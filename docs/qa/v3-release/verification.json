@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-03",
+  "scope": "Structural/runtime increment; complete latest-reference art and browser GPU/input acceptance remain open",
+  "source_sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
+  "runtime_passed": true,
+  "route_count": 78,
+  "boundary_samples": 69,
+  "boundary_jump_samples": 23,
+  "contact_warnings": [],
+  "visual": {
+    "sha256": "004106c1d0dd9660db9e94d003898f19d41e5341c33f27719395e00e98d6c004",
+    "bytes": 18167416,
+    "nodes": 87,
+    "meshes": 87,
+    "primitives": 99,
+    "triangles": 203447,
+    "materials": 50,
+    "images": 11,
+    "textures": [
+      {
+        "index": 0,
+        "name": "V2_Warm_Plaster_Normal",
+        "mimeType": "image/png",
+        "bytes": 30242,
+        "dimensions": [
+          128,
+          128
+        ],
+        "rgba_bytes": 65536
+      },
+      {
+        "index": 1,
+        "name": "V2_Warm_Plaster_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 73724,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      },
+      {
+        "index": 2,
+        "name": "V2_Sage_Plaster_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 69827,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      },
+      {
+        "index": 3,
+        "name": "V2_Weathered_Roof_Normal",
+        "mimeType": "image/png",
+        "bytes": 1891,
+        "dimensions": [
+          128,
+          128
+        ],
+        "rgba_bytes": 65536
+      },
+      {
+        "index": 4,
+        "name": "V2_Weathered_Roof_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 61299,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      },
+      {
+        "index": 5,
+        "name": "V2_Saffron_Plaster_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 72462,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      },
+      {
+        "index": 6,
+        "name": "V2_Limestone_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 80727,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      },
+      {
+        "index": 7,
+        "name": "V2_Road_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 66822,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      },
+      {
+        "index": 8,
+        "name": "V2_Aged_Timber_Normal",
+        "mimeType": "image/png",
+        "bytes": 31659,
+        "dimensions": [
+          128,
+          128
+        ],
+        "rgba_bytes": 65536
+      },
+      {
+        "index": 9,
+        "name": "V3_Layout_Warm_Fence_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 70182,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      },
+      {
+        "index": 10,
+        "name": "V2_Ground_Moss_BaseColor",
+        "mimeType": "image/png",
+        "bytes": 69815,
+        "dimensions": [
+          256,
+          256
+        ],
+        "rgba_bytes": 262144
+      }
+    ],
+    "texture_rgba_bytes": 2293760,
+    "asset": {
+      "generator": "Khronos glTF Blender I/O v4.3.47",
+      "version": "2.0"
+    },
+    "scene_extras": [
+      {
+        "map_title": "SUNWARD / TEST SITE 07",
+        "layout_reference": "Official classic Nuketown uniform traced outline; meter calibration provisional",
+        "playable_footprint_m": "irregular traced outline; provisional scale bus10.5m",
+        "player_reference": "1.8m tall; 0.35m capsule radius; 0.30m step height",
+        "build_version": "3.0",
+        "cargo_access": "Open rear loading ramp gives a dead-end covered perch; no forward exit",
+        "collision_note": "Separate simplified static triangle collision GLB includes stair ramps; engine navmesh must be baked and tested",
+        "boundary_collision": "Regenerate from LAYOUT perimeter meshes; old joined collider obsolete",
+        "art_direction": "User references: warm textured plaster and stone, aged timber, layered foliage, neutral daylight with warm/cool separation",
+        "v2_architecture_report": "1016 paving stones, 242 masonry blocks, 30704 evaluated triangles",
+        "v2_foliage_triangles": 37928,
+        "art_review": "Warm lower plaster, colored upper houses, preserved layout, layered foliage, timber/stone detail, readable shade and clean road surface",
+        "art_direction_notes": "Reference-inspired warm plaster, irregular limestone, aged timber, leafy overgrowth and neutral daylight. Original footprint and routes preserved.",
+        "notes": "Reference-inspired art pass; original layout/collision preserved; compact baked maps and original foliage geometry",
+        "ground_overlap_fixed": "Redundant coplanar visual base removed. Static collision unchanged; world ground supplies the same visible level.",
+        "canonical_layout_patch": "layout-r3-family-corrected",
+        "layout_scale_m_per_crop_pixel": 0.1269490642060507,
+        "landmark_patch_version": "landmarks-classic-r13",
+        "layout_authority": "Official classic Nuketown minimap and original gameplay references; independently authored geometry",
+        "metric_dimensions": "Provisional uniform calibration from 10.5m prototype bus span; not authenticated game meters",
+        "scale_m_per_reference_pixel": 0.1269490642060507,
+        "structural_reference_version": "layout-r3-family-corrected",
+        "validation_state": "Candidate awaiting independent integrated geometry, collision, export and traversal checks",
+        "original_branding": "SUNWARD / TEST SITE 07",
+        "native_style_backup": "{\"world\": \"World\", \"view_transform\": \"AgX\", \"look\": \"AgX - Medium High Contrast\", \"exposure\": 0.05000000074505806, \"gamma\": 1.0}",
+        "native_style_revision": "native-style-n2"
+      }
+    ]
+  },
+  "collision": {
+    "sha256": "71d477abeca04add7563cb048b697c7119135b8dcb723050f9b22677465602d9",
+    "bytes": 560628,
+    "nodes": 296,
+    "meshes": 296,
+    "primitives": 296,
+    "triangles": 4705,
+    "materials": 0,
+    "images": 0,
+    "textures": [],
+    "texture_rgba_bytes": 0,
+    "asset": {
+      "generator": "Khronos glTF Blender I/O v4.3.47",
+      "version": "2.0"
+    },
+    "scene_extras": [
+      {
+        "map_title": "SUNWARD / TEST SITE 07",
+        "layout_reference": "Official classic Nuketown uniform traced outline; meter calibration provisional",
+        "playable_footprint_m": "irregular traced outline; provisional scale bus10.5m",
+        "player_reference": "1.8m tall; 0.35m capsule radius; 0.30m step height",
+        "build_version": "3.0",
+        "cargo_access": "Open rear loading ramp gives a dead-end covered perch; no forward exit",
+        "collision_note": "Separate simplified static triangle collision GLB includes stair ramps; engine navmesh must be baked and tested",
+        "boundary_collision": "Regenerate from LAYOUT perimeter meshes; old joined collider obsolete",
+        "art_direction": "User references: warm textured plaster and stone, aged timber, layered foliage, neutral daylight with warm/cool separation",
+        "v2_architecture_report": "1016 paving stones, 242 masonry blocks, 30704 evaluated triangles",
+        "v2_foliage_triangles": 37928,
+        "art_review": "Warm lower plaster, colored upper houses, preserved layout, layered foliage, timber/stone detail, readable shade and clean road surface",
+        "art_direction_notes": "Reference-inspired warm plaster, irregular limestone, aged timber, leafy overgrowth and neutral daylight. Original footprint and routes preserved.",
+        "notes": "Reference-inspired art pass; original layout/collision preserved; compact baked maps and original foliage geometry",
+        "ground_overlap_fixed": "Redundant coplanar visual base removed. Static collision unchanged; world ground supplies the same visible level.",
+        "canonical_layout_patch": "layout-r3-family-corrected",
+        "layout_scale_m_per_crop_pixel": 0.1269490642060507,
+        "landmark_patch_version": "landmarks-classic-r13",
+        "layout_authority": "Official classic Nuketown minimap and original gameplay references; independently authored geometry",
+        "metric_dimensions": "Provisional uniform calibration from 10.5m prototype bus span; not authenticated game meters",
+        "scale_m_per_reference_pixel": 0.1269490642060507,
+        "structural_reference_version": "layout-r3-family-corrected",
+        "validation_state": "Candidate awaiting independent integrated geometry, collision, export and traversal checks",
+        "original_branding": "SUNWARD / TEST SITE 07",
+        "native_style_backup": "{\"world\": \"World\", \"view_transform\": \"AgX\", \"look\": \"AgX - Medium High Contrast\", \"exposure\": 0.05000000074505806, \"gamma\": 1.0}",
+        "native_style_revision": "native-style-n2"
+      }
+    ]
+  },
+  "octree": {
+    "triangleCount": 4705,
+    "mirroredMeshes": 0,
+    "nodes": 2284,
+    "references": 24045,
+    "maxLevel": 5,
+    "build_ms": 63.365049,
+    "heap_growth_bytes": 2325576
+  },
+  "runtime_modules": {
+    "collision": "c29ab142c929471ef97b6d3efa887a5ff7db5a1ee200ae96e5d27b4a3252a6cf",
+    "physics": "e254e42b2bcc8f428a2762fd537c9e3b63ac2c68f0a1391b60d9cb0d0c7dbc81"
+  },
+  "packaged_rebuild": "Visual and collision GLBs byte-identical to released authoring exports",
+  "pending": [
+    "Reference sky distance and detailed painterly cloud banks",
+    "Latest turquoise/yellow/honey palette and dense foliage appearance",
+    "Corrected furnishings integration",
+    "Live WebGL2/browser input/mobile/GPU timing"
+  ],
+  "transport": {
+    "gzip_bytes": 6124741,
+    "gzip_sha256": "03990a99e4e89d0b4441808f7578dc86faf2496af2b0c7dc34937f4e7155407c",
+    "decoded_matches_visual": true,
+    "raw_fallback": "Generated by prebuild, existing raw verified without overwrite",
+    "clean_gzip_only_tests": 73,
+    "nested_base_http_checks": [
+      "native gzip",
+      "missing decoder raw fallback",
+      "HTTP already decoded bytes"
+    ]
+  },
+  "independent_final_gates": {
+    "tests_passed": 73,
+    "tests_skipped": 0,
+    "lint": "pass",
+    "build": "pass",
+    "gles_production_programs": 12,
+    "negative_shader_control": "rejected as expected",
+    "inputs_unchanged_during_tests": true
+  }
+}

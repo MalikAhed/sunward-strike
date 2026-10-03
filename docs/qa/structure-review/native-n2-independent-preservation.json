@@ -1,0 +1,12 @@
+{
+  "base_source": "Sunward_ClassicLayout_v3_candidate_r2.blend",
+  "base_sha256": "de4190cc6c1e9951205fb9907332f3105fec5a65173306a91b1791aaed895183",
+  "native_source": "Sunward_NativeStyle_n2.blend",
+  "native_sha256": "94511dbd20c3e3f16ab38321422b216e49233f7a529877a04a28905bedd99628",
+  "native_revision": "native-style-n2",
+  "native_cloud_count": 12,
+  "protected_added": [],
+  "protected_removed": [],
+  "protected_changed": [],
+  "passed": true
+}

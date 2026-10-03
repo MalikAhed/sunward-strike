@@ -1,0 +1,39 @@
+{
+  "reference_sky": {
+    "pixels": 853382,
+    "median_rgb": [
+      81.0,
+      159.0,
+      249.0
+    ],
+    "p10_rgb": [
+      62.0,
+      137.0,
+      238.0
+    ],
+    "p90_rgb": [
+      113.0,
+      178.0,
+      253.0
+    ]
+  },
+  "current_n2_offline_sky": {
+    "pixels": 258739,
+    "median_rgb": [
+      105.0,
+      164.0,
+      223.0
+    ],
+    "p10_rgb": [
+      90.0,
+      153.0,
+      220.0
+    ],
+    "p90_rgb": [
+      125.0,
+      179.0,
+      228.0
+    ]
+  },
+  "scope": "Descriptive screenshot blue-pixel mask; different views/illumination, not a shader-factor calibration"
+}

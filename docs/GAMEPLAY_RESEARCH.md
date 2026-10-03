@@ -27,7 +27,7 @@ The references below are historical, explicit baselines. They are not assertions
 | [Riot: The Art of VALORANT Map Environments](https://playvalorant.com/en-us/news/dev/the-art-of-valorant-map-environments/) | Published 16 Nov 2020; accessed 3 Oct 2026 | Greybox/playtest before art; accurate collision; simple sightlines, restrained value contrast and detail | Art follows proven arena layout; bold landmarks and uncluttered combat space |
 | [Riot: VALORANT Shaders and Gameplay Clarity](https://www.riotgames.com/en/news/valorant-shaders-and-gameplay-clarity) | Published 30 Jun 2020; accessed 3 Oct 2026 | Balance art, performance, competitive clarity; distant character readability; quality changes should preserve gameplay information | Bright readable original silhouettes, stable visibility at every quality setting |
 
-No source above supplies a complete recoil pattern or a full movement simulation that can be reproduced from the article alone. Our values are deliberately independent. Use original SUNWARD architecture, materials, weapon silhouettes, characters, UI marks, and sounds. Do not import ripped franchise assets, identifiable map copies, branded skins, logos, or audio.
+No source above supplies a complete recoil pattern or a full movement simulation that can be reproduced from the article alone. Our values are deliberately independent. Use original SUNWARD architecture, materials, weapon silhouettes, characters, UI marks, and sounds. Do not import ripped franchise assets, commercial map files, branded skins, logos, or audio. The later structural brief explicitly selects classic Nuketown as a layout/proportion reference; all delivered geometry, materials and branding are independently authored.
 
 ## 3. Proposed tuning contract
 

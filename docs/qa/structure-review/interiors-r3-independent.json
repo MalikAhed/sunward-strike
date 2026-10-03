@@ -1,0 +1,651 @@
+{
+  "source_name": "Sunward_Interior_Dressing_r3_ProxyFixed_candidate.blend",
+  "sha256": "4a96d5a0e7291c49196a990ebc5f5fcff7408aa015a7093175836443b1d7abbc",
+  "visual_meshes": 76,
+  "proxies": 16,
+  "nonpositive_proxy_volumes": [],
+  "groups": [
+    {
+      "proxy": "COL_V3_D3_A_Mint_Bed",
+      "volume": 5.281100908915202,
+      "visual_names": [
+        "D3_A_Mint_Upper_bed",
+        "D3_A_Mint_Upper_bed_cover",
+        "D3_A_Mint_Upper_pillow"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.566071510314941,
+          3.0626044273376465,
+          3.179999828338623
+        ],
+        [
+          -2.4960708618164062,
+          6.312603950500488,
+          3.9650001525878906
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.566070556640625,
+          3.0626044273376465,
+          3.179999828338623
+        ],
+        [
+          -2.4960708618164062,
+          6.3126044273376465,
+          3.9650001525878906
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_A_Mint_Coffee",
+      "volume": 0.5135975927114488,
+      "visual_names": [
+        "D3_A_Mint_Coffee_table",
+        "D3_A_Mint_Coffee_leg",
+        "D3_A_Mint_Coffee_leg.001"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -3.1310715675354004,
+          -4.022975444793701,
+          0.17999997735023499
+        ],
+        [
+          -2.331071376800537,
+          -2.8229761123657227,
+          0.7150000929832458
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -3.1310715675354004,
+          -4.022975921630859,
+          0.17999997735023499
+        ],
+        [
+          -2.331071376800537,
+          -2.8229756355285645,
+          0.7150000929832458
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_A_Mint_Desk",
+      "volume": 1.5741085608800245,
+      "visual_names": [
+        "D3_A_Mint_Upper_desk",
+        "D3_A_Mint_Desk_leg",
+        "D3_A_Mint_Desk_leg.001"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.5560712814331055,
+          -4.772975921630859,
+          3.180000066757202
+        ],
+        [
+          -2.3560709953308105,
+          -3.8729748725891113,
+          3.9750001430511475
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.556070804595947,
+          -4.772974967956543,
+          3.180000066757202
+        ],
+        [
+          -2.3560709953308105,
+          -3.8729751110076904,
+          3.9750001430511475
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_A_Mint_Kitchen",
+      "volume": 3.5343094716469436,
+      "visual_names": [
+        "D3_A_Mint_Kitchen_counter",
+        "D3_A_Mint_Kitchen_countertop"
+      ],
+      "contained_visual_vertex_count": 16,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.6060709953308105,
+          5.162604331970215,
+          0.17999997735023499
+        ],
+        [
+          -2.056070327758789,
+          6.362604141235352,
+          1.3350000381469727
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.6060709953308105,
+          5.162604808807373,
+          0.17999997735023499
+        ],
+        [
+          -2.0560708045959473,
+          6.36260461807251,
+          1.3350000381469727
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_A_Mint_Lamp",
+      "volume": 0.39478519310553856,
+      "visual_names": [
+        "D3_A_Mint_Lamp_Base",
+        "D3_A_Mint_Lamp_Stem",
+        "D3_A_Mint_Lamp_Shade",
+        "D3_A_Mint_Lamp_Glow"
+      ],
+      "contained_visual_vertex_count": 64,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.706071376800537,
+          -5.86297607421875,
+          0.18000000715255737
+        ],
+        [
+          -4.186070919036865,
+          -5.342976093292236,
+          1.6399999856948853
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.706070423126221,
+          -5.862975120544434,
+          0.18000000715255737
+        ],
+        [
+          -4.186070442199707,
+          -5.342975616455078,
+          1.6399999856948853
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_A_Mint_Sofa",
+      "volume": 2.1262531019747257,
+      "visual_names": [
+        "D3_A_Mint_Living_sofa",
+        "D3_A_Mint_Sofa_back"
+      ],
+      "contained_visual_vertex_count": 16,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.5560712814331055,
+          -4.547975540161133,
+          0.18000000715255737
+        ],
+        [
+          -3.506070613861084,
+          -2.2979748249053955,
+          1.0799999237060547
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.5560712814331055,
+          -4.547975063323975,
+          0.18000000715255737
+        ],
+        [
+          -3.506071090698242,
+          -2.2979748249053955,
+          1.0799999237060547
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_A_Mint_Storage",
+      "volume": 1.1900016454358897,
+      "visual_names": [
+        "D3_A_Mint_Garage_storage",
+        "D3_A_Mint_Garage_storage.001",
+        "D3_A_Mint_Garage_storage.002"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -11.663256645202637,
+          1.0823054313659668,
+          0.1799999624490738
+        ],
+        [
+          -10.963255882263184,
+          2.782306671142578,
+          1.1800000667572021
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -11.663256645202637,
+          1.0823043584823608,
+          0.1799999624490738
+        ],
+        [
+          -10.963255882263184,
+          2.7823057174682617,
+          1.1800000667572021
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_A_Mint_Workbench",
+      "volume": 3.029401664311687,
+      "visual_names": [
+        "D3_A_Mint_Workbench",
+        "D3_A_Mint_Bench_leg",
+        "D3_A_Mint_Bench_leg.001"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -11.66325569152832,
+          -2.137917995452881,
+          0.17999999225139618
+        ],
+        [
+          -10.313255310058594,
+          0.2620829641819,
+          1.1150002479553223
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -11.66325569152832,
+          -2.1379165649414062,
+          0.17999999225139618
+        ],
+        [
+          -10.313255310058594,
+          0.2620835304260254,
+          1.1150002479553223
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Bed",
+      "volume": 5.281074121594428,
+      "visual_names": [
+        "D3_B_Saffron_Upper_bed.001",
+        "D3_B_Saffron_Upper_bed_cover.001",
+        "D3_B_Saffron_Upper_pillow.001"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.584502696990967,
+          3.1651065349578857,
+          3.179999828338623
+        ],
+        [
+          -2.514503002166748,
+          6.415107727050781,
+          3.9650001525878906
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.584502696990967,
+          3.165106773376465,
+          3.179999828338623
+        ],
+        [
+          -2.514503002166748,
+          6.415106773376465,
+          3.9650001525878906
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Coffee",
+      "volume": 0.5136021090050538,
+      "visual_names": [
+        "D3_B_Saffron_Coffee_table.001",
+        "D3_B_Saffron_Coffee_leg.002",
+        "D3_B_Saffron_Coffee_leg.003"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -3.149502754211426,
+          -4.7283172607421875,
+          0.17999997735023499
+        ],
+        [
+          -2.349501609802246,
+          -3.528316020965576,
+          0.7150000929832458
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -3.1495022773742676,
+          -4.728316783905029,
+          0.17999997735023499
+        ],
+        [
+          -2.3495020866394043,
+          -3.5283167362213135,
+          0.7150000929832458
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Desk",
+      "volume": 1.574104612072308,
+      "visual_names": [
+        "D3_B_Saffron_Upper_desk.001",
+        "D3_B_Saffron_Desk_leg.002",
+        "D3_B_Saffron_Desk_leg.003"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.574502944946289,
+          -5.478316307067871,
+          3.180000066757202
+        ],
+        [
+          -2.374502658843994,
+          -4.578315734863281,
+          3.9750001430511475
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.574502468109131,
+          -5.478315830230713,
+          3.180000066757202
+        ],
+        [
+          -2.374502658843994,
+          -4.5783162117004395,
+          3.9750001430511475
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Kitchen",
+      "volume": 3.5342982138196626,
+      "visual_names": [
+        "D3_B_Saffron_Kitchen_counter.001",
+        "D3_B_Saffron_Kitchen_countertop.001"
+      ],
+      "contained_visual_vertex_count": 16,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.624503135681152,
+          5.265107154846191,
+          0.17999997735023499
+        ],
+        [
+          -2.074502468109131,
+          6.4651079177856445,
+          1.3350000381469727
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.624503135681152,
+          5.26510763168335,
+          0.17999997735023499
+        ],
+        [
+          -2.074502944946289,
+          6.465107440948486,
+          1.3350000381469727
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Lamp",
+      "volume": 0.39478573699792235,
+      "visual_names": [
+        "D3_B_Saffron_Lamp_Base",
+        "D3_B_Saffron_Lamp_Stem",
+        "D3_B_Saffron_Lamp_Shade",
+        "D3_B_Saffron_Lamp_Glow"
+      ],
+      "contained_visual_vertex_count": 64,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.7245025634765625,
+          -6.568317413330078,
+          0.18000000715255737
+        ],
+        [
+          -4.204502582550049,
+          -6.04831600189209,
+          1.6399999856948853
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.7245025634765625,
+          -6.568316459655762,
+          0.18000000715255737
+        ],
+        [
+          -4.204502105712891,
+          -6.04831600189209,
+          1.6399999856948853
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Sofa",
+      "volume": 3.0621366947889332,
+      "visual_names": [
+        "D3_B_Saffron_Living_sofa.001",
+        "D3_B_Saffron_Sofa_back.001"
+      ],
+      "contained_visual_vertex_count": 16,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -4.57700252532959,
+          -5.253317832946777,
+          0.17999999225139618
+        ],
+        [
+          -3.522002696990967,
+          -3.00331711769104,
+          1.470000147819519
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -4.577002048492432,
+          -5.253317832946777,
+          0.17999999225139618
+        ],
+        [
+          -3.5220024585723877,
+          -3.0033164024353027,
+          1.470000147819519
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Storage",
+      "volume": 1.1900039811929066,
+      "visual_names": [
+        "D3_B_Saffron_Garage_storage.003",
+        "D3_B_Saffron_Garage_storage.004",
+        "D3_B_Saffron_Garage_storage.005"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -10.988077163696289,
+          5.013279438018799,
+          0.1799999624490738
+        ],
+        [
+          -10.288074493408203,
+          6.71328067779541,
+          1.1800000667572021
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -10.988077163696289,
+          5.013280391693115,
+          0.1799999624490738
+        ],
+        [
+          -10.288074493408203,
+          6.713280200958252,
+          1.1800000667572021
+        ]
+      ]
+    },
+    {
+      "proxy": "COL_V3_D3_B_Saffron_Workbench",
+      "volume": 3.029394129912058,
+      "visual_names": [
+        "D3_B_Saffron_Workbench.001",
+        "D3_B_Saffron_Bench_leg.002",
+        "D3_B_Saffron_Bench_leg.003"
+      ],
+      "contained_visual_vertex_count": 24,
+      "outside_vertices": 0,
+      "proxy_bbox": [
+        [
+          -10.988077163696289,
+          -1.1947321891784668,
+          0.17999999225139618
+        ],
+        [
+          -9.63807487487793,
+          1.205268383026123,
+          1.1150002479553223
+        ]
+      ],
+      "visual_bbox": [
+        [
+          -10.988076210021973,
+          -1.1947319507598877,
+          0.17999999225139618
+        ],
+        [
+          -9.638075828552246,
+          1.205268144607544,
+          1.1150002479553223
+        ]
+      ]
+    }
+  ],
+  "portal_samples": [
+    {
+      "house": "A_Mint",
+      "portal": "front_door",
+      "blocks": []
+    },
+    {
+      "house": "A_Mint",
+      "portal": "rear_door",
+      "blocks": []
+    },
+    {
+      "house": "A_Mint",
+      "portal": "rear_upper_door",
+      "blocks": []
+    },
+    {
+      "house": "A_Mint",
+      "portal": "garage_connector",
+      "blocks": []
+    },
+    {
+      "house": "A_Mint",
+      "portal": "room_passage",
+      "blocks": []
+    },
+    {
+      "house": "A_Mint",
+      "portal": "upper_room_passage",
+      "blocks": []
+    },
+    {
+      "house": "A_Mint",
+      "portal": "garage_front",
+      "blocks": []
+    },
+    {
+      "house": "A_Mint",
+      "portal": "garage_rear",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "front_door",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "rear_door",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "rear_upper_door",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "garage_connector",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "room_passage",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "upper_room_passage",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "garage_front",
+      "blocks": []
+    },
+    {
+      "house": "B_Saffron",
+      "portal": "garage_rear",
+      "blocks": []
+    }
+  ],
+  "passed": true,
+  "scope": "Actual saved furniture/proxy geometry and 1.1m portal corridor ray samples; complete controller routes remain separate"
+}

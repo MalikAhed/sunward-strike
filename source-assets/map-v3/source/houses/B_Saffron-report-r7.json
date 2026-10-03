@@ -1,0 +1,297 @@
+{
+  "version": "houses-r7",
+  "house_id": "B_Saffron",
+  "frame": "Blender Z up; local front=-Y, rear=+Y, +X right from street camera",
+  "root_local": [
+    0,
+    0,
+    0
+  ],
+  "layout_frame_version": "layout-r3-family-corrected",
+  "geometric_lot_id": "north",
+  "family_source_color": "yellow",
+  "root_transform_supplied": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "main_body_bbox_local_m": [
+    [
+      -4.924502754799785,
+      -7.32831671487097
+    ],
+    [
+      5.232215781981468,
+      6.76510743241417
+    ]
+  ],
+  "garage_bbox_local_m": [
+    [
+      -11.238075931910156,
+      -1.5447317727512087
+    ],
+    [
+      -4.851442480994062,
+      7.06327965676668
+    ]
+  ],
+  "main_body_width_depth_m": [
+    10.156718536781252,
+    14.09342414728514
+  ],
+  "garage_width_depth_m": [
+    6.3866334509160945,
+    8.60801142951789
+  ],
+  "floor_to_floor_m": 3.0,
+  "wall_eave_m": 6.2,
+  "local_geometry_bounds_m": [
+    [
+      -11.518075942993164,
+      -9.16081714630127,
+      0.0
+    ],
+    [
+      6.97221565246582,
+      10.460107803344727,
+      8.272500038146973
+    ]
+  ],
+  "portals": {
+    "front_door": {
+      "center": [
+        -0.9661434864091585,
+        -6.94831671487097,
+        0.18
+      ],
+      "clear_width": 1.16,
+      "clear_height": 2.15
+    },
+    "rear_door": {
+      "center": [
+        0.35385651359084164,
+        6.76510743241417,
+        0.18
+      ],
+      "clear_width": 1.2,
+      "clear_height": 2.15,
+      "certainty": "rear doorway family verified by BO1 thesis capture; exact width/position estimated"
+    },
+    "rear_upper_door": {
+      "center": [
+        -0.44614348640915835,
+        6.76510743241417,
+        3.18
+      ],
+      "clear_width": 1.2,
+      "clear_height": 2.15,
+      "certainty": "rear doorway family verified by BO1 thesis capture; exact width/position estimated"
+    },
+    "garage_connector": {
+      "center": [
+        -4.924502754799785,
+        0.8183953587716002,
+        0.18
+      ],
+      "clear_width": 1.3,
+      "clear_height": 2.15
+    },
+    "room_passage": {
+      "center": [
+        0.35385651359084164,
+        0.3183953587716001,
+        0.18
+      ],
+      "clear_width": 1.6,
+      "clear_height": 2.25,
+      "certainty": "unverified room partition approximation"
+    },
+    "upper_room_passage": {
+      "center": [
+        0.4038565135908416,
+        -0.5816046412283999,
+        3.18
+      ],
+      "clear_width": 1.3,
+      "clear_height": 2.15,
+      "certainty": "two-room connection verified in BO1 thesis plan; exact coordinates estimated"
+    },
+    "garage_front": {
+      "center": [
+        -8.04475920645211,
+        -1.5447317727512087,
+        0.18
+      ],
+      "clear_width": 2.94,
+      "clear_height": 2.42,
+      "certainty": "visible garage location, bay detail partly occluded in primary photo"
+    },
+    "garage_rear": {
+      "center": [
+        -5.851442480994062,
+        7.06327965676668,
+        0.18
+      ],
+      "clear_width": 1.2,
+      "clear_height": 2.15,
+      "certainty": "reversible traversal approximation, rear evidence limited"
+    }
+  },
+  "routes": {
+    "interior_stairs": {
+      "bottom": [
+        4.132215781981468,
+        -6.42831671487097,
+        0.18
+      ],
+      "top": [
+        4.132215781981468,
+        0.021683285129030283,
+        3.18
+      ],
+      "ramp_start": [
+        4.132215781981468,
+        -6.17831671487097,
+        0.3466666666666667
+      ],
+      "ramp_end": [
+        4.132215781981468,
+        -0.5283167148709698,
+        3.18
+      ],
+      "width": 1.45,
+      "rise": 3.0,
+      "run": 5.65,
+      "uncertainty": "gameplay-calibrated location, not primary measured stair plan"
+    },
+    "upper_rooms": {
+      "front_room": [
+        0.15385651359084163,
+        -3.9549606780496847,
+        3.18
+      ],
+      "rear_room": [
+        0.15385651359084163,
+        3.091751395592885,
+        3.18
+      ],
+      "passage": [
+        0.4038565135908416,
+        -0.5816046412283999,
+        3.18
+      ],
+      "balcony_door": [
+        -0.44614348640915835,
+        6.76510743241417,
+        3.18
+      ],
+      "topology_evidence": "BO1 thesis plan p128 and rear gameplay photographs p130; no primary meter dimensions"
+    },
+    "rear_stairs": {
+      "bottom": [
+        -0.42778421801853317,
+        9.58510743241417,
+        0.18
+      ],
+      "top": [
+        6.357215781981467,
+        9.58510743241417,
+        3.18
+      ],
+      "deck_connector": [
+        4.332215781981467,
+        8.265107432414169,
+        3.18
+      ],
+      "side_landing": [
+        6.357215781981467,
+        8.265107432414169,
+        3.18
+      ],
+      "top_cap": [
+        6.357215781981467,
+        9.58510743241417,
+        3.18
+      ],
+      "ramp_start": [
+        0.12221578198146688,
+        9.58510743241417,
+        0.3467
+      ],
+      "ramp_end": [
+        5.772215781981467,
+        9.58510743241417,
+        3.18
+      ],
+      "bottom_landing_bbox": [
+        [
+          -1.277784218018533,
+          8.71010743241417,
+          0
+        ],
+        [
+          0.17221578198146686,
+          10.46010743241417,
+          0.18
+        ]
+      ],
+      "bottom_landing_floor": 0.18,
+      "width": 1.45,
+      "run": 5.65,
+      "rise": 3.0,
+      "certainty": "rear pergola/diagonal fa\u00e7ade-parallel stair corroborated by BO1 thesis capture; exact dimensions estimated"
+    },
+    "rear_deck": {
+      "door": [
+        -0.44614348640915835,
+        6.76510743241417,
+        3.18
+      ],
+      "landing": [
+        0.15385651359084163,
+        7.81510743241417,
+        3.18
+      ],
+      "width": 9.756718536781252,
+      "depth": 2.1
+    }
+  },
+  "visual_objects": 554,
+  "collision_objects": 102,
+  "collision_triangles": 1224,
+  "visible_reference_criteria": [
+    "distinct roof silhouettes",
+    "green paired upper windows/shutters",
+    "green outer garage bay closed and inner bay open",
+    "yellow stone chimney continuous ground-to-roof",
+    "yellow upper overhang",
+    "separate body/garage minimap ratio"
+  ],
+  "uncertainties": [
+    "Metric dimensions are provisional gameplay calibration, not authenticated Nuketown meters",
+    "Minimap component polygons \u00b16 pixels; rectangular conservative bounding approximation",
+    "Rear pergola/stair direction and two upper rooms corroborated in BO1 thesis p128/p130; exact dimensions and side openings remain calibrated approximations",
+    "Yellow garage bay detail partially occluded"
+  ]
+}

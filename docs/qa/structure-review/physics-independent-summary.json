@@ -1,0 +1,944 @@
+{
+  "scope": "Independent disposable exact-line pre-approval checks plus live permanent regressions; no browser claim",
+  "negative_cases": [
+    {
+      "name": "continuous walk down exterior-axis ramp at60Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "continuous walk down exterior-axis ramp at30Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "continuous sprint down exterior-axis ramp at60Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "continuous sprint down exterior-axis ramp at30Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "continuous walk down interior-axis ramp at60Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "continuous walk down interior-axis ramp at30Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "continuous sprint down interior-axis ramp at60Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "continuous sprint down interior-axis ramp at30Hz",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 0,
+      "proposed_max_unsupported_frames": 0
+    },
+    {
+      "name": "one-meter ledge remains a real fall, without teleporting or retaining contact",
+      "passed": true,
+      "first_beyond": {
+        "feet": [
+          -0.406666666666666,
+          0.9202,
+          4.687608326203628e-20
+        ],
+        "on_floor": false
+      },
+      "airborne_frames": 19,
+      "largest_frame_drop_m": 0.09686666666666638
+    },
+    {
+      "name": "flat-floor jump keeps upward velocity, then lands normally",
+      "passed": true,
+      "jump_peak_m": 0.8046666666666651
+    },
+    {
+      "name": "wall/floor corner jump remains available and cannot pass through wall",
+      "passed": true,
+      "jump_peak_m": 0.8046666666666653
+    },
+    {
+      "name": "ramp jump is never canceled by downhill ground snap",
+      "passed": true,
+      "jump_peak_m": 0.804666666666666
+    },
+    {
+      "name": "diagnostic authored A_Mint_interior_stairs_down walk keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 7,
+      "proposed_max_unsupported_frames": 7
+    },
+    {
+      "name": "diagnostic authored A_Mint_interior_stairs_down sprint keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 5,
+      "proposed_max_unsupported_frames": 5
+    },
+    {
+      "name": "diagnostic authored A_Mint_rear_stairs_down walk keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 7,
+      "proposed_max_unsupported_frames": 7
+    },
+    {
+      "name": "diagnostic authored A_Mint_rear_stairs_down sprint keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 5,
+      "proposed_max_unsupported_frames": 5
+    },
+    {
+      "name": "diagnostic authored B_Saffron_interior_stairs_down walk keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 8,
+      "proposed_max_unsupported_frames": 8
+    },
+    {
+      "name": "diagnostic authored B_Saffron_interior_stairs_down sprint keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 8,
+      "proposed_max_unsupported_frames": 8
+    },
+    {
+      "name": "diagnostic authored B_Saffron_rear_stairs_down walk keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 7,
+      "proposed_max_unsupported_frames": 7
+    },
+    {
+      "name": "diagnostic authored B_Saffron_rear_stairs_down sprint keeps real flight contact",
+      "passed": true,
+      "baseline_ungrounded_core_frames": 0,
+      "proposed_ungrounded_core_frames": 0,
+      "baseline_max_unsupported_frames": 5,
+      "proposed_max_unsupported_frames": 5
+    }
+  ],
+  "negative_passed": true,
+  "ascent_comparisons": [
+    {
+      "controller": "current",
+      "sprint": false,
+      "core_ungrounded_frames": 7,
+      "unsupported_runs": [
+        {
+          "frames": 14,
+          "progress_range": [
+            0.011699876564795918,
+            0.15950349413584983
+          ],
+          "feet_start": [
+            -11.513502300330709,
+            0.31783256661009396,
+            11.701446426733806
+          ],
+          "feet_end": [
+            -11.811087709940262,
+            0.8003478279117903,
+            12.607143599320699
+          ],
+          "max_positive_y_velocity": 4.31699351370014,
+          "floor_y_range": [
+            0.18000000715255737,
+            0.7372140291863619
+          ]
+        },
+        {
+          "frames": 7,
+          "progress_range": [
+            0.8989553446216902,
+            0.9360184739773395
+          ],
+          "feet_start": [
+            -13.299888089008313,
+            3.1693158680331655,
+            17.13828743218026
+          ],
+          "feet_end": [
+            -13.374510393198985,
+            3.2065731814869536,
+            17.365399406993845
+          ],
+          "max_positive_y_velocity": 1.3542398012045493,
+          "floor_y_range": [
+            0.18000000715255782,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "A_Mint_interior_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": false,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "A_Mint_interior_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": true,
+      "core_ungrounded_frames": 14,
+      "unsupported_runs": [
+        {
+          "frames": 19,
+          "progress_range": [
+            0.005856929276786358,
+            0.33608948741633277
+          ],
+          "feet_start": [
+            -11.501738208038244,
+            0.277013879385858,
+            11.665642560240759
+          ],
+          "feet_end": [
+            -12.166623090703979,
+            1.3728719831797744,
+            13.68921071891565
+          ],
+          "max_positive_y_velocity": 6.534527012646395,
+          "floor_y_range": [
+            0.18000000715255737,
+            1.3083837563620937
+          ]
+        },
+        {
+          "frames": 19,
+          "progress_range": [
+            0.8826863997717165,
+            0.9878429570018437
+          ],
+          "feet_start": [
+            -13.26713245933146,
+            3.1225574509357252,
+            17.038596114661637
+          ],
+          "feet_end": [
+            -13.478852967752632,
+            3.2205717341830926,
+            17.68296462308908
+          ],
+          "max_positive_y_velocity": 3.208380944157892,
+          "floor_y_range": [
+            0.18000000715255737,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "A_Mint_interior_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": true,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "A_Mint_interior_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": false,
+      "core_ungrounded_frames": 27,
+      "unsupported_runs": [
+        {
+          "frames": 32,
+          "progress_range": [
+            0.02955123871135214,
+            0.3421773357481049
+          ],
+          "feet_start": [
+            -12.094746582479221,
+            0.015556635484187786,
+            27.436367804525943
+          ],
+          "feet_end": [
+            -14.109924110099822,
+            1.3275564690760353,
+            26.77423979080895
+          ],
+          "max_positive_y_velocity": 6.86864759734022,
+          "floor_y_range": [
+            0.014000000432133675,
+            1.235140841583079
+          ]
+        },
+        {
+          "frames": 17,
+          "progress_range": [
+            0.8794046062968345,
+            0.964346072350731
+          ],
+          "feet_start": [
+            -17.57287343470052,
+            3.115037898383445,
+            25.636416677830027
+          ],
+          "feet_end": [
+            -18.120403332805722,
+            3.2117271560221274,
+            25.456514487429054
+          ],
+          "max_positive_y_velocity": 2.927584716145058,
+          "floor_y_range": [
+            3.0630390665988627,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "A_Mint_rear_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": false,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [
+        {
+          "frames": 3,
+          "progress_range": [
+            0.02955123871135214,
+            0.031549421533835775
+          ],
+          "feet_start": [
+            -12.094746582479221,
+            0.015556635484187786,
+            27.436367804525943
+          ],
+          "feet_end": [
+            -12.10762678877877,
+            0.09492601527052563,
+            27.432135699408043
+          ],
+          "max_positive_y_velocity": 5.054432940125752,
+          "floor_y_range": [
+            0.014000000432133675,
+            0.014000000432133675
+          ]
+        }
+      ],
+      "route": "A_Mint_rear_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": true,
+      "core_ungrounded_frames": 35,
+      "unsupported_runs": [
+        {
+          "frames": 38,
+          "progress_range": [
+            0.05615132207783065,
+            0.7014473181475865
+          ],
+          "feet_start": [
+            -12.266209824722965,
+            0.3564449627857863,
+            27.380029965592463
+          ],
+          "feet_end": [
+            -16.42576660462075,
+            2.562861141678922,
+            26.013322179493404
+          ],
+          "max_positive_y_velocity": 9.467972181988861,
+          "floor_y_range": [
+            0.014000000432133675,
+            2.457545211448173
+          ]
+        },
+        {
+          "frames": 26,
+          "progress_range": [
+            0.8885094806444924,
+            0.9952153686689375
+          ],
+          "feet_start": [
+            -17.631563154691552,
+            3.158607768492559,
+            25.617132962656253
+          ],
+          "feet_end": [
+            -18.31938580214704,
+            3.2567235240439745,
+            25.391134711327553
+          ],
+          "max_positive_y_velocity": 4.225477813323401,
+          "floor_y_range": [
+            3.0940181039103463,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "A_Mint_rear_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": true,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "A_Mint_rear_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": false,
+      "core_ungrounded_frames": 6,
+      "unsupported_runs": [
+        {
+          "frames": 14,
+          "progress_range": [
+            0.0116999937780964,
+            0.15950361134915914
+          ],
+          "feet_start": [
+            1.911473801598069,
+            0.31783256661008163,
+            -15.377855538473504
+          ],
+          "feet_end": [
+            1.613588064312946,
+            0.8003478279116395,
+            -16.28345397705795
+          ],
+          "max_positive_y_velocity": 4.316993513699501,
+          "floor_y_range": [
+            0.18000000715255737,
+            0.7372140556881362
+          ]
+        },
+        {
+          "frames": 7,
+          "progress_range": [
+            0.8990123857884194,
+            0.9360545924724715
+          ],
+          "feet_start": [
+            0.12317044042311351,
+            3.1694247768529102,
+            -20.81445262551612
+          ],
+          "feet_end": [
+            0.0485149940266696,
+            3.206177696419081,
+            -21.041411647805692
+          ],
+          "max_positive_y_velocity": 1.3491958623283753,
+          "floor_y_range": [
+            0.18000000715255737,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "B_Saffron_interior_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": false,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "B_Saffron_interior_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": true,
+      "core_ungrounded_frames": 14,
+      "unsupported_runs": [
+        {
+          "frames": 19,
+          "progress_range": [
+            0.005857046490087116,
+            0.336089604629629
+          ],
+          "feet_start": [
+            1.9232497695345276,
+            0.2770138793858624,
+            -15.342055576148427
+          ],
+          "feet_end": [
+            1.25769387399053,
+            1.3728719831797616,
+            -17.365403136481753
+          ],
+          "max_positive_y_velocity": 6.534527012646336,
+          "floor_y_range": [
+            0.18000000715255737,
+            1.308383821622224
+          ]
+        },
+        {
+          "frames": 19,
+          "progress_range": [
+            0.8826748894107052,
+            0.9878417641993631
+          ],
+          "feet_start": [
+            0.156097287775747,
+            3.122522959396524,
+            -20.714352158063736
+          ],
+          "feet_end": [
+            -0.05585768700326041,
+            3.220679942877974,
+            -21.358713636926606
+          ],
+          "max_positive_y_velocity": 3.208856611604835,
+          "floor_y_range": [
+            0.18000000715255737,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "B_Saffron_interior_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": true,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "B_Saffron_interior_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": false,
+      "core_ungrounded_frames": 24,
+      "unsupported_runs": [
+        {
+          "frames": 32,
+          "progress_range": [
+            0.02955895460975106,
+            0.34629139340764226
+          ],
+          "feet_start": [
+            -7.209827670661978,
+            0.016440331526222873,
+            -29.155737505184792
+          ],
+          "feet_end": [
+            -5.16844039727918,
+            1.3356684004406327,
+            -29.827352144657294
+          ],
+          "max_positive_y_velocity": 6.793062139390407,
+          "floor_y_range": [
+            0.014000000432133564,
+            1.249137021665981
+          ]
+        },
+        {
+          "frames": 17,
+          "progress_range": [
+            0.8737386105212905,
+            0.9625791796277342
+          ],
+          "feet_start": [
+            -1.7688350171892793,
+            3.0858752585548204,
+            -30.945380408201274
+          ],
+          "feet_end": [
+            -1.1962225245946492,
+            3.2193677097558604,
+            -31.133695556014118
+          ],
+          "max_positive_y_velocity": 2.7576413058927165,
+          "floor_y_range": [
+            3.043758964082319,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "B_Saffron_rear_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": false,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [
+        {
+          "frames": 3,
+          "progress_range": [
+            0.02955895460975106,
+            0.03360008665648987
+          ],
+          "feet_start": [
+            -7.209827670661978,
+            0.016440331526222873,
+            -29.155737505184792
+          ],
+          "feet_end": [
+            -7.183859294515998,
+            0.13381558033505292,
+            -29.164541561935728
+          ],
+          "max_positive_y_velocity": 6.456311424969222,
+          "floor_y_range": [
+            0.014000000432133675,
+            0.014000000432133675
+          ]
+        }
+      ],
+      "route": "B_Saffron_rear_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": true,
+      "core_ungrounded_frames": 35,
+      "unsupported_runs": [
+        {
+          "frames": 42,
+          "progress_range": [
+            0.029602822486394818,
+            0.7275546570662212
+          ],
+          "feet_start": [
+            -7.2096632301114125,
+            0.021146084446440616,
+            -29.156190149901583
+          ],
+          "feet_end": [
+            -2.71111853236781,
+            2.644062642041372,
+            -30.635728349927287
+          ],
+          "max_positive_y_velocity": 9.846845039454983,
+          "floor_y_range": [
+            0.014000000432133675,
+            2.5463728333236046
+          ]
+        },
+        {
+          "frames": 29,
+          "progress_range": [
+            0.8820514707185579,
+            0.9965309038561345
+          ],
+          "feet_start": [
+            -1.7152856143984105,
+            3.1280285248386748,
+            -30.96309314697895
+          ],
+          "feet_end": [
+            -0.9773911831135393,
+            3.229103767784678,
+            -31.20566570239174
+          ],
+          "max_positive_y_velocity": 4.681589806312867,
+          "floor_y_range": [
+            3.0720431996043214,
+            3.180000066757202
+          ]
+        }
+      ],
+      "route": "B_Saffron_rear_stairs_up"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": true,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "B_Saffron_rear_stairs_up"
+    },
+    {
+      "controller": "current",
+      "sprint": false,
+      "core_ungrounded_frames": 14,
+      "unsupported_runs": [
+        {
+          "frames": 14,
+          "progress_range": [
+            0.050862070326343836,
+            0.1913680885036959
+          ],
+          "feet_start": [
+            -0.20490085283575712,
+            0.12203707277808756,
+            4.787848623637937e-20
+          ],
+          "feet_end": [
+            0.7484324804975768,
+            0.6363595543251043,
+            4.079077511756874e-20
+          ],
+          "max_positive_y_velocity": 4.463796068678542,
+          "floor_y_range": [
+            0.014000000000000012,
+            0.5780050568017743
+          ]
+        },
+        {
+          "frames": 8,
+          "progress_range": [
+            0.8892408755170842,
+            0.9350103343743849
+          ],
+          "feet_start": [
+            5.483499340383417,
+            3.1382576602336143,
+            5.579189266213017e-21
+          ],
+          "feet_end": [
+            5.794045118730201,
+            3.214174887385364,
+            3.273677419950471e-21
+          ],
+          "max_positive_y_velocity": 1.7907190898721397,
+          "floor_y_range": [
+            3.0916132142923054,
+            3.18
+          ]
+        }
+      ],
+      "route": "synthetic_lip_0.1807"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": false,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "synthetic_lip_0.1807"
+    },
+    {
+      "controller": "current",
+      "sprint": true,
+      "core_ungrounded_frames": 18,
+      "unsupported_runs": [
+        {
+          "frames": 19,
+          "progress_range": [
+            0.04880423776851523,
+            0.36273201964029134
+          ],
+          "feet_start": [
+            -0.2188632467406242,
+            0.10551213291347727,
+            4.8490112354648923e-20
+          ],
+          "feet_end": [
+            1.9111367532593768,
+            1.262832230792887,
+            3.2486683808566206e-20
+          ],
+          "max_positive_y_velocity": 6.739400326264705,
+          "floor_y_range": [
+            0.014000000000000012,
+            1.1952261080022248
+          ]
+        },
+        {
+          "frames": 21,
+          "progress_range": [
+            0.8833979146724513,
+            0.9906072070190345
+          ],
+          "feet_start": [
+            5.443854851052582,
+            3.121164655495494,
+            5.9360793956975305e-21
+          ],
+          "feet_end": [
+            6.171269899624149,
+            3.2269529839442646,
+            4.781763956084695e-22
+          ],
+          "max_positive_y_velocity": 3.5156983186796475,
+          "floor_y_range": [
+            3.0705679545884257,
+            3.18
+          ]
+        }
+      ],
+      "route": "synthetic_lip_0.1807"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": true,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "synthetic_lip_0.1807"
+    },
+    {
+      "controller": "current",
+      "sprint": false,
+      "core_ungrounded_frames": 25,
+      "unsupported_runs": [
+        {
+          "frames": 32,
+          "progress_range": [
+            0.029551705229408705,
+            0.3421776908390352
+          ],
+          "feet_start": [
+            -0.349491680018462,
+            0.015556459800781908,
+            4.8006778791949417e-20
+          ],
+          "feet_end": [
+            1.771675632342854,
+            1.3275601210113344,
+            5.008262006316496e-20
+          ],
+          "max_positive_y_velocity": 6.86865795864338,
+          "floor_y_range": [
+            0.014000000000000012,
+            1.2351404693545112
+          ]
+        },
+        {
+          "frames": 8,
+          "progress_range": [
+            0.8968050961671475,
+            0.9394487603104956
+          ],
+          "feet_start": [
+            5.534822577494096,
+            3.1634111162669534,
+            7.840563120504206e-21
+          ],
+          "feet_end": [
+            5.824159838706713,
+            3.207525476212583,
+            4.600574245209881e-21
+          ],
+          "max_positive_y_velocity": 1.5181230852482526,
+          "floor_y_range": [
+            3.122242108861569,
+            3.18
+          ]
+        }
+      ],
+      "route": "synthetic_lip_0.3467"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": false,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [
+        {
+          "frames": 3,
+          "progress_range": [
+            0.029551705229408705,
+            0.031549847057614246
+          ],
+          "feet_start": [
+            -0.349491680018462,
+            0.015556459800781908,
+            4.8006778791949417e-20
+          ],
+          "feet_end": [
+            -0.3359342877140874,
+            0.09492503158449639,
+            6.961500752072623e-20
+          ],
+          "max_positive_y_velocity": 5.05439184989658,
+          "floor_y_range": [
+            0.014000000000000012,
+            0.014000000000000012
+          ]
+        }
+      ],
+      "route": "synthetic_lip_0.3467"
+    },
+    {
+      "controller": "current",
+      "sprint": true,
+      "core_ungrounded_frames": 35,
+      "unsupported_runs": [
+        {
+          "frames": 38,
+          "progress_range": [
+            0.05615166676140906,
+            0.7014476628311711
+          ],
+          "feet_start": [
+            -0.16901094102383957,
+            0.356443952059472,
+            8.117923188298899e-20
+          ],
+          "feet_end": [
+            4.209322392309496,
+            2.5628672183534054,
+            2.567811856495613e-20
+          ],
+          "max_positive_y_velocity": 9.467983675071235,
+          "floor_y_range": [
+            0.013999999999999901,
+            2.457544819840814
+          ]
+        },
+        {
+          "frames": 19,
+          "progress_range": [
+            0.8889268751526543,
+            0.9884896486674962
+          ],
+          "feet_start": [
+            5.48136884791076,
+            3.1411749576022854,
+            9.507584679850647e-21
+          ],
+          "feet_end": [
+            6.156902266208962,
+            3.2272208305322807,
+            9.852575961918316e-22
+          ],
+          "max_positive_y_velocity": 3.168486243099986,
+          "floor_y_range": [
+            3.0954367190628918,
+            3.18
+          ]
+        }
+      ],
+      "route": "synthetic_lip_0.3467"
+    },
+    {
+      "controller": "zero-grounded-velocity",
+      "sprint": true,
+      "core_ungrounded_frames": 0,
+      "unsupported_runs": [],
+      "route": "synthetic_lip_0.3467"
+    }
+  ],
+  "live_permanent_tests_passed": 28,
+  "live_log_artifact": "physics-live-independent.log"
+}

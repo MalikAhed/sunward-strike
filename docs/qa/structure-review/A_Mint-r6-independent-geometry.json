@@ -1,0 +1,144 @@
+{
+  "source": "/workspace/shared/sunward-structure-build/houses/A_Mint-houses-r6.blend",
+  "sha256": "d5995e8024f62c612bc886e7e5ff0650c665d181101cd73370f266c30768be0a",
+  "house_id": "A_Mint",
+  "version": "houses-r6",
+  "expected_frame_version": "layout-r3-family-corrected",
+  "root_identity": true,
+  "visual_objects": 443,
+  "collision_objects": 104,
+  "rear_side_connector_support_width_m": 1.1500000953674316,
+  "canonical_minimum_route_width_m": 1.1,
+  "negative_or_zero_proxy_volume": [],
+  "portal_cross_section_ray_samples": [
+    {
+      "name": "front_door",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    },
+    {
+      "name": "rear_door",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    },
+    {
+      "name": "rear_upper_door",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    },
+    {
+      "name": "garage_connector",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    },
+    {
+      "name": "room_passage",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    },
+    {
+      "name": "upper_room_passage",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    },
+    {
+      "name": "garage_front",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    },
+    {
+      "name": "garage_rear",
+      "sample_offsets_m": [
+        -0.3,
+        0,
+        0.3
+      ],
+      "sample_heights_m": [
+        0.4,
+        1,
+        1.7,
+        1.8
+      ],
+      "blockers": [],
+      "pass": true
+    }
+  ],
+  "scope": "saved local prefab geometry and grid-ray aperture checks; actual controller sweeps remain separate"
+}

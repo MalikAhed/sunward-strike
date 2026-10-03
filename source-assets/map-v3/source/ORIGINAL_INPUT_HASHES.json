@@ -1,0 +1,14 @@
+{
+  "landmarks/landmark_patch.py": "b248ad43b14d0b3398e734edbf1d6028b0c4dc11c3f05ea68a5ffa01739543cc",
+  "layout/layout_patch.py": "9993ec6ff04f81ac817f8d0146d70193df6a53a339970d301937f3b9281e3535",
+  "layout/grass_patch.py": "f66ae73fa445f3fe75d1e5cbf577d7375f4e6add0ed1b41f07b3f76e9a685561",
+  "layout/site_frames.json": "45cc4f9b81175bcc51cc196641c7bdf173d85a10853a98a770736e419d033960",
+  "houses/coral_material_patch.py": "0029cc22c0b204e345a2cae0549cb7fb5a583e8e57ff42682efc1bf5bc4cc46a",
+  "houses/house_patch.py": "ca421405c3d3597822950a6a07cebed4c3148896d32697bd0b28f479f6919968",
+  "houses/house-route-contract-r7.json": "307f30cb78c71f182b5eb3dfb76526de14fb864e4a85402f26ce0ab4d0c3dc25",
+  "houses/B_Saffron-report-r7.json": "b8ed5f18f3bc28c5e80421f635c743b5935c12d81b44a40c872fe7e5d0755863",
+  "houses/A_Mint-report-r7.json": "0314ebb333975072227da639f7e488e619438b2f27fa0b7add00c84095238926",
+  "layout/textures/V3_Layout_Warm_Fence_BaseColor.png": "491ce5fa24333da89206f4fc479df8b221be0598f387d8bac1909358ffc189cb",
+  "houses/native-style/cloud-mesh-web-parity-n2.json": "ab3c5c44488441fb3034bfe035f698c857f1da05ec9d00997b58b05d46013488",
+  "houses/native-style/native_atmosphere.py": "851fb3fac4ec0ace4839b11ce99f642349c5b0e9bbbdf992b0a3d45a7a69807c"
+}

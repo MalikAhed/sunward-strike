@@ -1,0 +1,4 @@
+import bpy,json,pathlib,hashlib
+from mathutils import Vector
+p=pathlib.Path(bpy.data.filepath);out=pathlib.Path('/workspace/shared/sunward-strike/docs/qa/structure-review');center=lambda o:sum((o.matrix_world@Vector(v) for v in o.bound_box),Vector())/8
+front=[o for o in bpy.data.objects if o.name.startswith('LM_Jeep_grille_')];a=sum((center(o) for o in front),Vector())/len(front);b=center(bpy.data.objects['LM_Jeep_spare']);d=(a-b).normalized();r={'source_name':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'grille_center_world':list(a),'spare_center_world':list(b),'front_direction_world':list(d),'signed_heading_correct':d.y>.999 and abs(d.x)<1e-5,'scope':'Actual saved geometry independently confirms +Y front; street image front is to viewer right from east exit'};assert r['signed_heading_correct'];(out/'integrated-rc1-jeep-heading.json').write_text(json.dumps(r,indent=2)+'\n');print(r)

@@ -6,6 +6,9 @@ import { Octree } from 'three/addons/math/Octree.js';
 // share the depth/leaf budget, which the stock split method doesn't propagate.
 class BoundedOctree extends Octree {
   constructor(box){super(box);this.maxLevel=5;this.trianglesPerLeaf=32;}
+  // Stock calcBox pads only min. Floating-point split bounds can then drop
+  // triangles exactly on max, including a box's positive-facing wall.
+  calcBox(){super.calcBox();this.box.max.addScalar(.01);return this;}
   split(level){
     if(!this.box)return;
     const children=[],half=this.box.getSize(new Vector3()).multiplyScalar(.5);

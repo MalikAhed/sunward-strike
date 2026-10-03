@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {MAP_CONFIG} from './map-config.js';
 import { MarchingCubes } from 'three/addons/objects/MarchingCubes.js';
 
 // Original procedural atmosphere inspired by the supplied art-direction sheet.
@@ -61,17 +62,26 @@ export function createClouds(){
 let joinedCloudGeometry;
 function createJoinedCloudGeometry(){
   if(joinedCloudGeometry)return joinedCloudGeometry;
-  const resolution=40,extent=1.6;
+  const resolution=42,extent=1.8;
   const surface=new MarchingCubes(resolution,new THREE.MeshBasicMaterial(),false,false,8000);
   surface.isolation=0;
-  const puffs=[[-.62,-.14,0,.53],[-.19,.13,.07,.73],[.3,.18,.01,.8],[.7,-.09,-.02,.46],[.0,-.3,.15,.68]];
+  // Distinct crown/shoulder lobes share a soft lower mass. Narrower crown
+  // radii and restrained blending retain fluffy scallops instead of an egg.
+  // Each puff is [centerX,centerY,centerZ,radiusX,radiusY,radiusZ].
+  const puffs=[
+    [-1.02,-.11,-.02,.35,.35,.34],[-.71,.13,.07,.42,.48,.44],
+    [-.13,.38,-.05,.48,.69,.53],[.53,.15,.03,.43,.55,.46],
+    [.98,-.10,-.07,.34,.34,.33],[-.06,-.29,.15,.88,.43,.58],
+    [.20,.25,-.46,.37,.42,.34],[-.64,-.17,.38,.35,.35,.31],
+  ];
+  const blendRadius=.105;
   for(let z=0;z<resolution;z++)for(let y=0;y<resolution;y++)for(let x=0;x<resolution;x++){
     const px=(x/resolution*2-1)*extent,py=(y/resolution*2-1)*extent,pz=(z/resolution*2-1)*extent;
     let distance=Infinity;
-    for(const [cx,cy,cz,r]of puffs){
-      const next=(Math.hypot((px-cx)/r,(py-cy*.82)/(r*.74),(pz-cz)/(r*.67))-1)*r*.67;
-      const blend=Math.max(.23-Math.abs(distance-next),0)/.23;
-      distance=Math.min(distance,next)-blend*blend*.23*.25;
+    for(const [cx,cy,cz,rx,ry,rz]of puffs){
+      const next=(Math.hypot((px-cx)/rx,(py-cy)/ry,(pz-cz)/rz)-1)*Math.min(rx,ry,rz);
+      const blend=Math.max(blendRadius-Math.abs(distance-next),0)/blendRadius;
+      distance=Math.min(distance,next)-blend*blend*blendRadius*.25;
     }
     surface.field[x+y*resolution+z*resolution*resolution]=-distance;
   }
@@ -83,6 +93,10 @@ function createJoinedCloudGeometry(){
   joinedCloudGeometry.setAttribute('normal',new THREE.BufferAttribute(surface.geometry.attributes.normal.array.slice(0,surface.count*3),3));
   joinedCloudGeometry.computeBoundingBox();joinedCloudGeometry.computeBoundingSphere();
   joinedCloudGeometry.userData.triangleCount=surface.count/3;
+  joinedCloudGeometry.userData.cloudShapeVersion='fluffy-cumulus-n2';
+  joinedCloudGeometry.userData.resolution=resolution;
+  joinedCloudGeometry.userData.extent=extent;
+  joinedCloudGeometry.userData.lobeCount=puffs.length;
   surface.geometry.dispose();surface.material.dispose();
   return joinedCloudGeometry;
 }
@@ -92,7 +106,7 @@ export function applyReferencePalette(root){
   for(const material of materials){
     if(material.name.startsWith('V2_Leaf_')){material.color.multiply(new THREE.Color().setRGB(1.16,1.07,.80));material.roughness=.96;}
     if(material.name==='V2_Ground_Moss'){installColorLayer(material,'foliage');}
-    if(['V2_Warm_Plaster','V2_Sage_Plaster','V2_Saffron_Plaster'].includes(material.name)){installColorLayer(material,'paint');}
+    if(MAP_CONFIG.paintMaterials.includes(material.name)){installColorLayer(material,'paint');}
   }
 }
 function installColorLayer(material,kind){

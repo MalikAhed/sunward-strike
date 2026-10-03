@@ -4,13 +4,16 @@ import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import * as THREE from 'three';
 import { applyReferencePalette, createClouds, createSky } from '../src/atmosphere.js';
+import { MAP_CONFIG } from '../src/map-config.js';
+import {decodeGlbBytes} from '../src/asset-loader.js';
 import { shaderSources } from './helpers/shader-sources.js';
 
-const paintNames = ['V2_Warm_Plaster', 'V2_Sage_Plaster', 'V2_Saffron_Plaster'];
-const mapBytes = readFileSync(new URL('../public/assets/sunward-v2.5.glb', import.meta.url));
+const paintNames = MAP_CONFIG.paintMaterials;
+const mapBytes = Buffer.from(await decodeGlbBytes(readFileSync(new URL(`../public/assets/${MAP_CONFIG.assets.map}`, import.meta.url))));
 const sourceMap = JSON.parse(mapBytes.subarray(20, 20 + mapBytes.readUInt32LE(12)).toString());
 function painted(name) {
   const source = sourceMap.materials.find(material => material.name === name);
+  assert.ok(source, `Current map must contain material ${name}`);
   const pbr = source.pbrMetallicRoughness;
   const material = new THREE.MeshStandardMaterial({
     side: source.doubleSided ? THREE.DoubleSide : THREE.FrontSide,

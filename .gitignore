@@ -14,3 +14,9 @@ __pycache__/
 # Reproducible heavy QA intermediates stay local
 docs/qa/**/fixture.json
 docs/qa/**/original-scene-snapshot.json
+
+# Rebuilt source previews/exports are generated locally
+source-assets/map-v3/build/
+
+# Exact raw compatibility copy is generated from the committed gzip by prebuild
+public/assets/sunward-v3.0.glb

@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "packaged_scene_sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1760,
+      "sha256": "787e638e6e41b821559910a0226499f53ccc741752788c0c11902e1b27a3d717"
+    },
+    {
+      "path": "Sunward_ClassicLayout_v3.blend",
+      "bytes": 5828510,
+      "sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce"
+    },
+    {
+      "path": "build.py",
+      "bytes": 1166,
+      "sha256": "57b05820db19175c7af4e3aa3ed0ae8c48c1070cc83908620d3cc252002e436b"
+    },
+    {
+      "path": "source/ORIGINAL_INPUT_HASHES.json",
+      "bytes": 1267,
+      "sha256": "5a331467a05c92d9486c19d5bbb6bbcb68d634da4348fbf29cd623a35bfbf12f"
+    },
+    {
+      "path": "source/houses/A_Mint-report-r7.json",
+      "bytes": 6594,
+      "sha256": "0314ebb333975072227da639f7e488e619438b2f27fa0b7add00c84095238926"
+    },
+    {
+      "path": "source/houses/B_Saffron-report-r7.json",
+      "bytes": 6652,
+      "sha256": "b8ed5f18f3bc28c5e80421f635c743b5935c12d81b44a40c872fe7e5d0755863"
+    },
+    {
+      "path": "source/houses/coral_material_patch.py",
+      "bytes": 3145,
+      "sha256": "0029cc22c0b204e345a2cae0549cb7fb5a583e8e57ff42682efc1bf5bc4cc46a"
+    },
+    {
+      "path": "source/houses/house-route-contract-r7.json",
+      "bytes": 62260,
+      "sha256": "307f30cb78c71f182b5eb3dfb76526de14fb864e4a85402f26ce0ab4d0c3dc25"
+    },
+    {
+      "path": "source/houses/house_patch.py",
+      "bytes": 30659,
+      "sha256": "c94f42a2f94e9ed182ca9165704a7cb7aa4294f1e84badcd38fe05c6d57d1029"
+    },
+    {
+      "path": "source/houses/native-style/cloud-mesh-web-parity-n2.json",
+      "bytes": 1531850,
+      "sha256": "ab3c5c44488441fb3034bfe035f698c857f1da05ec9d00997b58b05d46013488"
+    },
+    {
+      "path": "source/houses/native-style/native_atmosphere.py",
+      "bytes": 11743,
+      "sha256": "851fb3fac4ec0ace4839b11ce99f642349c5b0e9bbbdf992b0a3d45a7a69807c"
+    },
+    {
+      "path": "source/integration/export_optimized.py",
+      "bytes": 3107,
+      "sha256": "77afbf1a2a6e9347b4774a93332e4b526a5b2b009f10f198bf08c4ab4ececfdd"
+    },
+    {
+      "path": "source/integration/integrate_candidate.py",
+      "bytes": 6142,
+      "sha256": "0e1a6dbf7a58012fc1e54e8744e4344112fd201109e99fbfaa498e39749b19ee"
+    },
+    {
+      "path": "source/landmarks/landmark_patch.py",
+      "bytes": 35268,
+      "sha256": "8191b53e2ca488b8deb5989908e9097087e7ce6d643eb867eb624c5db441eadf"
+    },
+    {
+      "path": "source/layout/grass_patch.py",
+      "bytes": 7376,
+      "sha256": "f66ae73fa445f3fe75d1e5cbf577d7375f4e6add0ed1b41f07b3f76e9a685561"
+    },
+    {
+      "path": "source/layout/layout_patch.py",
+      "bytes": 20353,
+      "sha256": "9993ec6ff04f81ac817f8d0146d70193df6a53a339970d301937f3b9281e3535"
+    },
+    {
+      "path": "source/layout/site_frames.json",
+      "bytes": 92124,
+      "sha256": "2a113f34dc8346692a4c6cc146686ad74828151a5a132cca6eae9bed7972cd70"
+    },
+    {
+      "path": "source/layout/textures/V3_Layout_Warm_Fence_BaseColor.png",
+      "bytes": 70182,
+      "sha256": "491ce5fa24333da89206f4fc479df8b221be0598f387d8bac1909358ffc189cb"
+    },
+    {
+      "path": "source/runtime/validate_export.py",
+      "bytes": 12652,
+      "sha256": "13f373340b36983171d05796dda645c04d92b3c512bf505030b069bb2bc2045e"
+    }
+  ]
+}

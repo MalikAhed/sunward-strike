@@ -1,0 +1,18 @@
+{
+  "source_file": "layout_ground_r2.blend",
+  "source_sha256": "d1188caef964a771d2f0ab1efcb40620ad33376edc2745e0898e45139310c53a",
+  "frames_version": "layout-r2-canonical",
+  "scale_is_provisional": true,
+  "outline_vertex_count": 23,
+  "expected_vertex_count": 23,
+  "max_outline_vertex_error_m": 0.0,
+  "upward_normals": true,
+  "floor_polygon_area_m2": 2833.429780960083,
+  "expected_polygon_area_m2": 2833.429814531043,
+  "old_full_width_street_present": false,
+  "original_world_desert_present": true,
+  "new_floor_collider_present": true,
+  "original_joined_collider_present": true,
+  "saved_source_not_modified": true,
+  "render_scope": "saved terrain and perimeter, with explicitly added reference house/vehicle QA plates; not final integrated geometry"
+}

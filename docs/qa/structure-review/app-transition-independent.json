@@ -1,0 +1,11 @@
+{
+  "source": "src/main.js",
+  "sha256": "8e5e11204e65974012f630b91a9677c1b64a855584a53dce7469ebcbc3d9857d",
+  "passed": true,
+  "checks": [
+    "real spawnWalk clears overview-preservation state",
+    "walk→fly→portrait resize retains manual position",
+    "orbit→fly copies actual YXZ yaw/pitch without reset"
+  ],
+  "scope": "Real extracted application functions in mock DOM; no live browser, pointer lock or visual claims"
+}

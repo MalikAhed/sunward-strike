@@ -1,0 +1,96 @@
+{
+  "source": "Sunward_ClassicLayout_v3_release_rc1.blend",
+  "source_sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
+  "scene_version": "3.0",
+  "house_versions": {
+    "A_Mint": "houses-r7",
+    "B_Saffron": "houses-r7"
+  },
+  "landmark_version": "landmarks-classic-r13",
+  "legacy_joined_collider_present": false,
+  "duplicate_visible_exit_gate_present": false,
+  "detailed_exit_rail_count": 8,
+  "floor_clip_present": true,
+  "proxy_mesh_count": 296,
+  "original_source_sha256": "460d54859e29c59d809da2bd0497e40ac2c8684630826e89415771847055bfc6",
+  "saved_source_not_modified": true,
+  "scope": "Independent saved-source geometry and Blender renders; not live browser/capsule validation",
+  "native_revision": "native-style-n2",
+  "native_cloud_meshes": 12,
+  "dressing_meshes": 0,
+  "native_export_candidates": [],
+  "root_transforms": {
+    "A_Mint": [
+      [
+        -0.950032114982605,
+        -0.3121522068977356,
+        0.0,
+        -9.775077819824219
+      ],
+      [
+        0.3121522068977356,
+        -0.950032114982605,
+        0.0,
+        -18.21718978881836
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "B_Saffron": [
+      [
+        0.949928343296051,
+        -0.3124675452709198,
+        0.0,
+        -3.9988954067230225
+      ],
+      [
+        0.3124675452709198,
+        0.949928343296051,
+        0.0,
+        20.121427536010742
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "old_house_visual_names_remaining": [],
+  "family_order_correct": true,
+  "family_roof_names": {
+    "A_Mint": [
+      "GreenGarageRoofFront",
+      "GreenGarageRoofRear",
+      "GreenRoofLeft",
+      "GreenRoofRight"
+    ],
+    "B_Saffron": [
+      "YellowGarageShallowRoof",
+      "YellowShedRoof"
+    ]
+  },
+  "root_transform_max_error": {
+    "A_Mint": 0.0,
+    "B_Saffron": 5.960464477539063e-08
+  },
+  "grass_vertices_in_house_components": 0,
+  "grass_source_vertex_count": 108000
+}

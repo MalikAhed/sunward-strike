@@ -1,0 +1,21 @@
+{
+  "source_name": "Sunward_ClassicLayout_v3_release_rc1.blend",
+  "sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
+  "grille_center_world": [
+    12.694906234741211,
+    2.638643741607666,
+    1.065000057220459
+  ],
+  "spare_center_world": [
+    12.694905281066895,
+    -0.9513565897941589,
+    1.2049999237060547
+  ],
+  "front_direction_world": [
+    2.65445663671926e-07,
+    0.999240517616272,
+    -0.0389675572514534
+  ],
+  "signed_heading_correct": true,
+  "scope": "Actual saved geometry independently confirms +Y front; street image front is to viewer right from east exit"
+}

@@ -5,7 +5,7 @@ The default branch is `main`. GitHub Pages publishes its tested production build
 ## Before a push
 
 1. Preserve editable asset sources and stable filenames. Record new export hashes and triangle/material counts.
-2. Run `npm ci`, `npm test`, and `npm run build`.
+2. Run `npm ci`, `npm run lint`, `npm test`, and `npm run build`.
 3. Check changed controls, relative asset paths, loading failures, small screens, and graphics settings in a real browser. Record tests actually run; never label pending checks as passes.
 4. Commit source, required GLBs, documentation and the lockfile. Exclude caches, `node_modules`, temporary credentials, logs and local artifacts.
 5. Push only the intended branch. Verify its remote commit SHA, then inspect CI for that same SHA.
@@ -13,7 +13,7 @@ The default branch is `main`. GitHub Pages publishes its tested production build
 
 ## Ownership and visual authority
 
-Keep original editable scenes recoverable. One integrator owns the live map export and shared rendering/material settings. Each changed asset needs a builder and independent source/render review, using the current reference rather than the preceding iteration. Do not change layout, scale, traversal geometry or prop placement merely to match a color/style reference.
+Keep original editable scenes recoverable. One integrator owns the live map export and shared rendering/material settings. Changes require independent source/render review against the whole assembled map, using the current reference rather than the preceding iteration. Do not change layout, scale, traversal geometry or prop placement merely to match a color/style reference.
 
 ## Gameplay direction
 

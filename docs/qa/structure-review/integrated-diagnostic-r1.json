@@ -1,0 +1,102 @@
+{
+  "source": "/workspace/shared/sunward-structure-build/integration/Sunward_ClassicLayout_v3_candidate.blend",
+  "source_sha256": "c267ed6dea36dc673f205a4ede3086278f4a22efb4e0ee37b16a28109b705cc5",
+  "scene_version": "3.0-candidate",
+  "house_versions": {
+    "A_Mint": "houses-r4",
+    "B_Saffron": "houses-r4"
+  },
+  "landmark_version": "landmarks-classic-r7",
+  "legacy_joined_collider_present": false,
+  "duplicate_visible_exit_gate_present": false,
+  "detailed_exit_rail_count": 8,
+  "floor_clip_present": true,
+  "proxy_mesh_count": 291,
+  "original_source_sha256": "460d54859e29c59d809da2bd0497e40ac2c8684630826e89415771847055bfc6",
+  "saved_source_not_modified": true,
+  "scope": "Independent saved-source geometry and Blender renders; not live browser/capsule validation",
+  "root_transforms": {
+    "A_Mint": [
+      [
+        0.949928343296051,
+        -0.3124675452709198,
+        0.0,
+        -3.9988954067230225
+      ],
+      [
+        0.3124675452709198,
+        0.949928343296051,
+        0.0,
+        20.121427536010742
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "B_Saffron": [
+      [
+        -0.950032114982605,
+        -0.3121522068977356,
+        0.0,
+        -9.775077819824219
+      ],
+      [
+        0.3121522068977356,
+        -0.950032114982605,
+        0.0,
+        -18.21718978881836
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "old_house_visual_names_remaining": [
+    "A_Mint_front.004_LowerPlaster",
+    "A_Mint_front.004_UpperPlaster",
+    "A_Mint_front.011_LowerPlaster",
+    "A_Mint_front.011_UpperPlaster",
+    "A_Mint_front.014_LowerPlaster",
+    "A_Mint_front.014_UpperPlaster",
+    "A_Mint_front.020_LowerPlaster",
+    "A_Mint_front.020_UpperPlaster",
+    "A_Mint_front.025_LowerPlaster",
+    "A_Mint_front.025_UpperPlaster",
+    "A_Mint_front.030_LowerPlaster",
+    "A_Mint_front.030_UpperPlaster",
+    "A_Mint_front.037_LowerPlaster",
+    "A_Mint_front.037_UpperPlaster",
+    "B_Saffron_front.004_LowerPlaster",
+    "B_Saffron_front.004_UpperPlaster",
+    "B_Saffron_front.011_LowerPlaster",
+    "B_Saffron_front.011_UpperPlaster",
+    "B_Saffron_front.014_LowerPlaster",
+    "B_Saffron_front.014_UpperPlaster",
+    "B_Saffron_front.020_LowerPlaster",
+    "B_Saffron_front.020_UpperPlaster",
+    "B_Saffron_front.025_LowerPlaster",
+    "B_Saffron_front.025_UpperPlaster",
+    "B_Saffron_front.030_LowerPlaster",
+    "B_Saffron_front.030_UpperPlaster",
+    "B_Saffron_front.037_LowerPlaster",
+    "B_Saffron_front.037_UpperPlaster"
+  ]
+}

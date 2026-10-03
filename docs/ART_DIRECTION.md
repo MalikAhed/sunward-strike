@@ -1,26 +1,24 @@
 # Visual direction and acceptance
 
-The current art direction is the user's supplied multi-panel environment reference from 2026-10-03. It guides materials, lighting, sky and vegetation. It does not replace the existing map's structural layout, dimensions, traversal routes or prop placements.
+The latest four references supplied on 2026-10-03 have distinct roles: sky tone/cloud forms; tree mesh/tones and grass; object surface finishes; and distant full-map color tone. The finish collage is not a mandatory object checklist. The distant view is not structural authority. Actual classic Nuketown imagery is the separate structural authority; see [the structural brief](MAP_STRUCTURE_PLAN.md). The collage is not a dimensional survey.
 
 ## Observable targets
 
-- Clear medium blue sky, large soft cream cloud forms and cool lower cloud shading
-- Warm sunlight on cream/tan masonry, cooler shaded planes, muted teal/coral/yellow paint
-- Broad restrained angular surface variation rather than noisy photoreal microdetail
-- Yellow-green grass and planted edges, with enough density to soften boundaries while keeping paths readable
-- Strong landmark silhouettes and readable shadow separation at player height
-- Original project branding and assets; no copied commercial textures or interface artwork
+- Medium-blue sky, large soft cream clouds and cool undersides
+- Warm cream/tan masonry in sunlight, cooler shaded planes, readable teal/coral/yellow paint
+- Broad restrained painted surface variation, avoiding noisy photoreal microdetail
+- Yellow-green folded grass, denser planted edges and clear traversal routes
+- Readable furnished interiors with warm surfaces and unobstructed stairs/doors
+- Original branding and owned geometry/materials; no extracted commercial assets
 
-## Implemented in the first viewer
+## Implementation boundaries
 
-The original map GLB is preserved byte-for-byte. A separate reversible atmosphere module adds original procedural clouds and reference-inspired shader/material color treatment. Existing foliage receives a warmer palette. No source-scene transforms or map geometry are changed by this runtime layer.
+The map's editable source and packed textures are versioned separately from its runtime GLBs. The web atmosphere adds original procedural sky/cloud meshes and scoped paint/foliage shaders without changing the source transforms. A Blender presentation world is a source-side approximation, not a live synchronization of browser shaders.
 
-## Still open
+The v3 structural candidate adds corrected house families and a reversible coral material treatment, plus 3,000 folded grass tufts. Source-only presentation scenery must stay excluded from gameplay collision and map GLB exports; the browser owns its atmosphere layer.
 
-Dense individual grass and a full reference-matched material/lighting pass are not completed. These need live rendered comparisons from hero, street, both courtyards, interiors and player-eye views. Current project screenshots/rendered previews do not prove a WebGL runtime match.
+## Acceptance evidence
 
-The first publishing environment's browser reports disabled graphics and cannot create WebGL2. The live page and file delivery can be tested there; real-time rendering, responsiveness, mouse capture, visual fidelity and GPU frame time must be checked in a WebGL2-capable browser. These checks remain pending rather than being described as passed.
+Fresh full-scene comparisons are required at the street, both house fronts/rears, yards and furnished interiors. Check warm highlights/cool shadows, sky hue, cloud silhouette, material warmth and vegetation density independently of structural correctness. Scoped geometry or material approval does not establish full art-direction acceptance. Concrete open differences belong in [the shared acceptance register](qa/SHARED_REVIEW.md).
 
-## Next art acceptance gate
-
-One builder makes a versioned change, an independent reviewer compares fresh runtime screenshots with the original reference pixels, and the integrator checks the whole scene and traversal. Record concrete closed/open differences and device/frame-time measurements. Do not label the result identical or perfect based on agreement alone.
+The cloud browser reports disabled graphics and cannot create WebGL2. Static public delivery, saved Blender renders and offline shader tests are useful but do not establish real-time browser fidelity, mouse/touch behavior or GPU frame time. Those remain pending until measured in a supported rendering browser. No exact-match or perfection claim is made.

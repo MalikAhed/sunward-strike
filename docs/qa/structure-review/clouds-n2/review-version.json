@@ -1,0 +1,10 @@
+{
+  "atmosphere_sha256": "2864f58bf1b845ca81645abae1ed3e196d4452a95c2c05e8fc9d738ba580ca4a",
+  "map_config_sha256": "1524479d6ed91fce70dcbe4f80c9994a0c9c970ee884c32d5d0753fdc4cdefc0",
+  "shape": "fluffy-cumulus-n2",
+  "cluster_triangles": 4288,
+  "placements": 12,
+  "accepted_scope": "offline compiler and atmosphere-only shape improvement",
+  "full_four_reference_style_accepted": false,
+  "live_browser_pass": false
+}
