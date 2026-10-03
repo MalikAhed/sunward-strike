@@ -1,0 +1,172 @@
+{
+  "created": "2026-10-03",
+  "map_version": "2.5",
+  "rifle_version": "revision2",
+  "files": [
+    {
+      "path": "source-assets/map/Sunward_TestSite.blend",
+      "bytes": 2559452,
+      "sha256": "460d54859e29c59d809da2bd0497e40ac2c8684630826e89415771847055bfc6"
+    },
+    {
+      "path": "source-assets/rifle/compact_carbine.blend",
+      "bytes": 3311960,
+      "sha256": "3901563e7dd3f85408d4457d92117b66cd31919ce0d63408d1bee93492416b8b"
+    },
+    {
+      "path": "source-assets/rifle/checkpoints/rifle_working.blend",
+      "bytes": 3115836,
+      "sha256": "e818629632e9b2c7f63f1e0dabe24612a38ae62083829faf8d5667547ac160a3"
+    },
+    {
+      "path": "source-assets/map/source/package_delivery.py",
+      "bytes": 1675,
+      "sha256": "34546df7c23deb9bc02136f637187170552f46424da457f7799c6645961fc21d"
+    },
+    {
+      "path": "source-assets/map/source/finalize_normals.py",
+      "bytes": 1682,
+      "sha256": "6b16aa6d5f9d7c3a8fbc8bb2fe63cc0fee705e666200488dde30a7d23d39a989"
+    },
+    {
+      "path": "source-assets/map/source/refine_export.py",
+      "bytes": 9100,
+      "sha256": "0196cb047d33a9974b44be011d3e1cb94a13ec1af3d4683d028f0aa9a5eaf247"
+    },
+    {
+      "path": "source-assets/map/source/qa_map.py",
+      "bytes": 7991,
+      "sha256": "624fd71dbab9e90a1bdda259da26f6c4fc87740a0e249ea2ac75f4301996776b"
+    },
+    {
+      "path": "source-assets/map/source/qa_collision.py",
+      "bytes": 4307,
+      "sha256": "3325fc5b734ac5eba9bdfc1d12444871ecccf1dbef8d89fa40b650f1170d023f"
+    },
+    {
+      "path": "source-assets/map/source/render_views.py",
+      "bytes": 997,
+      "sha256": "39e31f630b09ec6721a2225167cce91cb798b29712ca2d125f185a78578015ef"
+    },
+    {
+      "path": "source-assets/map/source/add_boundary.py",
+      "bytes": 2126,
+      "sha256": "99073d38ef868864bef9af8fcc3f257ec0fdcb7fff69036a56840fee4695947a"
+    },
+    {
+      "path": "source-assets/map/source/build_map.py",
+      "bytes": 33771,
+      "sha256": "7db542cc67f2a0f3b4b9a1bf762c89dd506c3f6db818ddf31160eff9fc331971"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/test_ground_overlap.py",
+      "bytes": 429,
+      "sha256": "ed76d031e4c8b198cb3daad742a7bc0d00b3849e250cb715a173023eebebb707"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/export_final.py",
+      "bytes": 3254,
+      "sha256": "7dda5db88ffd680fa56f964412d076df391123969357aec8abda1168566c5bc3"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/refine_art.py",
+      "bytes": 12763,
+      "sha256": "7e5465c1939597ac439ee4d50a41f4baa057a6bc4c89c95ef950bda6cdfd77bc"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/polish_art.py",
+      "bytes": 4578,
+      "sha256": "9edf69d3c3067b1d50dfafc379d9faa86ad7bd29680f8723b895541fdddcd8f2"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/render_delivery.py",
+      "bytes": 1073,
+      "sha256": "72dd2bfe0131210cb4aa36f06f44734b34775e03eac7b16890929c6b63516950"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/check_corner_ray.py",
+      "bytes": 598,
+      "sha256": "14e41c0ef9117bd5f2b51458c91b90f0522025ed5afbf5c5708aa0bb11de248c"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/test_eevee.py",
+      "bytes": 372,
+      "sha256": "d5a3d226b9ea45af9a496aae2d1525e1e9e9e1ff6072d43a6f604649fc493056"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/final_art_treatment.py",
+      "bytes": 3853,
+      "sha256": "4d8e984a172884fca16b48a9869b41b0aa138feb3790a3f050fb9a607c772fac"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/delivery_art.py",
+      "bytes": 2966,
+      "sha256": "6a9d130446245a742fcf4ffcc5925e0f083a03cb8a0f5612ab49e580c5b4f338"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/fix_ground_overlap.py",
+      "bytes": 913,
+      "sha256": "46caab0035ee0ccd98cdad250450d280c8313d75090a055a110795e11da3a743"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/source/package_v2.py",
+      "bytes": 3077,
+      "sha256": "e83c61200d08ddc5120d338cd1fa34d7f39d5f9817a3431d9d8c3055beaafdfa"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/add_architecture.py",
+      "bytes": 15828,
+      "sha256": "db847b3cb63b7e66758b12a703cd97e07c02b9fe181acd04fc182a61d29d6d50"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/add_foliage.py",
+      "bytes": 15727,
+      "sha256": "1b2f70471493a1c7605722029982ecd033f565f78e1aa65a5c38e5a967102382"
+    },
+    {
+      "path": "source-assets/map/refinement-v2/add_foliage_dense.py",
+      "bytes": 16109,
+      "sha256": "838867c9e69112d115be927fca55375085c29a0b4b273839f660588d3169d399"
+    },
+    {
+      "path": "source-assets/rifle/scripts/render_animation.py",
+      "bytes": 1077,
+      "sha256": "200103106c5339c648afb8e5dba65290a4371cf9ee073e9610306c15fde8b75b"
+    },
+    {
+      "path": "source-assets/rifle/scripts/build_asset.py",
+      "bytes": 5388,
+      "sha256": "1db27d473713271f1dad1a92336e1584b9a9b222be792176342d291bfc0bb41c"
+    },
+    {
+      "path": "source-assets/rifle/scripts/foreend.py",
+      "bytes": 19639,
+      "sha256": "a71a9af581bc4c5e1006d371a8a3cad5fa273c373d29eba73a41245ba9b087e9"
+    },
+    {
+      "path": "source-assets/rifle/scripts/finish_asset.py",
+      "bytes": 10823,
+      "sha256": "4835bca275009cc8cc2579b732806ac4f259fd9c2ad80d7513c6317e7766ca3a"
+    },
+    {
+      "path": "source-assets/rifle/scripts/stock.py",
+      "bytes": 12269,
+      "sha256": "662db55f805efc80364897aff9461b0ea8ccd6b4258d98d9c87cf75a576868c8"
+    },
+    {
+      "path": "source-assets/rifle/scripts/qa_export.py",
+      "bytes": 25433,
+      "sha256": "12d3d914efb63249067b5f0eb6b3000c835494c76ada557aa134858fafc111b3"
+    },
+    {
+      "path": "source-assets/rifle/scripts/receiver.py",
+      "bytes": 14933,
+      "sha256": "d6a91e95aac16af7ac87a6252fac49c81dac5a2ec1ce8ee39e10c15548d65a9b"
+    },
+    {
+      "path": "source-assets/rifle/scripts/package_previews.py",
+      "bytes": 1093,
+      "sha256": "89ef4f7c11ec228f8e193d17aced0aebdee29994b01206a600abb8a78c4eea54"
+    }
+  ]
+}

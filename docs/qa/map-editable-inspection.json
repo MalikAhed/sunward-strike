@@ -1,0 +1,90 @@
+{
+  "filepath": "/workspace/shared/stylized-nuketown-map/Sunward_TestSite.blend",
+  "scene_extras": {
+    "map_title": "SUNWARD / TEST SITE 07",
+    "layout_reference": "Classic Nuketown structure inspired; original geometry; estimated dimensions",
+    "playable_footprint_m": "58 x 74",
+    "player_reference": "1.8m tall; 0.35m capsule radius; 0.30m step height",
+    "cycles": "<bpy id prop: owner=\"SCScene\", name=\"cycles\", address=0x7ff72f73e820>",
+    "build_version": "2.5",
+    "cargo_access": "Open rear loading ramp gives a dead-end covered perch; no forward exit",
+    "collision_note": "Separate simplified static triangle collision GLB includes stair ramps; engine navmesh must be baked and tested",
+    "boundary_collision": "58 x 74m outer clip walls; invisible in render",
+    "art_direction": "User references: warm textured plaster and stone, aged timber, layered foliage, neutral daylight with warm/cool separation",
+    "v2_architecture_report": "1016 paving stones, 242 masonry blocks, 30704 evaluated triangles",
+    "v2_foliage_triangles": 37928,
+    "art_review": "Warm lower plaster, colored upper houses, preserved layout, layered foliage, timber/stone detail, readable shade and clean road surface",
+    "art_direction_notes": "Reference-inspired warm plaster, irregular limestone, aged timber, leafy overgrowth and neutral daylight. Original footprint and routes preserved.",
+    "notes": "Reference-inspired art pass; original layout/collision preserved; compact baked maps and original foliage geometry",
+    "ground_overlap_fixed": "Redundant coplanar visual base removed. Static collision unchanged; world ground supplies the same visible level."
+  },
+  "mesh_objects": 1816,
+  "packed_images": [
+    {
+      "name": "Render Result",
+      "packed": false,
+      "filepath": ""
+    },
+    {
+      "name": "V2_Aged_Timber_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Aged_Timber_BaseColor.png"
+    },
+    {
+      "name": "V2_Aged_Timber_Normal.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Aged_Timber_Normal.png"
+    },
+    {
+      "name": "V2_Ground_Moss_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Ground_Moss_BaseColor.png"
+    },
+    {
+      "name": "V2_Limestone_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Limestone_BaseColor.png"
+    },
+    {
+      "name": "V2_Road_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Road_BaseColor.png"
+    },
+    {
+      "name": "V2_Saffron_Plaster_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Saffron_Plaster_BaseColor.png"
+    },
+    {
+      "name": "V2_Sage_Plaster_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Sage_Plaster_BaseColor.png"
+    },
+    {
+      "name": "V2_Warm_Plaster_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Warm_Plaster_BaseColor.png"
+    },
+    {
+      "name": "V2_Warm_Plaster_Normal.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Warm_Plaster_Normal.png"
+    },
+    {
+      "name": "V2_Weathered_Roof_BaseColor.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Weathered_Roof_BaseColor.png"
+    },
+    {
+      "name": "V2_Weathered_Roof_Normal.png",
+      "packed": true,
+      "filepath": "/workspace/shared/stylized-nuketown-map/refinement-v2/textures/V2_Weathered_Roof_Normal.png"
+    }
+  ],
+  "collision_collection_present": true,
+  "collision_collection_names": [
+    "91_Collision_Proxies"
+  ],
+  "playable_base_present": false,
+  "source_texts": []
+}

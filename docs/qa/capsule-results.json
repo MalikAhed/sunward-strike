@@ -1,0 +1,96 @@
+{
+  "buildMs": 229.64632899999998,
+  "memoryAfterBuild": {
+    "rss": 101969920,
+    "heapTotal": 56963072,
+    "heapUsed": 29809144,
+    "external": 9026024,
+    "arrayBuffers": 2559103
+  },
+  "collisionStats": {
+    "triangleCount": 11286,
+    "mirroredMeshes": 1,
+    "nodes": 8342,
+    "references": 108408,
+    "maxLevel": 5
+  },
+  "method": "Node import of exact collision GLB using Three Octree and imported current src/physics.js WalkController. No browser or visual QA inferred; Node timings are not browser FPS.",
+  "passed": false,
+  "results": [
+    {
+      "name": "street spawn settles on ground",
+      "start": [
+        -15,
+        1.690000003959212,
+        -8.935201929630018e-12
+      ],
+      "end": [
+        -15,
+        1.690000003959212,
+        -8.935201929630018e-12
+      ],
+      "onFloor": true,
+      "pass": true
+    },
+    {
+      "name": "north rear doorway without jumping",
+      "start": [
+        -1.25,
+        1.7850000031157953,
+        -26.000000000051273
+      ],
+      "end": [
+        -1.25,
+        1.8600003686012947,
+        -19.401724152581433
+      ],
+      "onFloor": true,
+      "pass": true
+    },
+    {
+      "name": "south rear doorway without jumping",
+      "start": [
+        1.25,
+        1.7850000098687377,
+        25.999999999948727
+      ],
+      "end": [
+        1.25000000665973,
+        1.8600001063321212,
+        19.401805041725282
+      ],
+      "onFloor": true,
+      "pass": true
+    },
+    {
+      "name": "north spawn cannot walk through rear solid wall",
+      "start": [
+        0,
+        1.770000001403007,
+        -30.999999999985224
+      ],
+      "end": [
+        -1.9784547412581984e-15,
+        1.7850000078452946,
+        -22.974999947906664
+      ],
+      "onFloor": false,
+      "pass": true
+    },
+    {
+      "name": "jump works while holding forward into rear wall",
+      "start": [
+        -1.9784547412581984e-15,
+        1.7850000078452946,
+        -22.974999947906664
+      ],
+      "end": [
+        -2.2478770370706328e-15,
+        1.7850000078452946,
+        -22.974999947906664
+      ],
+      "peakCameraY": 1.7850000078452948,
+      "pass": false
+    }
+  ]
+}

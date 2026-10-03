@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {Capsule} from 'three/addons/math/Capsule.js';
+import {Vector3} from 'three';
+import {buildCollisionOctree} from '../src/collision.js';
+const bytes=fs.readFileSync(new URL('../public/assets/sunward-collision.glb',import.meta.url));
+const collision=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+const tree=buildCollisionOctree(collision.scene);
+test('source collider budget is bounded, mirror winding handled',()=>{assert.equal(tree.stats.triangleCount,11286);assert.equal(tree.stats.mirroredMeshes,1);assert.ok(tree.stats.nodes<40000);assert.ok(tree.stats.references<200000);});
+test('street capsule contacts floor with upward normal',()=>{const capsule=new Capsule(new Vector3(-15,.34,0),new Vector3(-15,1.44,0),.35);const hit=tree.capsuleIntersect(capsule);assert.ok(hit);assert.ok(hit.normal.y>.9);assert.ok(hit.depth<.2);});
+test('spawn is above ground, downward ray reaches surface',()=>{const capsule=new Capsule(new Vector3(-15,.6,0),new Vector3(-15,1.7,0),.35);assert.equal(tree.capsuleIntersect(capsule),false);});
+console.log('COLLISION_BUILD_STATS',tree.stats);
+const {WalkController}=await import('../src/physics.js');
+test('actual walk controller settles, walks, and stays grounded',()=>{const player=new WalkController(tree);player.spawn(new Vector3(0,1.9,-31));for(let i=0;i<120;i++)player.update(1/60);const before=player.collider.end.clone();assert.ok(Math.abs(before.y-1.58)<.06);for(let i=0;i<120;i++)player.update(1/60,{x:1,z:0});assert.ok(player.collider.end.x>7);assert.ok(player.collider.end.y>1.45&&player.collider.end.y<1.7);});
+test('perimeter blocks original movement within map bounds',()=>{const player=new WalkController(tree);player.spawn(new Vector3(27,1.9,-31));for(let i=0;i<180;i++)player.update(1/60,{x:1});assert.ok(player.collider.end.x<28.7);assert.ok(player.collider.end.x>27);});

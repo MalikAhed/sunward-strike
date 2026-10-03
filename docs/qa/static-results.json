@@ -1,0 +1,161 @@
+{
+  "method": "Static source/production/GLB checks only; browser runtime remains separate",
+  "results": [
+    {
+      "check": "source copy exists sunward-v2.5.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact source SHA-256 sunward-v2.5.glb",
+      "pass": true,
+      "detail": "5c55f997e74eb39d3a32a842ac417d04b37c905f982f60bdc8ab814ca10aec42"
+    },
+    {
+      "check": "self-contained GLB sunward-v2.5.glb",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "map build version",
+      "pass": true,
+      "detail": "2.5"
+    },
+    {
+      "check": "map triangles",
+      "pass": true,
+      "detail": "207294"
+    },
+    {
+      "check": "map material/texture retention",
+      "pass": true,
+      "detail": "57 materials / 11 images"
+    },
+    {
+      "check": "source copy exists carbine-revision2.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact source SHA-256 carbine-revision2.glb",
+      "pass": true,
+      "detail": "13f9c861adb51e8e18556a47fe60ca33d16ae65f593b979f4e3a8c1a7ac210ce"
+    },
+    {
+      "check": "self-contained GLB carbine-revision2.glb",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "rifle clips intact",
+      "pass": true,
+      "detail": "['Fire', 'Inspect', 'Reload', 'Charge']"
+    },
+    {
+      "check": "rifle triangles/materials",
+      "pass": true,
+      "detail": "25225 / 10"
+    },
+    {
+      "check": "source copy exists sunward-collision.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact source SHA-256 sunward-collision.glb",
+      "pass": true,
+      "detail": "378d5121d97faf7ca5af615c13c0104742c59cffe77e247c32ede25fdece83ce"
+    },
+    {
+      "check": "self-contained GLB sunward-collision.glb",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "rifle wrapper suggested -Y rotation maps -X to -Z",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production index exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "HTML avoids root-relative URLs",
+      "pass": true,
+      "detail": "['./assets/index-TPwZU82b.js', './assets/index-CrtAvYeG.css', './']"
+    },
+    {
+      "check": "HTML local references exist",
+      "pass": true,
+      "detail": "['./assets/index-TPwZU82b.js', './assets/index-CrtAvYeG.css', './']"
+    },
+    {
+      "check": "production entry lacks localhost",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production asset exists sunward-v2.5.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production asset hash sunward-v2.5.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production asset exists carbine-revision2.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production asset hash carbine-revision2.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production asset exists sunward-collision.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production asset hash sunward-collision.glb",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production JS exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production JS lacks localhost runtime origin",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "production JS avoids absolute GLB paths",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "application source exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "application assets avoid root-relative GLB URLs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "application has no runtime CDN import",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": true
+}

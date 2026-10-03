@@ -1,0 +1,10 @@
+{
+  "name": "sunward-strike",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Original SUNWARD environment browser FPS viewer and offline game prototype",
+  "scripts": { "dev": "vite --host 0.0.0.0", "build": "vite build", "preview": "vite preview --host 0.0.0.0", "test": "node --test tests/*.test.js" },
+  "dependencies": { "three": "0.180.0" },
+  "devDependencies": { "vite": "7.1.7" }
+}

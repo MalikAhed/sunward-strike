@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101f24"><meta name="description" content="Explore the original SUNWARD environment in a browser. Free-flight, orbit overview, and a first-person game-art carbine.">
+  <title>SUNWARD STRIKE · Test Site 07</title>
+</head>
+<body>
+  <main id="app">
+    <canvas id="scene" aria-label="Interactive SUNWARD 3D map"></canvas>
+    <div id="vignette"></div>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="SUNWARD STRIKE home"><span class="brand-mark">S<span> /</span></span><span class="brand-name">SUNWARD<span>STRIKE</span></span></a>
+      <div class="top-right"><span class="build-label"><i></i> LOCAL PROTOTYPE</span><button id="help-toggle" class="icon-button" aria-label="Toggle controls" title="Controls (H)">?</button><button id="fullscreen" class="icon-button" aria-label="Toggle fullscreen" title="Fullscreen">⛶</button></div>
+    </header>
+    <nav class="mode-switch" aria-label="Camera mode">
+      <button data-mode="fly" class="selected"><span>01</span> FREEFLY</button>
+      <button data-mode="walk"><span>02</span> FIRST PERSON</button>
+      <button data-mode="orbit"><span>03</span> OVERVIEW</button>
+    </nav>
+    <section id="intro" class="intro">
+      <p class="eyebrow"><span></span> TEST SITE 07 / ENVIRONMENT v2.5</p>
+      <h1>SMALL TOWN.<br><em>WIDE OPEN.</em></h1>
+      <p class="intro-copy">Two houses. Three lanes. Every angle is yours.<br>Fly the map or step into the street.</p>
+      <button id="explore" class="primary">EXPLORE SUNWARD <span>↗</span></button>
+      <p class="intro-foot">Original game-art environment · desktop & touch</p>
+    </section>
+    <section id="loading" class="loading" role="status"><span class="loading-orb"></span><strong>Preparing the site</strong><p id="loading-text">Loading environment and embedded textures</p><div class="load-track"><div id="load-progress"></div></div></section>
+    <div id="error" class="error hidden" role="alert"></div>
+    <div id="crosshair" class="crosshair hidden"><span></span></div>
+    <div id="hit-marker" class="hit-marker hidden">×</div>
+    <div id="lock-hint" class="lock-hint hidden">Click the scene to capture mouse · Esc to release</div>
+    <aside id="controls" class="controls">
+      <div class="controls-title"><span>FIELD GUIDE</span><button id="controls-close" aria-label="Hide controls">×</button></div>
+      <div class="control-row"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><span>Move</span></div>
+      <div class="control-row"><span><kbd>Q</kbd><kbd>E</kbd></span><span id="vertical-label">Descend / ascend</span></div>
+      <div class="control-row"><span><kbd>SHIFT</kbd></span><span>Move faster</span></div>
+      <div class="control-row"><span><kbd>MOUSE</kbd></span><span id="mouse-label">Drag to look</span></div>
+      <div class="control-row"><span><kbd>F</kbd><kbd>ESC</kbd></span><span>Capture / release</span></div>
+      <div id="walk-controls" class="hidden"><div class="control-row"><span><kbd>SPACE</kbd></span><span>Jump</span></div><div class="control-row"><span><kbd>R</kbd><kbd>I</kbd></span><span>Reload / inspect</span></div><div class="control-row"><span><kbd>LMB</kbd><kbd>RMB</kbd></span><span>Fire / aim</span></div></div>
+      <p class="guide-note" id="guide-note">Freefly passes through geometry. No boundaries.</p>
+    </aside>
+    <div class="touch-controls"><div class="touch-dpad"><button data-key="KeyW" aria-label="Forward">↑</button><button data-key="KeyA" aria-label="Left">←</button><button data-key="KeyS" aria-label="Backward">↓</button><button data-key="KeyD" aria-label="Right">→</button></div><div class="touch-height"><button data-key="KeyE" aria-label="Ascend">+</button><button data-key="KeyQ" aria-label="Descend">−</button></div></div>
+    <footer class="bottombar">
+      <div class="site-caption"><span class="caption-rule"></span><span><strong>THE NEIGHBORHOOD</strong><small id="position">SUNWARD / 58 × 74 m</small></span></div>
+      <div class="bottom-tools"><label class="select-field"><span>VIEWPOINT</span><select id="viewpoint" aria-label="Viewpoint"><option value="hero">Hero view</option><option value="street">Central street</option><option value="mint">Mint courtyard</option><option value="saffron">Saffron courtyard</option><option value="rooftop">Rooftop survey</option><option value="topdown">Top down</option></select></label><label class="select-field quality"><span>QUALITY</span><select id="quality" aria-label="Render quality"><option value="high">High</option><option value="balanced" selected>Balanced</option><option value="low">Low</option></select></label><button id="reset" class="reset-button" title="Reset view">↺ <span>RESET</span></button></div>
+    </footer>
+    <div id="telemetry" class="telemetry"><span id="mode-label">FREEFLY</span><span id="fps">— FPS</span></div>
+    <div id="weapon-hud" class="weapon-hud hidden"><span>COMPACT CARBINE <small>REVISION 02</small></span><strong id="ammo">30<span>/ ∞</span></strong></div>
+    <div id="toast" class="toast hidden" role="status"></div>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
