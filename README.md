@@ -2,6 +2,8 @@
 
 A lightweight original browser FPS project with a stylized SUNWARD arena. The first milestone is a playable scene viewer for inspecting the current map and rifle while the offline game is developed.
 
+[Open the public map explorer](https://malikahed.github.io/sunward-strike/)
+
 ## Current milestone
 
 - SUNWARD v2.5 environment with embedded textures and unchanged source layout
@@ -12,6 +14,8 @@ A lightweight original browser FPS project with a stylized SUNWARD arena. The fi
 - Bundled Three.js and relative asset paths for static hosting
 
 Combat damage, enemies, sliding, TDM and Kill Confirmed match rules are **not implemented in this first viewer**. Offline bots, adjustable difficulty and mode rules are specified in [the gameplay research and plan](docs/GAMEPLAY_RESEARCH.md). Battle royale is a later phase.
+
+Visual direction follows warm faceted painted surfaces, blue sky with cream clouds, and yellow-green vegetation. Existing foliage is preserved; a denser grass pass remains open. See [art direction and review gates](docs/ART_DIRECTION.md).
 
 ## Controls
 

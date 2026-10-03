@@ -84,12 +84,12 @@
     {
       "check": "HTML avoids root-relative URLs",
       "pass": true,
-      "detail": "['./assets/index-TPwZU82b.js', './assets/index-CrtAvYeG.css', './']"
+      "detail": "['./assets/index-BJ35l05o.js', './assets/index-C1uQO67Q.css', './']"
     },
     {
       "check": "HTML local references exist",
       "pass": true,
-      "detail": "['./assets/index-TPwZU82b.js', './assets/index-CrtAvYeG.css', './']"
+      "detail": "['./assets/index-BJ35l05o.js', './assets/index-C1uQO67Q.css', './']"
     },
     {
       "check": "production entry lacks localhost",

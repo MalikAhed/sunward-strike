@@ -1,9 +1,9 @@
 {
-  "buildMs": 229.64632899999998,
+  "buildMs": 208.34594699999997,
   "memoryAfterBuild": {
-    "rss": 101969920,
-    "heapTotal": 56963072,
-    "heapUsed": 29809144,
+    "rss": 101953536,
+    "heapTotal": 55914496,
+    "heapUsed": 27383592,
     "external": 9026024,
     "arrayBuffers": 2559103
   },
@@ -15,19 +15,19 @@
     "maxLevel": 5
   },
   "method": "Node import of exact collision GLB using Three Octree and imported current src/physics.js WalkController. No browser or visual QA inferred; Node timings are not browser FPS.",
-  "passed": false,
+  "passed": true,
   "results": [
     {
       "name": "street spawn settles on ground",
       "start": [
         -15,
-        1.690000003959212,
-        -8.935201929630018e-12
+        1.7143888888888892,
+        0
       ],
       "end": [
         -15,
-        1.690000003959212,
-        -8.935201929630018e-12
+        1.7143888888888892,
+        0
       ],
       "onFloor": true,
       "pass": true
@@ -36,13 +36,13 @@
       "name": "north rear doorway without jumping",
       "start": [
         -1.25,
-        1.7850000031157953,
-        -26.000000000051273
+        1.8077,
+        -26
       ],
       "end": [
         -1.25,
-        1.8600003686012947,
-        -19.401724152581433
+        1.8849031601046564,
+        -19.402241916096926
       ],
       "onFloor": true,
       "pass": true
@@ -51,13 +51,13 @@
       "name": "south rear doorway without jumping",
       "start": [
         1.25,
-        1.7850000098687377,
-        25.999999999948727
+        1.8077,
+        26
       ],
       "end": [
-        1.25000000665973,
-        1.8600001063321212,
-        19.401805041725282
+        1.2499999999999998,
+        1.8849011629552999,
+        19.40224217696115
       ],
       "onFloor": true,
       "pass": true
@@ -66,31 +66,31 @@
       "name": "north spawn cannot walk through rear solid wall",
       "start": [
         0,
-        1.770000001403007,
-        -30.999999999985224
+        1.7912333333333335,
+        -31
       ],
       "end": [
-        -1.9784547412581984e-15,
-        1.7850000078452946,
-        -22.974999947906664
+        -1.9757635026243716e-15,
+        1.7915725684147996,
+        -22.974999946914238
       ],
-      "onFloor": false,
+      "onFloor": true,
       "pass": true
     },
     {
       "name": "jump works while holding forward into rear wall",
       "start": [
-        -1.9784547412581984e-15,
-        1.7850000078452946,
-        -22.974999947906664
+        -1.9757635026243716e-15,
+        1.7915725684147996,
+        -22.974999946914238
       ],
       "end": [
-        -2.2478770370706328e-15,
-        1.7850000078452946,
-        -22.974999947906664
+        -2.245185798436806e-15,
+        2.182430982149072,
+        -22.974999887896256
       ],
-      "peakCameraY": 1.7850000078452948,
-      "pass": false
+      "peakCameraY": 2.5962473294621637,
+      "pass": true
     }
   ]
 }

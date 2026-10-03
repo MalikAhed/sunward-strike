@@ -11,9 +11,25 @@ import { clamp, damp, normalizedInput, rotationFromLook, VIEWPOINTS } from './ma
 const $ = (id) => document.getElementById(id);
 const canvas = $('scene');
 const state = { ready:false, mode:'fly', viewpoint:'hero', quality:'balanced', mapVersion:'2.5', rifleVersion:'revision2', fps:0, pointerLocked:false, collisionReady:false, rifleReady:false, ammo:30, reloading:false, shots:0, lastError:null, drawCalls:0, triangles:0, frame:0 };
+function showGraphicsFallback(error){
+  state.lastError=String(error);state.fallback=true;
+  for(const selector of ['.mode-switch','#intro','#loading','#controls','#bottombar','.bottombar','#telemetry','#crosshair','#weapon-hud','#lock-hint','.touch-controls','#help-toggle','#fullscreen','#error'])document.querySelector(selector)?.classList.add('hidden');
+  const fallback=document.createElement('section');fallback.className='graphics-fallback';
+  const poster=document.createElement('img');poster.src=`${import.meta.env.BASE_URL}assets/map-poster.png`;poster.alt='Static Blender-rendered overview of the SUNWARD source environment';poster.className='fallback-poster';fallback.append(poster);
+  const card=document.createElement('div');card.className='fallback-card';card.setAttribute('role','status');
+  const label=document.createElement('p');label.className='eyebrow';label.textContent='STATIC SOURCE PREVIEW';
+  const title=document.createElement('h1');title.textContent='THE SITE IS HERE.';
+  const explanation=document.createElement('p');explanation.textContent='Interactive 3D couldn’t start because this browser did not provide WebGL 2. The image behind this message is a static Blender preview of the source map.';
+  const next=document.createElement('p');next.className='fallback-next';next.textContent='Try a current browser with graphics acceleration enabled, then reload.';
+  const retry=document.createElement('button');retry.className='primary';retry.textContent='RETRY PAGE';retry.addEventListener('click',()=>location.reload());
+  card.append(label,title,explanation,next,retry);fallback.append(card);$('app').append(fallback);
+  Object.defineProperty(window,'sunwardDebug',{configurable:false,get:()=>Object.freeze({...state,renderer:Object.freeze({webgl2:false}),assets:Object.freeze({map:'sunward-v2.5.glb',poster:'map-poster.png'})})});
+  console.warn('SUNWARD graphics fallback:',error.message);
+}
+function start(){
 let renderer;
 try { renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:false, powerPreference:'high-performance'}); }
-catch (error) { $('loading').classList.add('completed'); $('error').textContent='This viewer needs WebGL 2. Please try a current browser with graphics acceleration enabled.'; $('error').classList.remove('hidden'); throw error; }
+catch (error) {showGraphicsFallback(error);return;}
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.08;
@@ -129,3 +145,6 @@ renderer.autoClear=true;renderer.render(scene,camera);state.drawCalls=renderer.i
 if(toastTimer>0){toastTimer-=dt;if(toastTimer<=0)$('toast').classList.add('hidden');}frameCount++;if(now-fpsStart>700){state.fps=Math.round(frameCount*1000/(now-fpsStart));$('fps').textContent=`${state.fps} FPS`;$('position').textContent=`X ${camera.position.x.toFixed(1)}  Y ${camera.position.y.toFixed(1)}  Z ${camera.position.z.toFixed(1)} / METERS`;fpsStart=now;frameCount=0;}}
 requestAnimationFrame(frame);
 Object.defineProperty(window,'sunwardDebug',{configurable:false,get:()=>Object.freeze({...state,onFloor:walker.onFloor,aiming:aim,fireHeld,camera:Object.freeze({position:camera.position.toArray(),yaw,pitch,fov:camera.fov}),assets:Object.freeze({map:'sunward-v2.5.glb',collision:'sunward-collision.glb',rifle:'carbine-revision2.glb'}),clips:Object.keys(clips),mapMeshes:map?(()=>{let n=0;map.traverse(o=>{if(o.isMesh)n++;});return n;})():0,renderer:Object.freeze({webgl2:true,pixelRatio:renderer.getPixelRatio(),width:canvas.width,height:canvas.height})})});
+
+}
+start();
