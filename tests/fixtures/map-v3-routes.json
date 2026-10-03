@@ -4100,5 +4100,5 @@
   "frame_version": "layout-r3-family-corrected",
   "release_input": "release-rc1",
   "scene_sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
-  "expected_collision_geometry_sha256": "61909ae2c4aab842acd9c8b64d26c476496730546118ca52cbbd0187850353a4"
+  "expected_collision_geometry_sha256": "d11884850d061de3e0023ec4d0aee24744d5e9c3ecb61e51aee80e8b437f764e"
 }

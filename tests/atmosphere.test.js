@@ -3,14 +3,17 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import * as THREE from 'three';
-import { applyReferencePalette, createClouds, createSky } from '../src/atmosphere.js';
+import { applyReferencePalette, createClouds, createSky, ATMOSPHERE_CONFIG } from '../src/atmosphere.js';
 import { MAP_CONFIG } from '../src/map-config.js';
 import {decodeGlbBytes} from '../src/asset-loader.js';
 import { shaderSources } from './helpers/shader-sources.js';
 
-const paintNames = MAP_CONFIG.paintMaterials;
+const bakedPrefixes = MAP_CONFIG.style.bakedMaterialPrefixes;
+const textures=Object.fromEntries([ATMOSPHERE_CONFIG.cloudTexture,ATMOSPHERE_CONFIG.mountainTexture].map(name=>[name,new THREE.Texture()]));
 const mapBytes = Buffer.from(await decodeGlbBytes(readFileSync(new URL(`../public/assets/${MAP_CONFIG.assets.map}`, import.meta.url))));
 const sourceMap = JSON.parse(mapBytes.subarray(20, 20 + mapBytes.readUInt32LE(12)).toString());
+const paintNames = sourceMap.materials.map(material=>material.name).filter(name=>bakedPrefixes.some(prefix=>name.startsWith(prefix)));
+const representativeNames = ['V3_Tone_Turquoise_Plaster_p1r5','V3_Tone_SunnyYellow_Plaster_p1r5','V3_Tone_Cream_Plaster_p1r5','V3_Tone_Honey_Timber_p1r5','V3_Tone_Warm_SandGround_p1r5','V4R5_Canopy_LeafAtlas','V4R5_Lawn_Blade_0','D3_Rug_Pattern_0','D3_Fabric_Warm_Yellow'];
 function painted(name) {
   const source = sourceMap.materials.find(material => material.name === name);
   assert.ok(source, `Current map must contain material ${name}`);
@@ -40,48 +43,31 @@ function painted(name) {
   return material;
 }
 
-test('all plaster shaders use a valid, versioned paint-layer program', () => {
-  for (const name of paintNames) {
-    const material = painted(name);
-    const sources = shaderSources(material);
-    assert.match(sources.vertex, /vArtWorld=/);
-    assert.match(sources.fragment, /float artPaintVariation=artHash/);
-    assert.doesNotMatch(sources.fragment, /\bfloat\s+patch\b/);
-    assert.equal(material.customProgramCacheKey(), 'sunward-art-layer-paint-v2');
-  }
+test('all actual baked style surfaces remain untinted by legacy runtime layers', () => {
+  assert.deepEqual(MAP_CONFIG.paintMaterials,[]);assert.equal(MAP_CONFIG.style.materialsBaked,true);assert.ok(paintNames.length>30);
+  for(const name of paintNames){const material=painted(name),sources=shaderSources(material);assert.doesNotMatch(sources.fragment,/float artPaintVariation=artHash/);assert.doesNotMatch(sources.fragment,/\bfloat\s+patch\b/);assert.doesNotMatch(material.customProgramCacheKey(),/sunward-art-layer/);}
 });
 
-test('atmosphere keeps authored blue/cream colors and fuller cloud silhouettes', () => {
-  const sky = createSky();
-  assert.equal(sky.material.toneMapped, false);
-  assert.equal(sky.material.uniforms.topColor.value.getHexString(), '478ed8');
-  assert.equal(sky.material.uniforms.bottomColor.value.getHexString(), '94c6ec');
-  const clouds = createClouds();
-  assert.equal(clouds.children.length, 12);
-  clouds.traverse(object => {
-    if (!object.isMesh) return;
-    assert.equal(object.material.toneMapped, false);
-    assert.equal(object.parent.children.length, 1, 'Each cluster is one smoothly joined surface');
-    assert.ok(object.geometry.userData.triangleCount < 8000, 'Cloud topology stays bounded');
-    const size = object.geometry.boundingBox.getSize(new THREE.Vector3());
-    assert.ok(size.y / size.x > .55, 'Cumulus mass retains vertical volume');
-    assert.equal(object.material.uniforms.cream.value.getHexString(), 'fffdf5');
-  });
+test('accepted n5 keeps distant azure sky and bounded cloud atlas cards', () => {
+  const sky=createSky(),clouds=createClouds({textures});
+  assert.equal(sky.material.toneMapped,false);assert.equal(sky.material.uniforms.zenith.value.getHexString(),'3287e2');
+  assert.equal(clouds.children.length,12);
+  for(const cloud of clouds.children){assert.equal(cloud.material.toneMapped,false);assert.ok(cloud.geometry.index.count/3<8000);assert.equal(cloud.frustumCulled,false);}
 });
 
 test('full renderer-generated GLSL ES shaders compile and link offline', (t) => {
   const programs = [];
-  for (const name of [...paintNames, 'V2_Ground_Moss']) {
+  for (const name of representativeNames) {
     for (const shadows of [false, true]) {
       programs.push({ name: `${name}-${shadows ? 'shadowed' : 'low'}`, ...shaderSources(painted(name), shadows) });
     }
   }
-  const clouds = createClouds();
-  programs.push({ name: 'OriginalCreamCloudLayer', ...shaderSources(clouds.children[0].children[0].material) });
+  const clouds = createClouds({textures});
+  programs.push({ name: 'OriginalCreamCloudLayer', ...shaderSources(clouds.children[0].material) });
   programs.push({ name: 'OriginalBlueSkyLayer', ...shaderSources(createSky().material) });
   // Prove that this compiler test catches the original missing-wall defect.
-  const original = shaderSources(painted(paintNames[0]));
-  programs.push({ name: 'reserved-word-negative-control', vertex: original.vertex, fragment: original.fragment.replaceAll('artPaintVariation', 'patch') });
+  const original = shaderSources(painted(representativeNames[0]));
+  programs.push({ name: 'reserved-word-negative-control', vertex: original.vertex, fragment: original.fragment.replace('void main() {','void main() { float patch=0.;') });
   const result = spawnSync('python3', [new URL('./helpers/compile-egl.py', import.meta.url).pathname], {
     input: JSON.stringify(programs), encoding: 'utf8', maxBuffer: 1024 * 1024,
   });

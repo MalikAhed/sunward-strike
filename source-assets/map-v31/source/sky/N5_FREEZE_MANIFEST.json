@@ -1,0 +1,116 @@
+{
+  "version": "distant-painted-banks-n5-rc1",
+  "base_source_sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
+  "protected_geometry_before_after_sha256": "f7f04eceec28539adffe0cd574d11838c0215a4248a7d240681d14a8f5f91bfc",
+  "live_n2_atmosphere_sha256_unchanged": "2864f58bf1b845ca81645abae1ed3e196d4452a95c2c05e8fc9d738ba580ca4a",
+  "author_visual_status": "accepted for scoped atmosphere; independent final scoped sign-off passed",
+  "independent_runtime_status": "106 checks and117 production GLSL variants passed against p1r5; plus5 dedicated tests, zero skips",
+  "render_evidence_scope": "Blender native and real offscreen Mesa GLES3. Artist diagnostic images use LINEAR; independent accepted raster evidence uses production mipmapping+4x anisotropy. No browser/input/FPS claim.",
+  "files": {
+    "Sunward_DistantSky_n5_rc1.blend": {
+      "sha256": "0453bc9cc2ccb2c093bfaf23c12ab2f55c4d621b6fc45e3b42ae2c5bfd79986a",
+      "bytes": 9040905
+    },
+    "native_atmosphere.py": {
+      "sha256": "3dce1efa59c6c947ef0769feee8928ab7206dfb1639b452a9c14e48642dd40ab",
+      "bytes": 14752
+    },
+    "native-sky-radiance-n5.json": {
+      "sha256": "70a0c9d710d5008ffaff4861a63868a365144929e275687223584741c0677b8b",
+      "bytes": 24542
+    },
+    "atmosphere-parity-n5.json": {
+      "sha256": "86449091a756d81a3cdb1bcdb9616dfcef011de4acc847b554916e8db278b685",
+      "bytes": 292857
+    },
+    "render_native_candidate.py": {
+      "sha256": "026a2ee7bfdd539172a287a8a6dd3717035b3886217c065617cd9d47e0a7c14d",
+      "bytes": 2551
+    },
+    "assets/cream-cloud-atlas-n5.png": {
+      "sha256": "88a4d5ea9098b7dec21198c55939c50826c755f8ca51355658a8967621e4c7c6",
+      "bytes": 1609679
+    },
+    "assets/peach-mountain-atlas-n5.png": {
+      "sha256": "0dce1ff0db7528511ca0ffebc1cf351a0c0375cd956cd272e735bf9a44fde3b7",
+      "bytes": 1778056
+    },
+    "assets/native-sky-radiance-n5.exr": {
+      "sha256": "3dc0a7de8de8f2bb0724a6ba04873b27b47bf3cbfe0ead0ffbcb0f26f31d2e11",
+      "bytes": 33122
+    },
+    "native-n5-street.png": {
+      "sha256": "3595a4850ff208254ed71a0c9c31d8cbdbf24d3f29663db73e3d91b194392697",
+      "bytes": 1501270
+    },
+    "native-n5-yard.png": {
+      "sha256": "f8aca0b0c69b10ae453038a76f8e54029034d6d99273fc027ba450ce38430e37",
+      "bytes": 1430005
+    },
+    "native-n5-overview.png": {
+      "sha256": "991e04c55a3eb0984b4ae0a8a4094c6d961b65c507867ef4ab7866dd52ff02fd",
+      "bytes": 1492546
+    },
+    "native-n5-report.json": {
+      "sha256": "06b4cccd71db88bd0f5fa3175a0e161c347620aa4a721434baee4b847f032632",
+      "bytes": 3870
+    },
+    "web-patch/src/atmosphere.js": {
+      "sha256": "393ac33aecbec53ba52135aa19911e1ac6dd0083e50885c240aaac6766e169a3",
+      "bytes": 7823
+    },
+    "web-patch/src/atmosphere-config.js": {
+      "sha256": "cf332a9727685dd71f85fb4991123f059a1e7af315a586cae93a27996dd0032c",
+      "bytes": 1847
+    },
+    "web-patch/main-integration.patch": {
+      "sha256": "3c25df15dbfc36acdd6ee2007a7f5b76216f6dbf8c1467dc8a8dffea11a08b1c",
+      "bytes": 1723
+    },
+    "web-patch/tests/atmosphere-n5.test.js": {
+      "sha256": "8d5e120159a5b1b57c8461a07d8dd5766b9aedb3b69789d2c5850c05dcbf74ba",
+      "bytes": 3966
+    },
+    "web-patch/tests/fixtures/atmosphere-parity-n5.json": {
+      "sha256": "86449091a756d81a3cdb1bcdb9616dfcef011de4acc847b554916e8db278b685",
+      "bytes": 292857
+    },
+    "evidence/frozen-native-inspection.json": {
+      "sha256": "681e67d940132b0db68bccd0cf36309a31f213457d4a38845c3729dacd53b730",
+      "bytes": 955
+    },
+    "evidence/egl-render-report.json": {
+      "sha256": "7b63b381017e40c79fac1cc087a97c6f08483b9cac6d45a31f51d4b24bb56ecc",
+      "bytes": 774
+    },
+    "evidence/cube-seam-report.json": {
+      "sha256": "a2d664e009a336c2435b36e6329c3c9a517df237a20b9081877920a7844b94be",
+      "bytes": 4850
+    },
+    "evidence/native-web-color-report.json": {
+      "sha256": "78cf63dbece513a3f3831cb3c29706ccb7c0be489b1abacfe4bd246b83745709",
+      "bytes": 1743
+    },
+    "README.md": {
+      "sha256": "3fb4a45b686dae243dfa0527361f7e7c96a4ee0b8c7ebd0fbd47fd2e93ea31e2",
+      "bytes": 6853
+    },
+    "evidence/independent/egl-render-report.json": {
+      "sha256": "ecd3cea7b0c754de945924a55ea1684d7952dcbf47611616b99aadfe0bb95852",
+      "bytes": 986
+    },
+    "evidence/independent/native-independent.json": {
+      "sha256": "900ec2b2b45d60bdd0289f354acea10725a1237eab173bdf52c8677410dcfe66",
+      "bytes": 461
+    },
+    "evidence/independent/final-style.json": {
+      "sha256": "7f20ee97c10ef5d561645c711b9f064bbbcfa900a941ff3a73d0b574f6f55210",
+      "bytes": 52029
+    },
+    "evidence/independent/dedicated-tests.log": {
+      "sha256": "9b888a74d1d0db6437b915a285f3aa605cb498c912f213898841c8432c43fd27",
+      "bytes": 581
+    }
+  },
+  "independent_visual_status": "Actual native and production-mipmapped+4x-anisotropy eight-view EGL review passed; all1834 protected source mesh records preserved; three retarget errors0m; no full-scene/browser claim"
+}

@@ -1,104 +1,105 @@
 import * as THREE from 'three';
 import {MAP_CONFIG} from './map-config.js';
-import { MarchingCubes } from 'three/addons/objects/MarchingCubes.js';
+import {ATMOSPHERE_CONFIG as CONFIG} from './atmosphere-config.js';
+export {ATMOSPHERE_CONFIG} from './atmosphere-config.js';
 
-// Original procedural atmosphere inspired by the supplied art-direction sheet.
-// This is a separate sky layer; no source map geometry or transforms are edited.
+// Authored images are original generated art, not supplied-reference pixels.
+// The same spherical cards, UVs, source sRGB textures and placements are exported
+// for native Blender QA. Map material paint code below is unchanged.
+const vertexShader=`varying vec2 vAtlasUv; varying vec3 vSkyDirection;
+  void main(){vAtlasUv=uv;vec4 relative=modelMatrix*vec4(position,1.0);
+    vSkyDirection=relative.xyz; relative.xyz+=cameraPosition;
+    gl_Position=projectionMatrix*viewMatrix*relative;
+    gl_Position.z=gl_Position.w*${CONFIG.backgroundDepth.toFixed(5)};}`;
+
+function assetTexture(name, options={}) {
+  const baseUrl=options.baseUrl ?? import.meta.env?.BASE_URL ?? './';
+  const url=`${baseUrl}${baseUrl.endsWith('/')?'':'/'}assets/${name}`;
+  // A caller-provided texture supports deterministic non-browser compiler tests.
+  if(options.textures?.[name])return options.textures[name];
+  const texture=new THREE.TextureLoader(options.loadingManager).load(url,
+    ()=>options.onLoad?.(name),undefined,
+    error=>{options.onError?.(name,error);console.warn(`Distant scenery texture unavailable: ${name}`,error);});
+  texture.name=name;texture.colorSpace=THREE.SRGBColorSpace;
+  texture.wrapS=texture.wrapT=THREE.ClampToEdgeWrapping;
+  texture.generateMipmaps=true;texture.minFilter=THREE.LinearMipmapLinearFilter;
+  texture.magFilter=THREE.LinearFilter;texture.anisotropy=4;
+  return texture;
+}
 export function createSky(){
+  const c=CONFIG.colors;
   const material=new THREE.ShaderMaterial({
-    name:'OriginalBlueSkyMaterial',
-    side:THREE.BackSide,
-    depthWrite:false,
-    dithering:true,
-    // Authored sky/cloud colors are display-referred. Exposure/tone mapping
-    // belongs to the lit map and otherwise washes this blue horizon to grey.
-    toneMapped:false,
-    uniforms:{topColor:{value:new THREE.Color('#478ed8')},bottomColor:{value:new THREE.Color('#94c6ec')}},
-    vertexShader:`varying vec3 vSkyWorld;
-      void main(){vec4 world=modelMatrix*vec4(position,1.0);vSkyWorld=world.xyz;gl_Position=projectionMatrix*viewMatrix*world;}`,
+    name:'DistantAzureSky_n5', side:THREE.BackSide,depthWrite:false,fog:false,
+    toneMapped:false,dithering:true,
+    uniforms:{zenith:{value:new THREE.Color(c.zenith)},middle:{value:new THREE.Color(c.middle)},horizon:{value:new THREE.Color(c.horizon)},nadir:{value:new THREE.Color(c.nadir)}},
+    vertexShader,
     fragmentShader:`#include <common>
       #include <dithering_pars_fragment>
-      uniform vec3 topColor;uniform vec3 bottomColor;varying vec3 vSkyWorld;
-      void main(){float elevation=normalize(vSkyWorld).y;float gradient=smoothstep(-.08,.72,elevation);gl_FragColor=vec4(mix(bottomColor,topColor,gradient),1.0);
-      #include <colorspace_fragment>
-      #include <dithering_fragment>
+      uniform vec3 zenith;uniform vec3 middle;uniform vec3 horizon;uniform vec3 nadir;
+      varying vec3 vSkyDirection;
+      void main(){float e=normalize(vSkyDirection).y;
+        vec3 color=mix(horizon,middle,smoothstep(0.0,.35,e));
+        color=mix(color,zenith,smoothstep(.2,.9,e));
+        color=mix(nadir,color,smoothstep(-.15,.025,e));
+        gl_FragColor=vec4(color,1.0);
+        #include <colorspace_fragment>
+        #include <dithering_fragment>
       }`
   });
-  const sky=new THREE.Mesh(new THREE.SphereGeometry(400,24,16),material);
-  sky.name='OriginalBlueSkyLayer';sky.frustumCulled=false;
+  const sky=new THREE.Mesh(new THREE.SphereGeometry(CONFIG.skyRadius,48,32),material);
+  sky.name='DistantAzureSkyLayer_n5';sky.frustumCulled=false;sky.renderOrder=-1000;
+  sky.userData.cameraCentered=true;sky.userData.version=CONFIG.version;
   return sky;
 }
-
-export function createClouds(){
-  const group=new THREE.Group();group.name='OriginalCreamCloudLayer';
-  const geometry=createJoinedCloudGeometry();
-  const material=new THREE.ShaderMaterial({
-    name:'OriginalCreamCloudMaterial',
-    toneMapped:false,
-    dithering:true,
-    uniforms:{cream:{value:new THREE.Color('#fffdf5')},shade:{value:new THREE.Color('#c5d9ed')},sunDirection:{value:new THREE.Vector3(-.6,.8,.25).normalize()}},
-    vertexShader:`varying vec3 vCloudNormal;
-      void main(){vCloudNormal=normalize(transpose(mat3(viewMatrix))*(normalMatrix*normal));gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}`,
+function cardMaterial(texture,name){
+  return new THREE.ShaderMaterial({name,uniforms:{atlas:{value:texture}},
+    transparent:true,depthWrite:false,depthTest:true,side:THREE.DoubleSide,
+    toneMapped:false,fog:false,dithering:true,
+    vertexShader,
     fragmentShader:`#include <common>
       #include <dithering_pars_fragment>
-      uniform vec3 cream;uniform vec3 shade;uniform vec3 sunDirection;varying vec3 vCloudNormal;
-      void main(){vec3 n=normalize(vCloudNormal);float daylight=smoothstep(-.55,.35,n.y);float sunlight=smoothstep(-.2,.9,dot(n,sunDirection));float light=daylight*.8+sunlight*.2;gl_FragColor=vec4(mix(shade,cream,light),1.0);
-      #include <colorspace_fragment>
-      #include <dithering_fragment>
+      uniform sampler2D atlas;varying vec2 vAtlasUv;
+      void main(){vec4 texel=texture2D(atlas,vAtlasUv);if(texel.a<.025)discard;
+        gl_FragColor=texel;
+        #include <colorspace_fragment>
+        #include <dithering_fragment>
       }`
   });
-  const placements=[[-120,62,-160,29],[-38,73,-205,36],[62,48,-168,24],[153,79,-101,35],[184,67,20,32],[115,60,133,26],[26,87,203,37],[-78,54,161,26],[-165,78,80,34],[-194,60,-23,24],[-84,113,-235,32],[108,127,192,28]];
-  for(let i=0;i<placements.length;i++){
-    const [x,y,z,size]=placements[i];const cloud=new THREE.Group();cloud.position.set(x,y,z);cloud.rotation.y=i*.93;
-    const mesh=new THREE.Mesh(geometry,material);mesh.scale.setScalar(size);cloud.add(mesh);
-    group.add(cloud);
-  }
-  return group;
 }
-
-// A smooth implicit union keeps cumulus lobes without intersecting separate
-// ellipsoids, which produced hard oval undersides and triangular shelves.
-// Generate one bounded, shared mesh once; each sky cluster uses that geometry.
-let joinedCloudGeometry;
-function createJoinedCloudGeometry(){
-  if(joinedCloudGeometry)return joinedCloudGeometry;
-  const resolution=42,extent=1.8;
-  const surface=new MarchingCubes(resolution,new THREE.MeshBasicMaterial(),false,false,8000);
-  surface.isolation=0;
-  // Distinct crown/shoulder lobes share a soft lower mass. Narrower crown
-  // radii and restrained blending retain fluffy scallops instead of an egg.
-  // Each puff is [centerX,centerY,centerZ,radiusX,radiusY,radiusZ].
-  const puffs=[
-    [-1.02,-.11,-.02,.35,.35,.34],[-.71,.13,.07,.42,.48,.44],
-    [-.13,.38,-.05,.48,.69,.53],[.53,.15,.03,.43,.55,.46],
-    [.98,-.10,-.07,.34,.34,.33],[-.06,-.29,.15,.88,.43,.58],
-    [.20,.25,-.46,.37,.42,.34],[-.64,-.17,.38,.35,.35,.31],
-  ];
-  const blendRadius=.105;
-  for(let z=0;z<resolution;z++)for(let y=0;y<resolution;y++)for(let x=0;x<resolution;x++){
-    const px=(x/resolution*2-1)*extent,py=(y/resolution*2-1)*extent,pz=(z/resolution*2-1)*extent;
-    let distance=Infinity;
-    for(const [cx,cy,cz,rx,ry,rz]of puffs){
-      const next=(Math.hypot((px-cx)/rx,(py-cy)/ry,(pz-cz)/rz)-1)*Math.min(rx,ry,rz);
-      const blend=Math.max(blendRadius-Math.abs(distance-next),0)/blendRadius;
-      distance=Math.min(distance,next)-blend*blend*blendRadius*.25;
-    }
-    surface.field[x+y*resolution+z*resolution*resolution]=-distance;
+// Spherical arc rather than view-facing rectangles: no billboard turning,
+// perspective shear, changing elevation, equirectangular seam or polar squeeze.
+export function sphericalCard({azimuth,elevation,width,height,rect,radius=CONFIG.radius}){
+  const h=16,v=4,positions=[],uvs=[],indices=[],rad=Math.PI/180;
+  for(let j=0;j<=v;j++)for(let i=0;i<=h;i++){
+    const u=i/h,t=j/v,a=(azimuth+(u-.5)*width)*rad,e=(elevation+(t-.5)*height)*rad;
+    positions.push(radius*Math.sin(a)*Math.cos(e),radius*Math.sin(e),radius*Math.cos(a)*Math.cos(e));
+    uvs.push((rect[0]+u*(rect[2]-rect[0]))/CONFIG.textureSize[0],1-(rect[3]-t*(rect[3]-rect[1]))/CONFIG.textureSize[1]);
+    if(i<h&&j<v){const k=j*(h+1)+i;indices.push(k,k+1,k+h+2,k,k+h+2,k+h+1);}
   }
-  surface.update();
-  const positions=surface.geometry.attributes.position.array.slice(0,surface.count*3);
-  for(let i=0;i<positions.length;i++)positions[i]*=extent;
-  joinedCloudGeometry=new THREE.BufferGeometry();
-  joinedCloudGeometry.setAttribute('position',new THREE.BufferAttribute(positions,3));
-  joinedCloudGeometry.setAttribute('normal',new THREE.BufferAttribute(surface.geometry.attributes.normal.array.slice(0,surface.count*3),3));
-  joinedCloudGeometry.computeBoundingBox();joinedCloudGeometry.computeBoundingSphere();
-  joinedCloudGeometry.userData.triangleCount=surface.count/3;
-  joinedCloudGeometry.userData.cloudShapeVersion='fluffy-cumulus-n2';
-  joinedCloudGeometry.userData.resolution=resolution;
-  joinedCloudGeometry.userData.extent=extent;
-  joinedCloudGeometry.userData.lobeCount=puffs.length;
-  surface.geometry.dispose();surface.material.dispose();
-  return joinedCloudGeometry;
+  const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));geometry.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));geometry.setIndex(indices);geometry.computeVertexNormals();geometry.computeBoundingSphere();
+  return geometry;
+}
+export function createClouds(options={}){
+  const group=new THREE.Group();group.name='DistantPaintedClouds_n5';
+  const material=cardMaterial(assetTexture(CONFIG.cloudTexture,options),'CreamLavenderClouds_n5');
+  for(let i=0;i<CONFIG.clouds.length;i++){
+    const cloud=CONFIG.clouds[i],rect=CONFIG.cloudRects[cloud.sprite],height=cloud.width*(rect[3]-rect[1])/(rect[2]-rect[0]);
+    const mesh=new THREE.Mesh(sphericalCard({...cloud,height,rect,radius:CONFIG.radius-i*.015}),material);
+    mesh.name=`DistantCloudBank_${i.toString().padStart(2,'0')}`;mesh.frustumCulled=false;mesh.renderOrder=1;
+    mesh.userData={profile:'distant-painterly-bank',...cloud,height};group.add(mesh);
+  }
+  group.userData={cameraCentered:true,version:CONFIG.version,textureBytesDecoded:1536*1024*4};return group;
+}
+export function createScenery(options={}){
+  const group=new THREE.Group();group.name='DistantPeachMountainHorizon_n5';
+  const material=cardMaterial(assetTexture(CONFIG.mountainTexture,options),'PeachLavenderHorizon_n5');
+  for(let i=0;i<CONFIG.mountains.length;i++){
+    const ridge=CONFIG.mountains[i],rect=CONFIG.mountainRects[ridge.sprite];
+    const mesh=new THREE.Mesh(sphericalCard({...ridge,elevation:ridge.base+ridge.height/2,rect,radius:CONFIG.radius-2-i*2}),material);
+    mesh.name=`DistantMountainRange_${i.toString().padStart(2,'0')}`;mesh.frustumCulled=false;mesh.renderOrder=2;
+    mesh.userData={profile:'distant-mountain-range',...ridge};group.add(mesh);
+  }
+  group.userData={cameraCentered:true,version:CONFIG.version,textureBytesDecoded:1536*1024*4};return group;
 }
 
 export function applyReferencePalette(root){

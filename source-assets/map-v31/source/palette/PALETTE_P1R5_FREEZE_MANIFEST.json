@@ -1,0 +1,181 @@
+{
+  "version": "material-palette-p1r5",
+  "status": "frozen candidate, independent visual review pending",
+  "source_sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
+  "files": [
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/Sunward_Palette_p1r5_RC1.blend",
+      "bytes": 7451997,
+      "sha256": "4a3d5f4d205908c0538b15a58fd254b9827cc88892baa059e8288353ff1d877e"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/material_palette_patch.py",
+      "bytes": 12882,
+      "sha256": "bfcd4f529706153db38b8cd119449822d5160a661a90847441df9945f3942107"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/lawn_finish_patch.py",
+      "bytes": 6731,
+      "sha256": "82d77526637bbdc17dc5bd4039d9697dd76d4ece43f8a229ad2a294d3081157f"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/palette-p1r5-report.json",
+      "bytes": 213051,
+      "sha256": "f9c49f313578c29c47c361e14e14a4bc35baf85b73d2813c7e4e63a3a1180ce9"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/export-color-audit.json",
+      "bytes": 10905,
+      "sha256": "c81150e45120167107144924f9c237994eb60a5012ff6c904195f61fba6d49af"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/palette-p1r5-street.png",
+      "bytes": 1350905,
+      "sha256": "7b60319801e3cf440729c2326bcdacea6b1986d8ed7a7d247bcab0f7177a95ba"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/palette-p1r5-green_backyard.png",
+      "bytes": 1507135,
+      "sha256": "dbf14d3191e39b7fade1c4b8bc21b9d606d688f72038eeb0a08aedbf9d7ffc5e"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/palette-p1r5-yellow_backyard.png",
+      "bytes": 1452804,
+      "sha256": "6ba1f36a0605c62874eddb3a055caa7ac927ab0c6fa08989c661c091e51dd448"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/palette-p1r5-overview.png",
+      "bytes": 1407130,
+      "sha256": "36ccd791e4151b155712aed66006d7afa425e101bd10cc203ec6262597b9e921"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/exports/sunward-palette-p1r5.glb",
+      "bytes": 19026624,
+      "sha256": "cbceb3db9a327bdfa532260a06a11fb4a00774f0e124c9d3ef630392fea9d550"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/exports/export-report.json",
+      "bytes": 810,
+      "sha256": "4d95d17e73abb2b29481966c1eff62dc474d17f509f2369b707fe6ff459c84f8"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/exports/sunward-palette-p1r5-collision.glb",
+      "bytes": 560628,
+      "sha256": "71d477abeca04add7563cb048b697c7119135b8dcb723050f9b22677465602d9"
+    }
+  ],
+  "textures": [
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Honey_GrainedTimber_p1r5_BaseColor.png",
+      "bytes": 67191,
+      "sha256": "63633c5807a4c81442f74721eea267d848655c9c3802bdc0afbc8ee5f8779b40"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Warm_GrassBase_p1r5_BaseColor.png",
+      "bytes": 75002,
+      "sha256": "0fae0865a32c1961524ee2d2e6dfae3c478bc9c8efd681f78371896156455d1b"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Cream_Limestone_p1r5_BaseColor.png",
+      "bytes": 64940,
+      "sha256": "d095dca1ec7ec41ab3872d8e5559402086f5c82bea76f1fc65c3864f6d74e0e2"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Lavender_Asphalt_p1r5_BaseColor.png",
+      "bytes": 69708,
+      "sha256": "124cac1944c973f6b8876cf64e22f90beebab259f5bbe9815e43ab429dda84ff"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_SunnyYellow_Plaster_p1r5_BaseColor.png",
+      "bytes": 51983,
+      "sha256": "25c50ee3b16bdbf6e3d0c361a74c6f2d59fe26cc43ba3bf19a63cf7846b1d454"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Turquoise_Plaster_p1r5_BaseColor.png",
+      "bytes": 51436,
+      "sha256": "a74f156fe254d530102e68f4b9a1ce98d368c8711d1f699f67ede6a7d960642d"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Cream_Plaster_p1r5_BaseColor.png",
+      "bytes": 64853,
+      "sha256": "52d7d09c2177d6c8cc0b2e29d91479524b57a177e0430942374ed4c03373c66c"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_BlueLavender_Roof_p1r5_BaseColor.png",
+      "bytes": 55073,
+      "sha256": "bb7d0fa86afa70cbf7ae575c636a7d61a2c8b433f642d79464e4f3108d488183"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Warm_SandGround_p1r5_BaseColor.png",
+      "bytes": 70666,
+      "sha256": "c0969f07a8c875e39f947ae486cdd8a25a03c10ec7557118f2ad35eaae330de1"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_Turquoise_LowerSiding_p1r5_BaseColor.png",
+      "bytes": 48255,
+      "sha256": "e5ecb8fee01ba8bcd57f0c0addbb066694647739f53aee81134cdebcbffa50b6"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_SunnyYellow_LowerSiding_p1r5_BaseColor.png",
+      "bytes": 52979,
+      "sha256": "9b7052f059a8417b0e30b8e94c718420be7794d7c5c49bd8c18fc08f0c6fbb5d"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_TurfCarpet_p1r5_BaseColor.png",
+      "bytes": 485907,
+      "sha256": "92e43f5503acbb0a04a6abb7cb0142a1a052e22c32c5ad8060ae99e3fcfde46a"
+    },
+    {
+      "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/textures/V3_Tone_TurfCarpet_p1r5_Normal.png",
+      "bytes": 396672,
+      "sha256": "3a0615adebc07328bc9424204076707f60f5ce88799bf643c656996d3b001728"
+    }
+  ],
+  "material_names": [
+    "V3_Tone_BlueGrey_Steel_p1r5",
+    "V3_Tone_BlueLavender_Roof_p1r5",
+    "V3_Tone_Blue_GarageDoor_p1r5",
+    "V3_Tone_Brown_Timber_p1r5",
+    "V3_Tone_Cream_Concrete_p1r5",
+    "V3_Tone_Cream_Limestone_p1r5",
+    "V3_Tone_Cream_Plaster_p1r5",
+    "V3_Tone_Cream_Shutters_p1r5",
+    "V3_Tone_Deep_Teal_p1r5",
+    "V3_Tone_Golden_BusShade_p1r5",
+    "V3_Tone_Golden_Bus_p1r5",
+    "V3_Tone_Honey_GrainedTimber_p1r5",
+    "V3_Tone_Honey_Timber_p1r5",
+    "V3_Tone_Lavender_Asphalt_p1r5",
+    "V3_Tone_Lavender_Trim_p1r5",
+    "V3_Tone_Rich_Teal_p1r5",
+    "V3_Tone_Sunlit_RedAccent_p1r5",
+    "V3_Tone_Sunlit_Teal_p1r5",
+    "V3_Tone_SunnyYellow_LowerSiding_p1r5",
+    "V3_Tone_SunnyYellow_Plaster_p1r5",
+    "V3_Tone_TurfCarpet_p1r5",
+    "V3_Tone_Turquoise_LowerSiding_p1r5",
+    "V3_Tone_Turquoise_Plaster_p1r5",
+    "V3_Tone_Warm_Chalk_p1r5",
+    "V3_Tone_Warm_Concrete_p1r5",
+    "V3_Tone_Warm_Ivory_p1r5",
+    "V3_Tone_Warm_Limestone_01_p1r5",
+    "V3_Tone_Warm_RedAccent_p1r5",
+    "V3_Tone_Warm_SandGround_p1r5"
+  ],
+  "new_material_runtime_policy": "Baked only. V3_Tone_* names must bypass legacy paint/foliage tint shader hooks.",
+  "verified": {
+    "geometry_unchanged": true,
+    "collision_unchanged": true,
+    "original_images_unchanged": true,
+    "saved_reload_bindings_restore_exact": true,
+    "saved_reload_original_images_exact": true,
+    "saved_reload_original_fake_users_exact": true,
+    "export_color_checks": true,
+    "collision_export_byte_identical": true
+  },
+  "known_mismatches": [
+    "Turf material improvement is independent of ongoing blade/canopy silhouette refinement.",
+    "Reference density and detail of siding/wood are not fully matched.",
+    "Native n2 sky/cloud/lighting retained, known atmosphere gaps remain."
+  ]
+}

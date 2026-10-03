@@ -1,13 +1,13 @@
 # SUNWARD STRIKE independent QA plan
 
-Updated 2026-10-03 18:59 UTC. Read-only review of application and saved 3D assets; diagnostic scripts/renders belong to this QA directory.
+Updated 2026-10-03 for the v3.1 offline arena. The current accepted scopes and exact hashes are in the acceptance register; earlier RC1 evidence remains historical.
 
 ## Current contract
 
 The V3 map replaces the old generated rectangular layout with reference-traced classic Nuketown proportions. Original source is retained as a protected baseline, not as current structural authority. [Structural brief](../MAP_STRUCTURE_PLAN.md) defines primary sources, coordinate conventions, uncertainty and family corrections. [Acceptance register](SHARED_REVIEW.md) records exact passed revisions and open gates.
 
 - Canonical frame: `layout-r3-family-corrected`, one uniform image-to-world scale
-- Green/gable family: lower/south/bus-side; yellow-family/coral shed-roof house: upper/north/truck-side
+- Green/gable family: lower/south/bus-side; sunny-yellow shed-roof house: upper/north/truck-side
 - 23-vertex playable outline, round central court, sole road-mouth extension, near-parallel staggered bus/truck
 - Prototype scale from a presumed 10.5m bus; no claim of original authenticated meters
 - Blender `(x,y,z)` → Three/glTF `(x,z,-y)`; do not apply a second family/root transform
@@ -42,7 +42,7 @@ The V3 map replaces the old generated rectangular layout with reference-traced c
 - Input state clears on blur, hide, pointer cancellation and unlock; form inputs isolate shortcuts
 - Load/error/retry, optional collision/rifle failures and truthful WebGL2 fallback stay recoverable
 - Run lint, unit/config/shader/controller tests and production subpath build
-- Verify actual public commit/deployment and delivered asset hashes after publication. RC1 source/export, 78 routes/69 walking samples/23 boundary jumps and 73 tests pass independently. Public deployment still requires verification. Last reported public UI/cloud baseline is commit `918d30ae262662269f6dcf8e16b9780cc256d1ae`, run `37138460983`; this is not evidence that V3 geometry is published
+- Verify actual public commit, exact-SHA CI/Pages deployment, served application/worker/manifest/assets, gzip/raw decoding and selected offline-cache hashes after publication. Passing local tests alone does not establish a deployed release.
 
 ## Appearance comparison gates
 
@@ -55,7 +55,7 @@ The V3 map replaces the old generated rectangular layout with reference-traced c
 
 ## Live browser/device sequence, still open
 
-Cloud Chromium cannot create WebGL2 because graphics are disabled. Browser UI automation was denied; no alternate route was used to bypass that restriction. Offline GLSL compilation, Blender renders and actual-controller Node simulations are valid narrower evidence, not live browser passes.
+Cloud Chromium cannot create WebGL2 because graphics are disabled. Offline GLSL compilation, Blender renders and actual-controller Node simulations are valid narrower evidence, not live browser passes.
 
 When an authorized WebGL2-capable browser is available:
 
@@ -67,4 +67,14 @@ When an authorized WebGL2-capable browser is available:
 6. Test missing-map retry, optional asset failures and context loss
 7. Measure actual loading/GPU frame time on target devices and record deployed digests
 
-Touch currently covers movement/look/freefly height; keyboard/mouse cover firing, aiming, jump and reload. Future combat/bots/multiplayer are not functioning feature claims.
+Touch and keyboard/mouse mappings now cover match movement, look, firing, aim, sprint, jump, slide, crouch and reload. Combat and local TDM/Kill Confirmed bots are implemented and portably tested; online multiplayer is not implemented. Actual device input and offline replay remain the browser gates above.
+
+## Offline-match regression gates
+
+- Both modes and all three difficulties on exact final map/cover geometry; no hidden-target tracking or difficulty-based health/damage advantage
+- True finite-triangle capsule contacts, original failing stair-edge replay, reachable furniture/vehicle jumps, ceiling recovery and bounded slide transitions
+- Separate opaque-visual cover rays with open windows retained and decorative foliage excluded
+- Deterministic render-cadence replay, respawn/protection, damage/ammo/reload/ADS/recoil, tags, score/time endings and restart
+- Actual composed main logic with OS autorepeat, short taps, mixed pointer/touch input, pause/focus/death and explorer restoration
+- Integrity-checked gzip/raw cache selection, quota/incomplete-cache failures, existing-ready status during offline update checks, and idle-tab update guards
+- Audio gesture gating, bounded voices, mute/pause cleanup and optional unsupported-audio fallback

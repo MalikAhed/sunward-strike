@@ -4,18 +4,18 @@ The latest four references supplied on 2026-10-03 have distinct roles: sky tone/
 
 ## Observable targets
 
-- Medium-blue sky, large soft cream clouds and cool undersides
-- Warm cream/tan masonry in sunlight, cooler shaded planes, readable teal/coral/yellow paint
+- Rich azure sky, distant cream/lavender cloud banks and peach/lavender mountain scenery
+- Warm cream/tan masonry in sunlight, cooler shaded planes, readable turquoise/cream and sunny-yellow paint
 - Broad restrained painted surface variation, avoiding noisy photoreal microdetail
-- Yellow-green folded grass, denser planted edges and clear traversal routes
+- Yellow-green short grass, dense broadleaf crowns and clear traversal routes
 - Readable furnished interiors with warm surfaces and unobstructed stairs/doors
 - Original branding and owned geometry/materials; no extracted commercial assets
 
 ## Implementation boundaries
 
-The map's editable source and packed textures are versioned separately from its runtime GLBs. The web atmosphere adds original procedural sky/cloud meshes and scoped paint/foliage shaders without changing the source transforms. A Blender presentation world is a source-side approximation, not a live synchronization of browser shaders.
+The map's editable source and packed textures are versioned separately from its runtime GLBs. The web atmosphere adds original camera-centred sky/cloud/scenery cards and a sky gradient without changing source map transforms. Display-referred sky and lit map materials have separate color pipelines. A Blender presentation world is a source-side approximation, not a live synchronization of browser shaders.
 
-The v3 structural candidate adds corrected house families and a reversible coral material treatment, plus 3,000 folded grass tufts. Source-only presentation scenery must stay excluded from gameplay collision and map GLB exports; the browser owns its atmosphere layer.
+The current v3.1 increment retains the corrected house families and adds the accepted reversible turquoise/yellow/honey palette, packed turf textures, rounded broadleaf foliage and original furnished interiors. The lawn still has sparse/angular areas; a denser grass-only candidate remains separate until distance-view checks pass. Source-only presentation scenery must stay excluded from gameplay collision and map GLB exports; the browser owns its atmosphere layer.
 
 ## Acceptance evidence
 

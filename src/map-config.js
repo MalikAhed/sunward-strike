@@ -1,12 +1,12 @@
-// Generated from canonical site_frames.json. Do not hand-edit coordinates.
+// Generated coordinates from canonical site_frames.json; v3.1 style/delivery contract.
 export const MAP_CONFIG = Object.freeze({
-  "version": "3.0",
-  "decodedMapSha256": "004106c1d0dd9660db9e94d003898f19d41e5341c33f27719395e00e98d6c004",
+  "version": "3.1",
+  "decodedMapSha256": "7f2c4ba9865cbb471c1d102a407bc76fc888f4bed679260cde314f328ea1b0b2",
   "frameVersion": "layout-r3-family-corrected",
   "label": "SUNWARD / CLASSIC LAYOUT",
   "assets": {
-    "map": "sunward-v3.0.glb.gz",
-    "collision": "sunward-collision-v3.0.glb",
+    "map": "sunward-v3.1.glb.gz",
+    "collision": "sunward-collision-v3.1.glb",
     "rifle": "carbine-revision2.glb"
   },
   "floorY": 0.014,
@@ -167,7 +167,7 @@ export const MAP_CONFIG = Object.freeze({
       ]
     },
     "saffron": {
-      "label": "Coral backyard",
+      "label": "Yellow backyard",
       "position": [
         -10.282874,
         1.84,
@@ -211,11 +211,17 @@ export const MAP_CONFIG = Object.freeze({
     2,
     0
   ],
-  "paintMaterials": [
-    "V2_Warm_Plaster",
-    "V2_Sage_Plaster",
-    "V3_B_Coral_Plaster",
-    "V3_B_Cream_Plaster"
-  ],
-  "scaleNotice": "Reference-traced proportions; meters are prototype calibration from a 10.5m bus anchor, not an authenticated game survey."
+  "paintMaterials": [],
+  "scaleNotice": "Reference-traced proportions; meters are prototype calibration from a 10.5m bus anchor, not an authenticated game survey.",
+  "style": {
+    "version": "palette-p1r5+vegetation-v4r5+furniture-r3+n5",
+    "materialsBaked": true,
+    "structuralBuildVersion": "3.0",
+    "bakedMaterialPrefixes": [
+      "V3_Tone_",
+      "V4R5_",
+      "D3_"
+    ],
+    "atmosphere": "distant-painted-banks-n5"
+  }
 });

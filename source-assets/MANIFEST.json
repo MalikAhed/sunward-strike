@@ -1,6 +1,6 @@
 {
   "created": "2026-10-03",
-  "map_version": "3.0",
+  "map_version": "3.1",
   "rifle_version": "revision2",
   "files": [
     {
@@ -262,6 +262,206 @@
       "path": "source-assets/map-v3/source/runtime/validate_export.py",
       "bytes": 12652,
       "sha256": "13f373340b36983171d05796dda645c04d92b3c512bf505030b069bb2bc2045e"
+    },
+    {
+      "path": "source-assets/map-v31/.gitignore",
+      "bytes": 23,
+      "sha256": "1b5e03dd29773979d66538ff37bb8e7b339dff715406b92dc948523dcd118e30"
+    },
+    {
+      "path": "source-assets/map-v31/MANIFEST.json",
+      "bytes": 7390,
+      "sha256": "aebfa18db142dda4ddfc81108147c9430d82b07bf32c452b7fc4f2b64bdc4896"
+    },
+    {
+      "path": "source-assets/map-v31/README.md",
+      "bytes": 2954,
+      "sha256": "8a925aefd7b53a7ff2334df256fe84176c195b88f3b2ea4163c39630d7fe0427"
+    },
+    {
+      "path": "source-assets/map-v31/Sunward_ClassicLayout_v3_1.blend.xz",
+      "bytes": 10798612,
+      "sha256": "564bba96961a3c23c4be2b7429aa8092dd74fa6edf3c8e05a52c7691dee021aa"
+    },
+    {
+      "path": "source-assets/map-v31/extract_source.py",
+      "bytes": 2145,
+      "sha256": "6bd12f209a574594eedba66ce528d9c355f4a1c93e8b186fb3db2419a2cba75a"
+    },
+    {
+      "path": "source-assets/map-v31/source/furniture/FURNITURE_R3_FREEZE_MANIFEST.json",
+      "bytes": 2598,
+      "sha256": "192e62f71c84fb16319101648ea750f1a303fb5a7b513a1e37a5547f22c63c90"
+    },
+    {
+      "path": "source-assets/map-v31/source/furniture/interior_dressing_patch.py",
+      "bytes": 11193,
+      "sha256": "a149d9e4ca5bcc93e2d1db6c491027a151ae0bbfc9aac2c660a7c3760610ef92"
+    },
+    {
+      "path": "source-assets/map-v31/source/furniture/interior_style.py",
+      "bytes": 7739,
+      "sha256": "686351c682cccc1df5ec54984a05d61656c7be7a8f017940ef83d1034553d8d6"
+    },
+    {
+      "path": "source-assets/map-v31/source/furniture/source_furniture_inventory.json",
+      "bytes": 27990,
+      "sha256": "8a69f8faedebb6805a745f2e12b12a5522fa366da94bf78b1de21ef4ed4d957c"
+    },
+    {
+      "path": "source-assets/map-v31/source/house-route-contract-r7.json",
+      "bytes": 62260,
+      "sha256": "307f30cb78c71f182b5eb3dfb76526de14fb864e4a85402f26ce0ab4d0c3dc25"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/PALETTE_P1R5_FREEZE_MANIFEST.json",
+      "bytes": 8215,
+      "sha256": "6512d99a80313c4bf07c24abb1ae5a987050f2a919627c22c4ea33bbe8c40113"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/lawn_finish_patch.py",
+      "bytes": 6731,
+      "sha256": "82d77526637bbdc17dc5bd4039d9697dd76d4ece43f8a229ad2a294d3081157f"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/material_palette_patch.py",
+      "bytes": 12882,
+      "sha256": "bfcd4f529706153db38b8cd119449822d5160a661a90847441df9945f3942107"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_BlueLavender_Roof_p1r5_BaseColor.png",
+      "bytes": 55073,
+      "sha256": "bb7d0fa86afa70cbf7ae575c636a7d61a2c8b433f642d79464e4f3108d488183"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Cream_Limestone_p1r5_BaseColor.png",
+      "bytes": 64940,
+      "sha256": "d095dca1ec7ec41ab3872d8e5559402086f5c82bea76f1fc65c3864f6d74e0e2"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Cream_Plaster_p1r5_BaseColor.png",
+      "bytes": 64853,
+      "sha256": "52d7d09c2177d6c8cc0b2e29d91479524b57a177e0430942374ed4c03373c66c"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Honey_GrainedTimber_p1r5_BaseColor.png",
+      "bytes": 67191,
+      "sha256": "63633c5807a4c81442f74721eea267d848655c9c3802bdc0afbc8ee5f8779b40"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Lavender_Asphalt_p1r5_BaseColor.png",
+      "bytes": 69708,
+      "sha256": "124cac1944c973f6b8876cf64e22f90beebab259f5bbe9815e43ab429dda84ff"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_SunnyYellow_LowerSiding_p1r5_BaseColor.png",
+      "bytes": 52979,
+      "sha256": "9b7052f059a8417b0e30b8e94c718420be7794d7c5c49bd8c18fc08f0c6fbb5d"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_SunnyYellow_Plaster_p1r5_BaseColor.png",
+      "bytes": 51983,
+      "sha256": "25c50ee3b16bdbf6e3d0c361a74c6f2d59fe26cc43ba3bf19a63cf7846b1d454"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_TurfCarpet_p1r5_BaseColor.png",
+      "bytes": 485907,
+      "sha256": "92e43f5503acbb0a04a6abb7cb0142a1a052e22c32c5ad8060ae99e3fcfde46a"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_TurfCarpet_p1r5_Normal.png",
+      "bytes": 396672,
+      "sha256": "3a0615adebc07328bc9424204076707f60f5ce88799bf643c656996d3b001728"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Turquoise_LowerSiding_p1r5_BaseColor.png",
+      "bytes": 48255,
+      "sha256": "e5ecb8fee01ba8bcd57f0c0addbb066694647739f53aee81134cdebcbffa50b6"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Turquoise_Plaster_p1r5_BaseColor.png",
+      "bytes": 51436,
+      "sha256": "a74f156fe254d530102e68f4b9a1ce98d368c8711d1f699f67ede6a7d960642d"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Warm_GrassBase_p1r5_BaseColor.png",
+      "bytes": 75002,
+      "sha256": "0fae0865a32c1961524ee2d2e6dfae3c478bc9c8efd681f78371896156455d1b"
+    },
+    {
+      "path": "source-assets/map-v31/source/palette/textures/V3_Tone_Warm_SandGround_p1r5_BaseColor.png",
+      "bytes": 70666,
+      "sha256": "c0969f07a8c875e39f947ae486cdd8a25a03c10ec7557118f2ad35eaae330de1"
+    },
+    {
+      "path": "source-assets/map-v31/source/site_frames.json",
+      "bytes": 92232,
+      "sha256": "45cc4f9b81175bcc51cc196641c7bdf173d85a10853a98a770736e419d033960"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/N5_FREEZE_MANIFEST.json",
+      "bytes": 5015,
+      "sha256": "a2fbd9c87d28f961264dbee89ccb3438b7b4a3a597b9bdf2e43ee14e7d4e35fb"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/assets/PROVENANCE.json",
+      "bytes": 4178,
+      "sha256": "1dfbfa3ba89968284f9b231109548f19ae06ed52049f61921c4b9e4dbe45ad7e"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/assets/cream-cloud-atlas-n5.png",
+      "bytes": 1609679,
+      "sha256": "88a4d5ea9098b7dec21198c55939c50826c755f8ca51355658a8967621e4c7c6"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/assets/native-sky-gradient-n5.png",
+      "bytes": 312,
+      "sha256": "41d341d39f4d6be0fc670c1da51a3ab13a0052efdc1bea7aa9a75f5722bfec1d"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/assets/native-sky-radiance-n5.exr",
+      "bytes": 33122,
+      "sha256": "3dc0a7de8de8f2bb0724a6ba04873b27b47bf3cbfe0ead0ffbcb0f26f31d2e11"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/assets/peach-mountain-atlas-n5.png",
+      "bytes": 1778056,
+      "sha256": "0dce1ff0db7528511ca0ffebc1cf351a0c0375cd956cd272e735bf9a44fde3b7"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/atmosphere-parity-n5.json",
+      "bytes": 292857,
+      "sha256": "86449091a756d81a3cdb1bcdb9616dfcef011de4acc847b554916e8db278b685"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/native-sky-radiance-n5.json",
+      "bytes": 24542,
+      "sha256": "70a0c9d710d5008ffaff4861a63868a365144929e275687223584741c0677b8b"
+    },
+    {
+      "path": "source-assets/map-v31/source/sky/native_atmosphere.py",
+      "bytes": 14752,
+      "sha256": "3dce1efa59c6c947ef0769feee8928ab7206dfb1639b452a9c14e48642dd40ab"
+    },
+    {
+      "path": "source-assets/map-v31/source/vegetation/VEGETATION_V4_R5_FREEZE_MANIFEST.json",
+      "bytes": 8586,
+      "sha256": "a87ae878efbddcaef52b5d4ce1807700045d97da3502f5e8b7d486e422483d36"
+    },
+    {
+      "path": "source-assets/map-v31/source/vegetation/textures/sunward_broadleaf_clusters_r5.png",
+      "bytes": 43359,
+      "sha256": "182b69777bee83bda72f694a9338b3c38c508d3ff21078f4e7d268672b9b3283"
+    },
+    {
+      "path": "source-assets/map-v31/source/vegetation/textures/sunward_broadleaf_clusters_r5_manifest.json",
+      "bytes": 3292,
+      "sha256": "c1f475fd4d5ee9f043c2bedd210aed376d00623019385768ede0f3f5584926d6"
+    },
+    {
+      "path": "source-assets/map-v31/source/vegetation/vegetation_patch_v4_r5.py",
+      "bytes": 21834,
+      "sha256": "6a3db5c62e070f44612378c702287185db4cc9517e67149aaa9c7fe298a325ae"
     }
   ],
   "preserved_map_baseline": "2.5"

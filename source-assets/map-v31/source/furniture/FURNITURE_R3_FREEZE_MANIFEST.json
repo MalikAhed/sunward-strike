@@ -1,0 +1,53 @@
+{
+  "version": "interior-dressing-r3-proxyfixed",
+  "function_signature": "apply(config_path=None,route_contract_path=None,include_style=True)",
+  "source_inventory_count": 40,
+  "candidate_visual_objects": 76,
+  "source_baseline_unchanged": true,
+  "lamp_vertex_containment": "64/64 each, fresh-process evaluated vertices",
+  "all_solid_groups_containment": true,
+  "collision_proxies": 16,
+  "route_contract_version": "houses-r7-route-contract",
+  "canonical_frame_version": "layout-r3-family-corrected",
+  "final_independent_proxy_review": "accepted16of16proxies; lamps64of64 each; positive volumes;1.1m portal samples clear",
+  "files": {
+    "module": {
+      "path": "/workspace/shared/sunward-structure-build/layout/interior-dressing/interior_dressing_patch.py",
+      "sha256": "a149d9e4ca5bcc93e2d1db6c491027a151ae0bbfc9aac2c660a7c3760610ef92",
+      "bytes": 11193
+    },
+    "style_dependency": {
+      "path": "/workspace/shared/sunward-structure-build/layout/interior-dressing/interior_style.py",
+      "sha256": "686351c682cccc1df5ec54984a05d61656c7be7a8f017940ef83d1034553d8d6",
+      "bytes": 7739
+    },
+    "source_inventory": {
+      "path": "/workspace/shared/sunward-structure-build/layout/interior-dressing/source_furniture_inventory.json",
+      "sha256": "8a69f8faedebb6805a745f2e12b12a5522fa366da94bf78b1de21ef4ed4d957c",
+      "bytes": 27990
+    },
+    "canonical_frames": {
+      "path": "/workspace/shared/sunward-structure-build/layout/site_frames.json",
+      "sha256": "45cc4f9b81175bcc51cc196641c7bdf173d85a10853a98a770736e419d033960",
+      "bytes": 92232
+    },
+    "route_contract": {
+      "path": "/workspace/shared/sunward-structure-build/houses/house-route-contract-r7.json",
+      "sha256": "307f30cb78c71f182b5eb3dfb76526de14fb864e4a85402f26ce0ab4d0c3dc25",
+      "bytes": 62260
+    },
+    "candidate": {
+      "path": "/workspace/shared/sunward-structure-build/layout/interior-dressing/Sunward_Interior_Dressing_r3_ProxyFixed_candidate.blend",
+      "sha256": "4a96d5a0e7291c49196a990ebc5f5fcff7408aa015a7093175836443b1d7abbc",
+      "bytes": 5710391
+    },
+    "containment_evidence": {
+      "path": "/workspace/shared/sunward-structure-build/layout/interior-dressing/proxy_containment_r3.json",
+      "sha256": "ae6353be4ecbb277cfc278c11fc8906c1b684ec14a863c3225e5897642f80fe6",
+      "bytes": 15292
+    }
+  },
+  "input_candidate_sha256": "de4190cc6c1e9951205fb9907332f3105fec5a65173306a91b1791aaed895183",
+  "input_matches_parent_hash": true,
+  "independent_review_candidate_sha256": "4a96d5a0e7291c49196a990ebc5f5fcff7408aa015a7093175836443b1d7abbc"
+}

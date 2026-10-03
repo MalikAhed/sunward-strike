@@ -1,0 +1,205 @@
+{
+  "version": "vegetation-v4-r5",
+  "freeze_scope": "Immutable owned candidate/module/atlas/fragment and scoped preview inputs. Independent report and manager integration approval are separate.",
+  "source_lineage": "Continued saved v4r1 checkpoint through r2/r3/r4; no scene rebuild. Fresh RC1 apply exact-reproduction tested.",
+  "function_signature": "apply(config_path=None,texture_path=None)",
+  "trees": 10,
+  "tree_anchors": {
+    "01": [
+      -15.868633270263672,
+      40.11590576171875,
+      0.0
+    ],
+    "02": [
+      -1.5233874320983887,
+      43.41658020019531,
+      0.0
+    ],
+    "03": [
+      -23.866424560546875,
+      -36.942176818847656,
+      0.0
+    ],
+    "04": [
+      0.7616944313049316,
+      -34.53014373779297,
+      0.0
+    ],
+    "05": [
+      -20.184900283813477,
+      11.55236530303955,
+      0.0
+    ],
+    "06": [
+      2.031184673309326,
+      -14.726091384887695,
+      0.0
+    ],
+    "07": [
+      4.824065208435059,
+      17.138124465942383,
+      0.0
+    ],
+    "08": [
+      -18.153717041015625,
+      -17.772869110107422,
+      0.0
+    ],
+    "09": [
+      -22.850831985473633,
+      24.755069732666016,
+      0.0
+    ],
+    "10": [
+      2.919827461242676,
+      29.833030700683594,
+      0.0
+    ]
+  },
+  "canopy_triangles": 67403,
+  "lawn_triangles": 69000,
+  "trunk_branches_triangles": 8240,
+  "owned_fragment_triangles": 144643,
+  "native_entire_scene_triangles": 235123,
+  "budget": {
+    "canopy_triangles_max": 108000,
+    "lawn_triangles_max": 69000,
+    "trunk_and_branches_triangles_max": 10000,
+    "tree_anchor_count": 10,
+    "texture_bytes_added": 524288,
+    "texture_definition": "base decoded RGBA only, mip allocation excluded",
+    "alpha_mode": "MASK",
+    "alpha_cutoff": 0.5,
+    "double_sided": true
+  },
+  "minimum_added_branch_z_m": 3.1911699771881104,
+  "collision_sha256": "d86896868c30a44a72ffc373fb9fe3232d10a1badf4e1a25dbb3794b54224cc6",
+  "owned_geometry_sha256": "e33ae57844b9f01879a2790c5b0d53e1af4a86bf74cfc7f4dd3ea7142d3e3a25",
+  "owned_binding_sha256": "23223d09fe7d5b1b0832165ee0154a1f07e3c7b4fad16a356477406bb10a8389",
+  "owned_material_value_sha256": "69d41693eaa67cd2dd7c586c648a348e08b945febf468f05c242662aa839d8a1",
+  "tests": {
+    "protected_meshes_and_collision_unchanged": true,
+    "no_nonfinite_or_degenerate_owned_triangles": true,
+    "saved_restore_exact_rc1": true,
+    "fresh_rc1_reapply_exact_geometry_material_uv": true,
+    "fragment_export_reimport_geometry_material_bounds": true,
+    "png_embedded_byte_identical": true,
+    "whole_scene_runtime_controller": false,
+    "actual_browser_gpu": false
+  },
+  "files": {
+    "Sunward_Vegetation_v4_r5_candidate.blend": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/Sunward_Vegetation_v4_r5_candidate.blend",
+      "sha256": "f027e2d012f41ff9e644ceb504c8bcce12c010b71e0fdc9295023bcc1a148ee7",
+      "bytes": 10365655
+    },
+    "vegetation_patch_v4_r5.py": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/vegetation_patch_v4_r5.py",
+      "sha256": "6a3db5c62e070f44612378c702287185db4cc9517e67149aaa9c7fe298a325ae",
+      "bytes": 21834
+    },
+    "textures/sunward_broadleaf_clusters_r5.png": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/textures/sunward_broadleaf_clusters_r5.png",
+      "sha256": "182b69777bee83bda72f694a9338b3c38c508d3ff21078f4e7d268672b9b3283",
+      "bytes": 43359
+    },
+    "textures/sunward_broadleaf_clusters_r5_manifest.json": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/textures/sunward_broadleaf_clusters_r5_manifest.json",
+      "sha256": "c1f475fd4d5ee9f043c2bedd210aed376d00623019385768ede0f3f5584926d6",
+      "bytes": 3292
+    },
+    "make_leaf_atlas_r5.py": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/make_leaf_atlas_r5.py",
+      "sha256": "009a5ce4c9851938f2759af5495b9dc58d5800f0f2eef44fee4036081e8d38b4",
+      "bytes": 2206
+    },
+    "vegetation_v4_r5_report.json": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/vegetation_v4_r5_report.json",
+      "sha256": "c900d5dee8f111d9f5e673d4bfddfbacff18d2c208746353d171cf821386cf55",
+      "bytes": 13350
+    },
+    "vegetation_v4_r5_verification.json": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/vegetation_v4_r5_verification.json",
+      "sha256": "63aa7b3695a2fd153436c9ca9da1a4a9e21d803d292f431cff1dc2dd28870e70",
+      "bytes": 6416
+    },
+    "vegetation_v4_r5_restore_verification.json": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/vegetation_v4_r5_restore_verification.json",
+      "sha256": "5b8717f651b8c661b306777d40f1a76010cc8cbaf82483f6619f3bbf550d077f",
+      "bytes": 1527
+    },
+    "vegetation_v4_r5_reproducibility.json": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/vegetation_v4_r5_reproducibility.json",
+      "sha256": "99d9233857673c1f3ee1533e9ead4794397de15b7693129601ee0ef4fe5e7dc5",
+      "bytes": 4690
+    },
+    "vegetation_v4_r5_fragment.glb": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/vegetation_v4_r5_fragment.glb",
+      "sha256": "de5f3c5698e4175fface1ee22e51bb5c778d7bbda356ae35f20b072743cb3b48",
+      "bytes": 9416068
+    },
+    "vegetation_v4_r5_fragment_verification.json": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/vegetation_v4_r5_fragment_verification.json",
+      "sha256": "b82718322b7a250a8ef84c25a69e1dfb0bcbf782e1ee07418aec29ea1b91d4f6",
+      "bytes": 20236
+    },
+    "VEGETATION_V4_R5_APPLICATION_CONTRACT.md": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/VEGETATION_V4_R5_APPLICATION_CONTRACT.md",
+      "sha256": "50af6d0589fadc3aa46012677522bda79c01790cb0b03464a2e02b91f8cc10fa",
+      "bytes": 5509
+    },
+    "Sunward_Joint_Vegetation_v4_r5_Palette_p1r5_preview.blend": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/Sunward_Joint_Vegetation_v4_r5_Palette_p1r5_preview.blend",
+      "sha256": "93886c335fc5b574fb866c9428aca18d18426e714f11434bc32cafd043c15ea3",
+      "bytes": 11988255
+    },
+    "joint_v4_r5_p1r5_tree_player.png": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/joint_v4_r5_p1r5_tree_player.png",
+      "sha256": "986e24f0c480cc9de39e2b0491f1f74fc84aa6040ba82b86b4a9d518d29df151",
+      "bytes": 1409340
+    },
+    "joint_v4_r5_p1r5_yard_player.png": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/joint_v4_r5_p1r5_yard_player.png",
+      "sha256": "f0d35e15241880a8038399a54fd337e7da942a449c84f1ec960e3bc1b4926266",
+      "bytes": 1503364
+    },
+    "joint_v4_r5_p1r5_tree_far.png": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/joint_v4_r5_p1r5_tree_far.png",
+      "sha256": "422668e154d94750b6b8c568f75b7f8106c2a73a8744237d00a844a47ede03f6",
+      "bytes": 1070953
+    },
+    "joint_v4_r5_p1r5_overview.png": {
+      "path": "/workspace/shared/sunward-structure-build/layout/vegetation/joint_v4_r5_p1r5_overview.png",
+      "sha256": "0b78707e551f99c6fa63ba42ff51e07f78e16809709dee2db87ac6d692040838",
+      "bytes": 1362344
+    }
+  },
+  "canonical_frames": {
+    "path": "/workspace/shared/sunward-structure-build/layout/site_frames.json",
+    "sha256": "45cc4f9b81175bcc51cc196641c7bdf173d85a10853a98a770736e419d033960",
+    "bytes": 92232
+  },
+  "r7_route_contract": {
+    "path": "/workspace/shared/sunward-structure-build/houses/house-route-contract-r7.json",
+    "sha256": "307f30cb78c71f182b5eb3dfb76526de14fb864e4a85402f26ce0ab4d0c3dc25",
+    "bytes": 62260
+  },
+  "immutable_rc1": {
+    "path": "/workspace/shared/sunward-structure-build/integration/Sunward_ClassicLayout_v3_release_rc1.blend",
+    "sha256": "e1abb8d3a107daae0020e8dff8057e2a7eda3e8c4dfd1a17d01e039ebf3cd1ce",
+    "bytes": 5828510
+  },
+  "joint_palette_dependency": {
+    "path": "/workspace/shared/sunward-structure-build/houses/material-palette/p1r5/PALETTE_P1R5_FREEZE_MANIFEST.json",
+    "sha256": "6512d99a80313c4bf07c24abb1ae5a987050f2a919627c22c4ea33bbe8c40113",
+    "bytes": 8215
+  },
+  "original_reference_pixels_published": false,
+  "known_gaps": [
+    "Retained lower trunk and branch junctions remain angular",
+    "No wind or distance LOD system",
+    "No measured WebGL/mobile alpha overdraw or FPS",
+    "No alpha-coverage-preserving mip generator; native close/~60m/overview checked",
+    "Final n5 lighting, furniture and full runtime integration gates pending"
+  ]
+}

@@ -22,14 +22,14 @@ const asBuffer = bytes => Buffer.from(bytes);
 const response = bytes => new Response(bytes, {headers: {'content-length': String(bytes.length)}});
 const code = expected => error => error.name === 'GlbAssetError' && error.code === expected;
 
-test('committed gzip decodes through the native decoder to the exact accepted RC1 map', async () => {
+test('committed gzip decodes through the native decoder to the exact accepted v3.1 map', async () => {
   const gzip = readFileSync(new URL(`../public/assets/${MAP_CONFIG.assets.map}`, import.meta.url));
   const bytes = asBuffer(await decodeGlbBytes(gzip));
-  assert.equal(gzip.length, 6_124_741);
-  assert.equal(createHash('sha256').update(gzip).digest('hex'), '03990a99e4e89d0b4441808f7578dc86faf2496af2b0c7dc34937f4e7155407c');
-  assert.equal(bytes.length, 18_167_416);
+  assert.equal(gzip.length, 8_062_943);
+  assert.equal(createHash('sha256').update(gzip).digest('hex'), 'dd1726021006f0f41d111942e972597979fd10e879078bd8ea5e92807cc32c6b');
+  assert.equal(bytes.length, 17_890_616);
   assert.equal(createHash('sha256').update(bytes).digest('hex'), MAP_CONFIG.decodedMapSha256);
-  assert.equal(MAP_CONFIG.decodedMapSha256, '004106c1d0dd9660db9e94d003898f19d41e5341c33f27719395e00e98d6c004');
+  assert.equal(MAP_CONFIG.decodedMapSha256, '7f2c4ba9865cbb471c1d102a407bc76fc888f4bed679260cde314f328ea1b0b2');
 });
 
 test('already-decoded GLB passes through without invoking a decompressor', async () => {

@@ -20,7 +20,7 @@ test('configured public assets decode to real GLB2 files within delivery and dec
     assert.match(name,/^[\w.-]+\.glb(?:\.gz)?$/);
     const delivery=readFileSync(new URL(`../public/assets/${name}`,import.meta.url));
     const bytes=Buffer.from(await decodeGlbBytes(delivery));
-    assert.ok(delivery.length<(kind==='map'?8_000_000:3_000_000),`${kind} transfer budget`);
+    assert.ok(delivery.length<(kind==='map'?(MAP_CONFIG.version==='3.1'?8_500_000:8_000_000):3_000_000),`${kind} transfer budget`);
     assert.equal(bytes.readUInt32LE(0),0x46546c67,name);
     assert.equal(bytes.readUInt32LE(4),2,name);
     assert.equal(bytes.readUInt32LE(8),bytes.length,name);

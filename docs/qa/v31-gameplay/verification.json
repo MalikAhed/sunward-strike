@@ -1,0 +1,82 @@
+{
+  "version": "3.1 offline-game",
+  "date": "2026-10-03",
+  "source_sha256": "14f42223cd107e19889ee1ef03aebbfc093ae84d4e493e8d2c92ae39cb16f1ae",
+  "visual_sha256": "7f2c4ba9865cbb471c1d102a407bc76fc888f4bed679260cde314f328ea1b0b2",
+  "collision_sha256": "fc20bd6d76beac2bfbf2e84f21bd088bcac01782f68075c267094815b046ff0e",
+  "compressed_visual_sha256": "dd1726021006f0f41d111942e972597979fd10e879078bd8ea5e92807cc32c6b",
+  "source_export_reimport_passed": true,
+  "protected_source_meshes_unchanged": 1813,
+  "approved_furniture_proxy_additions": 16,
+  "tests_passed": 181,
+  "tests_skipped": 0,
+  "lint": "pass",
+  "build": "pass",
+  "map_material_sky_checks": 161,
+  "actual_map_material_sky_gles_programs": 156,
+  "controller_routes": {
+    "walking": 78,
+    "sprinting": 78,
+    "perimeter_walk_samples_per_pace": 69,
+    "ground_jump_samples": 23,
+    "elevated_no_escape_attempts": 900,
+    "physically_proven_perch_anchors": 22,
+    "all_elevated_anchors_tested": 50,
+    "additional_perches_not_established": 11
+  },
+  "opaque_visual_cover_rays": 3905,
+  "opaque_details_previously_missed_now_matched": 613,
+  "mode_difficulty_matrix_passed": true,
+  "deterministic_replay_render_cadences": [
+    30,
+    60,
+    144
+  ],
+  "core_hashes": {
+    "src/gameplay/bots.js": "f58720651d23d8fd3fe915ada525c689e53d5e454eccf292ac5c1244acd099c8",
+    "src/gameplay/capsule-contacts.js": "1aa08e7e762048cd789ddd0a1161a85fdadc21f4a53793734bda35d187738c06",
+    "src/gameplay/combat.js": "300285148061c8453c2a3dd0c54bf0819480b908625c778a99fe241951ecc862",
+    "src/gameplay/cover.js": "c4a93018ff6f5f442954649c5f67ba5983499f29ca26b0d135c645b1d223f511",
+    "src/gameplay/index.js": "cebfb5d19300478a2a417f667c909caf4f7eeb3ff8994241c620d929a20f5e5f",
+    "src/gameplay/input-controller.js": "62cc9cf26d2ee402a47a597ff52e09597d112fbb537033350d58e8c9d81faa0d",
+    "src/gameplay/map-navigation.js": "769a0bec90f23210190084ae4377573e09a2aafb44ecaa1ec2586694ed5a694d",
+    "src/gameplay/match.js": "1b5bec41e7f7d14c47f84bcc38db53ec859cf1698f983634a111e16b747204ac",
+    "src/gameplay/navigation.js": "a43541de50f5ce75114060095e9815944cb765a5d45514f97222fd837057e695",
+    "src/gameplay/player-controller.js": "addba9ac4e6d93b0c86e013ad74ae8dc1437d5c115025f00e550ea862c1fde0d",
+    "src/gameplay/random.js": "0bc10f1b4f8cc3a884f970aa712b845197b5b34463ea8af7841400e40513a844",
+    "src/gameplay/three-world.js": "38cd108742691d7a232f60af6861070ff7eff35b6f9fbd78946fcd3815c929af",
+    "src/gameplay/tuning.js": "1e24c4176b385b1177aacc4e495a62e5aa6f862b1d0eda7e4194cdb8816484e3",
+    "src/gameplay/vectors.js": "b30abd76228bcbfe2c8bf36786d380190c2c66dc9fa6af62a7c6b434746b95c3"
+  },
+  "qualified_results": {
+    "grounded_slide_endpoint_continuity_failures": 18,
+    "one_minute_6v6_no_confirm_probe": "failed threshold; full300s same seed confirms7 with no physical violations",
+    "additional_perches_not_established": 11
+  },
+  "measured_map": {
+    "visual_bytes": 17890616,
+    "gzip_bytes": 8062943,
+    "explicit_provisional_gzip_cap": 8500000,
+    "visual_triangles": 235734,
+    "visual_meshes": 118,
+    "visual_primitives": 132,
+    "visual_materials": 76,
+    "visual_images": 16,
+    "visual_base_rgba_bytes": 5439488,
+    "collision_bytes": 585308,
+    "collision_meshes": 312,
+    "collision_triangles": 4897,
+    "separate_sky_download_bytes": 3387735,
+    "separate_sky_base_rgba_bytes": 12582912
+  },
+  "unverified": [
+    "Actual browser WebGL2 rendering and device GPU performance",
+    "Real keyboard, pointer lock and touch interaction",
+    "Actual audio output and disconnected-browser service-worker replay",
+    "Exact style-reference identity"
+  ],
+  "separate_future_work": [
+    "Denser lawn distance-artifact correction",
+    "Denser-match bot objective tactics"
+  ]
+}

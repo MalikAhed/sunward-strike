@@ -69,5 +69,5 @@ test('npm dev and production build prepare the raw fallback, while test requires
   const packageJson=JSON.parse(await fs.readFile(new URL('../package.json',import.meta.url),'utf8'));
   assert.equal(packageJson.scripts.predev,'npm run prepare:assets');assert.equal(packageJson.scripts.prebuild,'npm run prepare:assets');
   assert.equal(packageJson.scripts['prepare:assets'],'node scripts/prepare-map-assets.mjs');assert.equal(packageJson.scripts.pretest,undefined);
-  const ignores=await fs.readFile(new URL('../.gitignore',import.meta.url),'utf8');assert.ok(ignores.split('\n').includes('public/assets/sunward-v3.0.glb'));
+  const ignores=await fs.readFile(new URL('../.gitignore',import.meta.url),'utf8');assert.ok(ignores.split('\n').includes('public/assets/sunward-v3.0.glb'));assert.ok(ignores.split('\n').includes('public/assets/sunward-v3.1.glb'));
 });

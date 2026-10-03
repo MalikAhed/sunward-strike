@@ -20,3 +20,6 @@ source-assets/map-v3/build/
 
 # Exact raw compatibility copy is generated from the committed gzip by prebuild
 public/assets/sunward-v3.0.glb
+
+# Reconstructable v3.1 compatibility fallback; commit gzip only
+public/assets/sunward-v3.1.glb

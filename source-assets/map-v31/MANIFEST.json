@@ -1,0 +1,166 @@
+{
+  "source_sha256": "14f42223cd107e19889ee1ef03aebbfc093ae84d4e493e8d2c92ae39cb16f1ae",
+  "archive_sha256": "564bba96961a3c23c4be2b7429aa8092dd74fa6edf3c8e05a52c7691dee021aa",
+  "archive_bytes": 10798612,
+  "uncompressed_blend_sha256": "d9a499587437bb1ece4d3d6ca4a203cfb62d9ca8515f2247321d6d4b1d02197d",
+  "uncompressed_blend_bytes": 46473500,
+  "seconds": 11.094544696999947,
+  "note": "XZ archive of exact decoded native Blender bytes; standard library lzma extracts a native .blend",
+  "version": "3.1",
+  "scope": "Accepted palette p1r5, vegetation v4-r5, furniture-r3 and distant sky n5; later grass revision separate",
+  "native_archive": "Sunward_ClassicLayout_v3_1.blend.xz",
+  "native_extracted_name": "Sunward_ClassicLayout_v3_1.blend",
+  "source_layout_reference": "../map-v3/Sunward_ClassicLayout_v3.blend",
+  "furniture_baseline_reference": "../map/Sunward_TestSite.blend",
+  "visual_export_sha256": "7f2c4ba9865cbb471c1d102a407bc76fc888f4bed679260cde314f328ea1b0b2",
+  "collision_export_sha256": "fc20bd6d76beac2bfbf2e84f21bd088bcac01782f68075c267094815b046ff0e",
+  "application_order": [
+    "palette/material_palette_patch.py",
+    "palette/lawn_finish_patch.py",
+    "vegetation/vegetation_patch_v4_r5.py",
+    "furniture/interior_dressing_patch.py",
+    "sky/native_atmosphere.py"
+  ],
+  "files": {
+    "source/furniture/FURNITURE_R3_FREEZE_MANIFEST.json": {
+      "sha256": "192e62f71c84fb16319101648ea750f1a303fb5a7b513a1e37a5547f22c63c90",
+      "bytes": 2598
+    },
+    "source/furniture/interior_dressing_patch.py": {
+      "sha256": "a149d9e4ca5bcc93e2d1db6c491027a151ae0bbfc9aac2c660a7c3760610ef92",
+      "bytes": 11193
+    },
+    "source/furniture/interior_style.py": {
+      "sha256": "686351c682cccc1df5ec54984a05d61656c7be7a8f017940ef83d1034553d8d6",
+      "bytes": 7739
+    },
+    "source/furniture/source_furniture_inventory.json": {
+      "sha256": "8a69f8faedebb6805a745f2e12b12a5522fa366da94bf78b1de21ef4ed4d957c",
+      "bytes": 27990
+    },
+    "source/house-route-contract-r7.json": {
+      "sha256": "307f30cb78c71f182b5eb3dfb76526de14fb864e4a85402f26ce0ab4d0c3dc25",
+      "bytes": 62260
+    },
+    "source/palette/PALETTE_P1R5_FREEZE_MANIFEST.json": {
+      "sha256": "6512d99a80313c4bf07c24abb1ae5a987050f2a919627c22c4ea33bbe8c40113",
+      "bytes": 8215
+    },
+    "source/palette/lawn_finish_patch.py": {
+      "sha256": "82d77526637bbdc17dc5bd4039d9697dd76d4ece43f8a229ad2a294d3081157f",
+      "bytes": 6731
+    },
+    "source/palette/material_palette_patch.py": {
+      "sha256": "bfcd4f529706153db38b8cd119449822d5160a661a90847441df9945f3942107",
+      "bytes": 12882
+    },
+    "source/palette/textures/V3_Tone_BlueLavender_Roof_p1r5_BaseColor.png": {
+      "sha256": "bb7d0fa86afa70cbf7ae575c636a7d61a2c8b433f642d79464e4f3108d488183",
+      "bytes": 55073
+    },
+    "source/palette/textures/V3_Tone_Cream_Limestone_p1r5_BaseColor.png": {
+      "sha256": "d095dca1ec7ec41ab3872d8e5559402086f5c82bea76f1fc65c3864f6d74e0e2",
+      "bytes": 64940
+    },
+    "source/palette/textures/V3_Tone_Cream_Plaster_p1r5_BaseColor.png": {
+      "sha256": "52d7d09c2177d6c8cc0b2e29d91479524b57a177e0430942374ed4c03373c66c",
+      "bytes": 64853
+    },
+    "source/palette/textures/V3_Tone_Honey_GrainedTimber_p1r5_BaseColor.png": {
+      "sha256": "63633c5807a4c81442f74721eea267d848655c9c3802bdc0afbc8ee5f8779b40",
+      "bytes": 67191
+    },
+    "source/palette/textures/V3_Tone_Lavender_Asphalt_p1r5_BaseColor.png": {
+      "sha256": "124cac1944c973f6b8876cf64e22f90beebab259f5bbe9815e43ab429dda84ff",
+      "bytes": 69708
+    },
+    "source/palette/textures/V3_Tone_SunnyYellow_LowerSiding_p1r5_BaseColor.png": {
+      "sha256": "9b7052f059a8417b0e30b8e94c718420be7794d7c5c49bd8c18fc08f0c6fbb5d",
+      "bytes": 52979
+    },
+    "source/palette/textures/V3_Tone_SunnyYellow_Plaster_p1r5_BaseColor.png": {
+      "sha256": "25c50ee3b16bdbf6e3d0c361a74c6f2d59fe26cc43ba3bf19a63cf7846b1d454",
+      "bytes": 51983
+    },
+    "source/palette/textures/V3_Tone_TurfCarpet_p1r5_BaseColor.png": {
+      "sha256": "92e43f5503acbb0a04a6abb7cb0142a1a052e22c32c5ad8060ae99e3fcfde46a",
+      "bytes": 485907
+    },
+    "source/palette/textures/V3_Tone_TurfCarpet_p1r5_Normal.png": {
+      "sha256": "3a0615adebc07328bc9424204076707f60f5ce88799bf643c656996d3b001728",
+      "bytes": 396672
+    },
+    "source/palette/textures/V3_Tone_Turquoise_LowerSiding_p1r5_BaseColor.png": {
+      "sha256": "e5ecb8fee01ba8bcd57f0c0addbb066694647739f53aee81134cdebcbffa50b6",
+      "bytes": 48255
+    },
+    "source/palette/textures/V3_Tone_Turquoise_Plaster_p1r5_BaseColor.png": {
+      "sha256": "a74f156fe254d530102e68f4b9a1ce98d368c8711d1f699f67ede6a7d960642d",
+      "bytes": 51436
+    },
+    "source/palette/textures/V3_Tone_Warm_GrassBase_p1r5_BaseColor.png": {
+      "sha256": "0fae0865a32c1961524ee2d2e6dfae3c478bc9c8efd681f78371896156455d1b",
+      "bytes": 75002
+    },
+    "source/palette/textures/V3_Tone_Warm_SandGround_p1r5_BaseColor.png": {
+      "sha256": "c0969f07a8c875e39f947ae486cdd8a25a03c10ec7557118f2ad35eaae330de1",
+      "bytes": 70666
+    },
+    "source/site_frames.json": {
+      "sha256": "45cc4f9b81175bcc51cc196641c7bdf173d85a10853a98a770736e419d033960",
+      "bytes": 92232
+    },
+    "source/sky/N5_FREEZE_MANIFEST.json": {
+      "sha256": "a2fbd9c87d28f961264dbee89ccb3438b7b4a3a597b9bdf2e43ee14e7d4e35fb",
+      "bytes": 5015
+    },
+    "source/sky/assets/PROVENANCE.json": {
+      "sha256": "1dfbfa3ba89968284f9b231109548f19ae06ed52049f61921c4b9e4dbe45ad7e",
+      "bytes": 4178
+    },
+    "source/sky/assets/cream-cloud-atlas-n5.png": {
+      "sha256": "88a4d5ea9098b7dec21198c55939c50826c755f8ca51355658a8967621e4c7c6",
+      "bytes": 1609679
+    },
+    "source/sky/assets/native-sky-gradient-n5.png": {
+      "sha256": "41d341d39f4d6be0fc670c1da51a3ab13a0052efdc1bea7aa9a75f5722bfec1d",
+      "bytes": 312
+    },
+    "source/sky/assets/native-sky-radiance-n5.exr": {
+      "sha256": "3dc0a7de8de8f2bb0724a6ba04873b27b47bf3cbfe0ead0ffbcb0f26f31d2e11",
+      "bytes": 33122
+    },
+    "source/sky/assets/peach-mountain-atlas-n5.png": {
+      "sha256": "0dce1ff0db7528511ca0ffebc1cf351a0c0375cd956cd272e735bf9a44fde3b7",
+      "bytes": 1778056
+    },
+    "source/sky/atmosphere-parity-n5.json": {
+      "sha256": "86449091a756d81a3cdb1bcdb9616dfcef011de4acc847b554916e8db278b685",
+      "bytes": 292857
+    },
+    "source/sky/native-sky-radiance-n5.json": {
+      "sha256": "70a0c9d710d5008ffaff4861a63868a365144929e275687223584741c0677b8b",
+      "bytes": 24542
+    },
+    "source/sky/native_atmosphere.py": {
+      "sha256": "3dce1efa59c6c947ef0769feee8928ab7206dfb1639b452a9c14e48642dd40ab",
+      "bytes": 14752
+    },
+    "source/vegetation/VEGETATION_V4_R5_FREEZE_MANIFEST.json": {
+      "sha256": "a87ae878efbddcaef52b5d4ce1807700045d97da3502f5e8b7d486e422483d36",
+      "bytes": 8586
+    },
+    "source/vegetation/textures/sunward_broadleaf_clusters_r5.png": {
+      "sha256": "182b69777bee83bda72f694a9338b3c38c508d3ff21078f4e7d268672b9b3283",
+      "bytes": 43359
+    },
+    "source/vegetation/textures/sunward_broadleaf_clusters_r5_manifest.json": {
+      "sha256": "c1f475fd4d5ee9f043c2bedd210aed376d00623019385768ede0f3f5584926d6",
+      "bytes": 3292
+    },
+    "source/vegetation/vegetation_patch_v4_r5.py": {
+      "sha256": "6a3db5c62e070f44612378c702287185db4cc9517e67149aaa9c7fe298a325ae",
+      "bytes": 21834
+    }
+  }
+}

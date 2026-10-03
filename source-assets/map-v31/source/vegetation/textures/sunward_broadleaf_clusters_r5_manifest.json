@@ -1,0 +1,193 @@
+{
+  "origin": "original procedural compound broadleaf silhouettes; no reference pixels used",
+  "dimensions": [
+    512,
+    256
+  ],
+  "decoded_rgba_bytes": 524288,
+  "palette_cells": 8,
+  "gutter_px_min": 6,
+  "alpha": "cutoff0.5; eight matte palette cells with shallow-lobed drooping leaf clusters",
+  "srgb_encoding": "linear palette converted to sRGB once",
+  "sha256": "182b69777bee83bda72f694a9338b3c38c508d3ff21078f4e7d268672b9b3283",
+  "bytes": 43359,
+  "leaf_silhouettes_per_card": 5,
+  "cells": [
+    {
+      "palette_index": 0,
+      "rect_xywh_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.0,
+        0.5,
+        0.25,
+        1.0
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    },
+    {
+      "palette_index": 1,
+      "rect_xywh_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.25,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    },
+    {
+      "palette_index": 2,
+      "rect_xywh_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.5,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    },
+    {
+      "palette_index": 3,
+      "rect_xywh_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.75,
+        0.5,
+        1.0,
+        1.0
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    },
+    {
+      "palette_index": 4,
+      "rect_xywh_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.0,
+        0.0,
+        0.25,
+        0.5
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    },
+    {
+      "palette_index": 5,
+      "rect_xywh_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.25,
+        0.0,
+        0.5,
+        0.5
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    },
+    {
+      "palette_index": 6,
+      "rect_xywh_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.5,
+        0.0,
+        0.75,
+        0.5
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    },
+    {
+      "palette_index": 7,
+      "rect_xywh_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "uv_rect_u0_v0_u1_v1": [
+        0.75,
+        0.0,
+        1.0,
+        0.5
+      ],
+      "mask_bbox_local_px": [
+        21,
+        30,
+        106,
+        116
+      ],
+      "mask_coverage_fraction": 0.29150390625
+    }
+  ]
+}

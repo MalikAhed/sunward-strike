@@ -1,32 +1,19 @@
-# Map loading and compatibility
+# Current asset delivery
 
-The accepted v3 map is committed as `public/assets/sunward-v3.0.glb.gz` (6,124,741 bytes). Native `DecompressionStream('gzip')` restores the original 18,167,416-byte GLB, then `GLTFLoader.parseAsync` loads that scene. Compression changes only transport; geometry, materials, textures and collision behavior are unchanged.
+The v3.1 authored map is committed as `public/assets/sunward-v3.1.glb.gz`.
 
-- Gzip SHA-256: `03990a99e4e89d0b4441808f7578dc86faf2496af2b0c7dc34937f4e7155407c`
-- Decoded GLB SHA-256: `004106c1d0dd9660db9e94d003898f19d41e5341c33f27719395e00e98d6c004`
+- Gzip: 8,062,943 bytes; SHA-256 `dd1726021006f0f41d111942e972597979fd10e879078bd8ea5e92807cc32c6b`
+- Decoded GLB: 17,890,616 bytes; SHA-256 `7f2c4ba9865cbb471c1d102a407bc76fc888f4bed679260cde314f328ea1b0b2`
+- Collision: 585,308 bytes; SHA-256 `fc20bd6d76beac2bfbf2e84f21bd088bcac01782f68075c267094815b046ff0e`
+- Two separate n5 atlases: 3,387,735 bytes combined; decoded RGBA 12,582,912 bytes before mipmaps
+- Embedded map images: decoded RGBA 5,439,488 bytes before mipmaps
 
-The loader inspects payload magic. If the host has already applied HTTP content decoding, raw GLB bytes pass through directly. Content type and the `.gz` filename do not determine decoding. Invalid/truncated gzip, GLB header/chunks, failed requests and parser errors are surfaced to the map error panel. They do not silently trigger another download.
+The map-only gzip cap was explicitly revised to 8,500,000 bytes for v3.1. Older version caps remain unchanged. Atlas, rifle, collision, poster, code and CSS bytes are separate; `dist/offline-manifest.json` provides the exact complete selected delivery totals for each build.
 
-## Browsers without a native decompressor
+`npm run dev` and `npm run build` run `prepare:assets` first. Preparation decompresses the committed gzip and verifies its configured decoded SHA before creating `public/assets/sunward-v3.1.glb`. That raw compatibility artifact is ignored by Git and copied to `dist/` during build. Existing identical bytes are left unchanged. A divergent local file, invalid gzip, path traversal or symbolic-link target fails safely rather than overwriting edits.
 
-The client chooses `sunward-v3.0.glb` before fetching when `DecompressionStream` is absent. This avoids downloading both versions. `npm run dev` and `npm run build` automatically run `scripts/prepare-map-assets.mjs` first, and Vite includes both the gzip and generated raw fallback in the served/build output.
+The loader preserves LoadingManager accounting through decode and GLTF parsing. Modern clients request gzip. If constructing a gzip DecompressionStream is unsupported, the app requests raw directly without first downloading gzip. HTTP-decoded raw GLB is recognized by its magic bytes rather than filename. Corrupt/truncated payloads and network errors remain explicit errors with a user-triggered retry; they are not silently masked by a second asset path. All URLs are relative to the hosting base.
 
-Only gzip belongs in Git. The raw fallback is ignored and generated from accepted gzip. Preparation checks the decoded hash in `src/map-config.js`, then either:
+The offline worker uses the same per-browser map choice, exact byte/hash validation, HTTP-cache reuse and a separate versioned CacheStorage entry. It never eagerly saves both map representations for one client. A worker-protocol change also changes the cache version. Offline readiness is withheld until every selected dependency is validated and saved; failed installs preserve the previous working version. See [offline cache behavior](OFFLINE_CACHE.md).
 
-1. Reuses an existing regular raw file after an exact byte comparison, preserving its timestamp
-2. Creates a complete temporary file and atomically links it into the still-absent raw destination without overwrite
-3. Fails clearly if any existing raw file differs or is not a regular file
-
-A differing raw file may contain newer authoring work. Preserve it and reconcile that change with the approved gzip/config after review; never blindly overwrite or delete it to pass a build. The generated raw file is not an editable source. Source scenes and reproducible exports remain in `source-assets/`.
-
-Manual preparation is `npm run prepare:assets`. Tests run directly from committed gzip, so CI does not require the raw file until the build step. Direct `vite`/`vite build` commands bypass npm lifecycle hooks; use the npm scripts, or run preparation explicitly first.
-
-## Progress, retry and static hosting
-
-Byte progress occupies the download portion of the loading bar; a server-encoded response with an unreliable `Content-Length` uses indeterminate byte counts. Parsing and embedded resources remain tracked by Three.js LoadingManager. The bar only reaches 100% after the map has parsed and been added to the scene. Optional collision/rifle completion cannot mark the map complete.
-
-Download and parser failures balance the manager's top-level item and expose an explicit retry button. A retry clears stale errors and progress. A single-flight guard prevents duplicate retry loads. Query strings and fragments are retained in raw fallback URLs, and map-relative resource bases continue to use Vite's relative base so a nested GitHub Pages path works.
-
-## Verification limits
-
-The regression suite verifies native WHATWG decompression in Node, bytes, GLTF parsing, loader accounting, source-level retry wiring and the actual collision/walk-controller gates. Offline GLES shader compilation is separate. This environment cannot create browser WebGL2; none of those checks establishes browser GPU rendering, touch/pointer-lock behavior or a measured device frame rate. The application retains its static source-preview fallback for browsers where WebGL2 cannot start.
+The static fallback poster is the accepted v3.1 Blender overview. It is explicitly labeled a source preview when WebGL2 cannot initialize, and it does not imply that gameplay has been rendered or verified on that browser.

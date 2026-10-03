@@ -24,7 +24,7 @@ test('current GLB collider identity is v3-only and budget stays bounded',()=>{
  assert.ok(meshes>0);assert.ok(!(metadata.nodes||[]).some(n=>n.name==='COL_Sunward_Static'));
  const triangles=metadata.meshes.flatMap(m=>m.primitives).reduce((sum,p)=>sum+metadata.accessors[p.indices??p.attributes.POSITION].count/3,0);
  assert.equal(tree.stats.triangleCount,triangles);assert.ok(triangles>0&&triangles<=20000);assert.ok(tree.stats.nodes<40000);assert.ok(tree.stats.references<200000);assert.ok(buildMs<5000);
- assert.equal(metadata.scenes[metadata.scene||0].extras.build_version,MAP_CONFIG.version);
+ const extras=metadata.scenes[metadata.scene||0].extras;assert.equal(extras.build_version,MAP_CONFIG.style?.structuralBuildVersion??MAP_CONFIG.version);if(MAP_CONFIG.version==='3.1')assert.match(extras.integrated_style_revision,/^v3\.1:/);
 });
 
 test('all six synthetic box faces retain outward collision, mirrored and unmirrored',()=>{
