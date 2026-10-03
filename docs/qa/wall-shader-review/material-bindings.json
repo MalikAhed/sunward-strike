@@ -1,0 +1,219 @@
+{
+  "reviewer": "Independent rendering review",
+  "date": "2026-10-03",
+  "map_file": "public/assets/sunward-v2.5.glb",
+  "map_sha256": "5c55f997e74eb39d3a32a842ac417d04b37c905f982f60bdc8ab814ca10aec42",
+  "atmosphere_sha256": "030cb2c63a505ebf74532ccdc075e4d52552436ea4827232b38223bcb66e20e1",
+  "affected_materials": [
+    {
+      "material_index": 9,
+      "name": "V2_Warm_Plaster",
+      "alpha_mode": "OPAQUE",
+      "double_sided": true,
+      "bindings": [
+        {
+          "name": "10_A_Mint_Architecture__V2_Warm_Plaster",
+          "vertices": 6240,
+          "triangles": 2860,
+          "has_normals": true,
+          "has_uv": true,
+          "local_bounds": [
+            [
+              -1.8249998092651367,
+              -0.05000198632478714,
+              -11.125
+            ],
+            [
+              10.425000190734863,
+              3.1000001430511475,
+              0.125
+            ]
+          ]
+        },
+        {
+          "name": "10_B_Saffron_Architecture__V2_Warm_Plaster",
+          "vertices": 6240,
+          "triangles": 2860,
+          "has_normals": true,
+          "has_uv": true,
+          "local_bounds": [
+            [
+              -1.8250012397766113,
+              -0.050001442432403564,
+              -11.125
+            ],
+            [
+              10.425000190734863,
+              3.1000008583068848,
+              0.1250009536743164
+            ]
+          ]
+        },
+        {
+          "name": "11_A_Mint_Garage__V2_Warm_Plaster",
+          "vertices": 1632,
+          "triangles": 748,
+          "has_normals": true,
+          "has_uv": true,
+          "local_bounds": [
+            [
+              -0.5249999761581421,
+              -0.10500085353851318,
+              -10.425000190734863
+            ],
+            [
+              6.429999828338623,
+              3.049999713897705,
+              0.125
+            ]
+          ]
+        },
+        {
+          "name": "11_B_Saffron_Garage__V2_Warm_Plaster",
+          "vertices": 1632,
+          "triangles": 748,
+          "has_normals": true,
+          "has_uv": true,
+          "local_bounds": [
+            [
+              -0.5250014066696167,
+              -0.10499989986419678,
+              -10.42500114440918
+            ],
+            [
+              6.429998874664307,
+              3.0500001907348633,
+              0.125
+            ]
+          ]
+        },
+        {
+          "name": "40_ContextScenery__V2_Warm_Plaster",
+          "vertices": 96,
+          "triangles": 44,
+          "has_normals": true,
+          "has_uv": true,
+          "local_bounds": [
+            [
+              -4.5,
+              -3.25,
+              -7.5
+            ],
+            [
+              4.5,
+              3.25,
+              7.5
+            ]
+          ]
+        }
+      ],
+      "pbr": {
+        "baseColorTexture": {
+          "index": 7
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8799999952316284
+      },
+      "normalTexture": {
+        "index": 6,
+        "scale": 0.3199999928474426
+      }
+    },
+    {
+      "material_index": 10,
+      "name": "V2_Sage_Plaster",
+      "alpha_mode": "OPAQUE",
+      "double_sided": true,
+      "bindings": [
+        {
+          "name": "10_A_Mint_Architecture__V2_Sage_Plaster",
+          "vertices": 4992,
+          "triangles": 2288,
+          "has_normals": true,
+          "has_uv": true,
+          "local_bounds": [
+            [
+              -1.8249998092651367,
+              -1.975001335144043,
+              -11.125
+            ],
+            [
+              10.425000190734863,
+              1.575000286102295,
+              0.125
+            ]
+          ]
+        }
+      ],
+      "pbr": {
+        "baseColorTexture": {
+          "index": 9
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8799999952316284
+      },
+      "normalTexture": {
+        "index": 8,
+        "scale": 0.3199999928474426
+      }
+    },
+    {
+      "material_index": 23,
+      "name": "V2_Saffron_Plaster",
+      "alpha_mode": "OPAQUE",
+      "double_sided": true,
+      "bindings": [
+        {
+          "name": "10_B_Saffron_Architecture__V2_Saffron_Plaster",
+          "vertices": 4992,
+          "triangles": 2288,
+          "has_normals": true,
+          "has_uv": true,
+          "local_bounds": [
+            [
+              -1.8250007629394531,
+              -1.9750008583068848,
+              -11.125000953674316
+            ],
+            [
+              10.425000190734863,
+              1.5750010013580322,
+              0.1250009536743164
+            ]
+          ]
+        }
+      ],
+      "pbr": {
+        "baseColorTexture": {
+          "index": 17
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8799999952316284
+      },
+      "normalTexture": {
+        "index": 16,
+        "scale": 0.3199999928474426
+      }
+    }
+  ],
+  "material_count": 57,
+  "mesh_count": 133,
+  "all_map_external_uris": [],
+  "reference_authority": {
+    "bug_evidence": "image(20261003-161724).png",
+    "style_reference": "ca71f0ad-ff16-4cb7-8b22-5bff8edf6139.png"
+  },
+  "spec_source": "https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf",
+  "spec_section": "3.8, page 25 (PDF page 26), reserved future keywords includes patch",
+  "result": "Minimal paint shader correction approved at source/compiler level; fresh target-browser rendering remains unverified",
+  "limitations": [
+    "GLSL tests use installed surfaceless Mesa software compiler, not the user browser ANGLE/GPU",
+    "No fresh target-browser render was acquired",
+    "Material palette/sky/cloud fidelity versus reference remains a separate visual review"
+  ],
+  "offline_compiler_checks": {
+    "isolated_reserved_identifier_reproduction": "original failed / safe identifier passed",
+    "builder_shader_regression": "2 tests passed, zero skips, nine shader variants linked, original negative control rejected",
+    "independent_textured_wall_variants": "six programs compiled and linked, GLB-derived baseColor and normal texture flags, original textured negative control rejected"
+  }
+}

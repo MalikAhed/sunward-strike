@@ -10,3 +10,7 @@ docs/qa/*-local.json
 
 __pycache__/
 *.pyc
+
+# Reproducible heavy QA intermediates stay local
+docs/qa/**/fixture.json
+docs/qa/**/original-scene-snapshot.json

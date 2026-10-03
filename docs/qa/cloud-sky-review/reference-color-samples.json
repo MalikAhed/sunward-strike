@@ -1,0 +1,62 @@
+{
+  "reference_windmill_sky": {
+    "region": [
+      416,
+      0,
+      695,
+      395
+    ],
+    "blue_filtered_pixels": 47163,
+    "median_RGB": [
+      87.0,
+      147.0,
+      221.0
+    ],
+    "mean_RGB": [
+      93.77,
+      149.87,
+      216.86
+    ],
+    "note": "descriptive pixel sample, not a color-match tolerance"
+  },
+  "reference_house_sky": {
+    "region": [
+      770,
+      401,
+      1117,
+      473
+    ],
+    "blue_filtered_pixels": 11735,
+    "median_RGB": [
+      106.0,
+      162.0,
+      231.0
+    ],
+    "mean_RGB": [
+      110.95,
+      165.42,
+      227.14
+    ],
+    "note": "descriptive pixel sample, not a color-match tolerance"
+  },
+  "bug_upper_clear_sky": {
+    "region": [
+      264,
+      13,
+      455,
+      191
+    ],
+    "blue_filtered_pixels": 743,
+    "median_RGB": [
+      132.0,
+      152.0,
+      166.0
+    ],
+    "mean_RGB": [
+      131.82,
+      152.24,
+      165.9
+    ],
+    "note": "descriptive pixel sample, not a color-match tolerance"
+  }
+}

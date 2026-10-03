@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { buildCollisionOctree } from './collision.js';
-import {createClouds, applyReferencePalette} from './atmosphere.js';
+import {createClouds, createSky, applyReferencePalette} from './atmosphere.js';
 import {WalkController} from './physics.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { clamp, damp, normalizedInput, rotationFromLook, VIEWPOINTS } from './math.js';
@@ -51,10 +51,7 @@ sunlight.shadow.camera.top=62; sunlight.shadow.camera.bottom=-62;
 sunlight.shadow.camera.near=1; sunlight.shadow.camera.far=180;
 sunlight.shadow.normalBias=.035; sunlight.shadow.bias=-.00015;
 sunlight.target.position.set(0,0,0); scene.add(sunlight,sunlight.target);
-const sky = new THREE.Mesh(new THREE.SphereGeometry(400,24,16),new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,uniforms:{topColor:{value:new THREE.Color(0x4c95d7)},bottomColor:{value:new THREE.Color(0xc5e0ee)}},vertexShader:'varying vec3 vWorld; void main(){vec4 p=modelMatrix*vec4(position,1.0);vWorld=p.xyz;gl_Position=projectionMatrix*viewMatrix*p;}',fragmentShader:'uniform vec3 topColor; uniform vec3 bottomColor; varying vec3 vWorld; void main(){float h=normalize(vWorld).y;gl_FragColor=vec4(mix(bottomColor,topColor,smoothstep(-0.02,0.72,h)),1.0); #include <tonemapping_fragment> #include <colorspace_fragment> }'}));
-// GLSL includes need to begin on their own lines.
-sky.material.fragmentShader=sky.material.fragmentShader.replace(' #include','\n#include').replace(' #include','\n#include').replace(' }','\n}');
-sky.frustumCulled=false; scene.add(sky,createClouds());
+const sky = createSky(); scene.add(sky,createClouds());
 const pmrem = new THREE.PMREMGenerator(renderer);
 scene.environment = pmrem.fromScene(new RoomEnvironment(),.04).texture;
 scene.environmentIntensity=.28;
@@ -86,7 +83,7 @@ function applyLook(){camera.rotation.set(pitch,yaw,0,'YXZ');}
 function setLook(position,target){ camera.position.fromArray(position); const angles=rotationFromLook(position,target);yaw=angles.yaw;pitch=angles.pitch;applyLook(); }
 function setViewpoint(name){const view=VIEWPOINTS[name]||VIEWPOINTS.hero;state.viewpoint=name;$('viewpoint').value=name;if(state.mode==='walk')setMode('fly',false);setLook(view.position,view.target);orbit.target.fromArray(view.target);velocity.set(0,0,0);}
 function spawnWalk(position=[-15,1.84,0],target=[5,1.84,0]){setLook(position,target);walker.spawn(camera.position);velocity.set(0,0,0);}
-function setMode(mode,reset=true){state.mode=mode;orbit.enabled=mode==='orbit';orbit.autoRotate=false;keys.clear();aim=false;fireHeld=false;document.querySelectorAll('[data-mode]').forEach(button=>button.classList.toggle('selected',button.dataset.mode===mode));$('mode-label').textContent={fly:'FREEFLY',walk:'FIRST PERSON',orbit:'OVERVIEW'}[mode];$('crosshair').classList.toggle('hidden',mode!=='walk');$('walk-controls').classList.toggle('hidden',mode!=='walk');$('weapon-hud').classList.toggle('hidden',mode!=='walk');$('lock-hint').classList.toggle('hidden',mode!=='walk'||state.pointerLocked);$('vertical-label').textContent=mode==='walk'?'Freefly only':'Descend / ascend';$('mouse-label').textContent=mode==='orbit'?'Drag / scroll to orbit':'Drag to look';$('guide-note').textContent=mode==='walk'?'Capsule collision + gravity. Cosmetic firing; no combat targets.':mode==='orbit'?'Drag to orbit. Scroll to zoom. Right-drag to pan.':'Freefly passes through geometry. No boundaries.';if(mode==='walk'&&reset)spawnWalk();if(mode==='orbit'){document.exitPointerLock?.();if(reset)setViewpoint('hero');orbit.target.set(0,2,0);orbit.update();}if(mode!=='walk')state.reloading=false;}
+function setMode(mode,reset=true){state.mode=mode;$('app').dataset.mode=mode;orbit.enabled=mode==='orbit';orbit.autoRotate=false;keys.clear();aim=false;fireHeld=false;document.querySelectorAll('button[data-mode]').forEach(button=>{const selected=button.dataset.mode===mode;button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));});$('mode-label').textContent={fly:'FREEFLY',walk:'FIRST PERSON',orbit:'ORBIT'}[mode];$('crosshair').classList.toggle('hidden',mode!=='walk');$('walk-controls').classList.toggle('hidden',mode!=='walk');$('weapon-hud').classList.toggle('hidden',mode!=='walk');$('lock-hint').classList.toggle('hidden',mode!=='walk'||state.pointerLocked);$('vertical-label').textContent=mode==='walk'?'Freefly only':'Descend / ascend';$('mouse-label').textContent=mode==='orbit'?'Drag / scroll to orbit':'Drag to look';$('guide-note').textContent=mode==='walk'?'Capsule collision + gravity. Cosmetic firing; no combat targets.':mode==='orbit'?'Drag to orbit. Scroll to zoom. Right-drag to pan.':'Freefly passes through geometry. No boundaries.';if(mode==='walk'&&reset)spawnWalk();if(mode==='orbit'){document.exitPointerLock?.();if(reset)setViewpoint('hero');orbit.target.set(0,2,0);orbit.update();}if(mode!=='walk')state.reloading=false;}
 function setQuality(value){state.quality=value;const dpr=window.devicePixelRatio||1;renderer.setPixelRatio(Math.min(dpr,{high:2,balanced:1.5,low:1}[value]));renderer.shadowMap.enabled=value!=='low';sunlight.shadow.mapSize.set(value==='high'?4096:2048,value==='high'?4096:2048);if(sunlight.shadow.map){sunlight.shadow.map.dispose();sunlight.shadow.map=null;}sunlight.shadow.needsUpdate=true;scene.traverse(obj=>{if(obj.isMesh){for(const mat of Array.isArray(obj.material)?obj.material:[obj.material])mat.needsUpdate=true;}});resize();}
 function resize(){const w=window.innerWidth,h=window.innerHeight;camera.aspect=w/h;camera.updateProjectionMatrix();weaponCamera.aspect=w/h;weaponCamera.updateProjectionMatrix();renderer.setSize(w,h,false);}
 function requestLock(){if(state.mode==='orbit')return;try{const result=canvas.requestPointerLock();result?.catch?.(()=>toast('Mouse capture was unavailable. Drag the scene to look instead.'));}catch{toast('Drag the scene to look. Mouse capture is unavailable here.');}}
@@ -110,12 +107,12 @@ canvas.addEventListener('pointermove',event=>{if(state.mode==='orbit')return;let
 window.addEventListener('pointerup',event=>{if(state.pointerLocked){if(event.button===0)fireHeld=false;if(event.button===2)aim=false;}if(drag?.id===event.pointerId){const click=Math.hypot(event.clientX-drag.startX,event.clientY-drag.startY)<6;drag=null;if(click&&state.mode==='walk'&&event.pointerType!=='touch')requestLock();}});
 canvas.addEventListener('pointercancel',clearInput);
 $('explore').addEventListener('click',()=>{dismissIntro();setMode('fly');toast('WASD to fly · Q / E for height · drag to look · F to capture mouse');});
-document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{dismissIntro();setMode(button.dataset.mode);}));
+document.querySelectorAll('button[data-mode]').forEach(button=>button.addEventListener('click',()=>{dismissIntro();setMode(button.dataset.mode);}));
 $('viewpoint').addEventListener('change',event=>{dismissIntro();setViewpoint(event.target.value);});
 $('quality').addEventListener('change',event=>setQuality(event.target.value));
 $('reset').addEventListener('click',()=>{if(state.mode==='walk')spawnWalk();else setViewpoint('hero');toast('View reset');});
-function toggleHelp(){const panel=$('controls');if(matchMedia('(max-width:640px),(pointer:coarse)').matches){panel.classList.remove('hidden');panel.classList.toggle('mobile-open');}else panel.classList.toggle('hidden');}
-$('help-toggle').addEventListener('click',toggleHelp);$('controls-close').addEventListener('click',()=>{$('controls').classList.add('hidden');$('controls').classList.remove('mobile-open');});
+function toggleHelp(){const panel=$('controls');const opening=$('help-toggle').getAttribute('aria-expanded')!=='true';panel.classList.toggle('hidden',!opening);panel.classList.toggle('mobile-open',opening);$('help-toggle').setAttribute('aria-expanded',String(opening));}
+$('help-toggle').addEventListener('click',toggleHelp);$('controls-close').addEventListener('click',()=>{$('controls').classList.add('hidden');$('controls').classList.remove('mobile-open');$('help-toggle').setAttribute('aria-expanded','false');});
 $('fullscreen').addEventListener('click',()=>{if(document.fullscreenElement)document.exitFullscreen?.();else $('app').requestFullscreen?.().catch(()=>toast('Fullscreen is unavailable in this browser.'));});
 document.querySelectorAll('[data-key]').forEach(button=>{button.addEventListener('pointerdown',event=>{event.preventDefault();dismissIntro();keys.add(button.dataset.key);button.setPointerCapture(event.pointerId);});for(const type of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(type,()=>keys.delete(button.dataset.key));});
 

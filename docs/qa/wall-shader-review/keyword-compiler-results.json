@@ -1,0 +1,24 @@
+{
+  "context": {
+    "EGL": "1.5",
+    "GL": "4.5 (Core Profile) Mesa 25.0.7-2+deb13u1",
+    "GLSL": "4.50",
+    "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)"
+  },
+  "cases": [
+    {
+      "name": "original_reserved_identifier",
+      "GLSL": "300 es",
+      "success": false,
+      "diagnostic": "0:4(19): error: illegal use of reserved word `patch'\n0:4(19): error: syntax error, unexpected ERROR_TOK, expecting ',' or ';'\n",
+      "source": "#version 300 es\nprecision highp float;\nout vec4 outColor;\nvoid main(){float patch=.25;outColor=vec4(patch);}\n"
+    },
+    {
+      "name": "corrected_safe_identifier",
+      "GLSL": "300 es",
+      "success": true,
+      "diagnostic": "",
+      "source": "#version 300 es\nprecision highp float;\nout vec4 outColor;\nvoid main(){float artPaintVariation=.25;outColor=vec4(artPaintVariation);}\n"
+    }
+  ]
+}

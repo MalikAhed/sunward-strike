@@ -1,0 +1,12 @@
+{
+  "method": "Actual fallback/start source extracted into VM with mock DOM and forced WebGLRenderer error. No browser visual/layout test implied.",
+  "passed": true,
+  "checks": [
+    "No cascading renderer/animation setup after failure",
+    "Explicit static-source label and truthful poster alt/description",
+    "Relative poster path",
+    "Dead controls hidden",
+    "Retry Page invokes reload",
+    "Read-only debug reports fallback=true, ready=false, webgl2=false"
+  ]
+}
