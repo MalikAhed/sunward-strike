@@ -37,9 +37,11 @@ function installColorLayer(material,kind){
     shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vArtWorld;');
     shader.vertexShader=shader.vertexShader.replace('#include <worldpos_vertex>','#include <worldpos_vertex>\nvArtWorld=(modelMatrix*vec4(transformed,1.0)).xyz;');
     shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying vec3 vArtWorld;\nfloat artHash(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}');
-    const layer=kind==='foliage'?'diffuseColor.rgb*=vec3(1.16,1.08,.76);':`vec3 cell=floor(vArtWorld*1.2);float diagonal=step(fract(vArtWorld.x*1.2),fract(vArtWorld.y*1.2));float patch=artHash(cell+diagonal);diffuseColor.rgb*=.965+patch*.07;`;
+    // `patch` is reserved in GLSL ES 3.00; using it makes only plaster
+    // programs fail to compile, leaving roofs and frames visibly floating.
+    const layer=kind==='foliage'?'diffuseColor.rgb*=vec3(1.16,1.08,.76);':`vec3 artCell=floor(vArtWorld*1.2);float artDiagonal=step(fract(vArtWorld.x*1.2),fract(vArtWorld.y*1.2));float artPaintVariation=artHash(artCell+artDiagonal);diffuseColor.rgb*=.965+artPaintVariation*.07;`;
     shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\n'+layer);
   };
-  material.customProgramCacheKey=()=>`sunward-art-layer-${kind}-v1`;
+  material.customProgramCacheKey=()=>`sunward-art-layer-${kind}-v2`;
   material.needsUpdate=true;
 }
