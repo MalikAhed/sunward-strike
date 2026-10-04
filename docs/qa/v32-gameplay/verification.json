@@ -1,0 +1,95 @@
+{
+  "version": "3.2",
+  "scope": "Local independently checked source/runtime refinement; deployment identity is verified separately for the published commit",
+  "created_utc": "2026-10-04T00:14:08.610942+00:00",
+  "source_sha256": "2451ad713cdb8522398a5d4c7b13812475095138cd56c3321ca2d9e26f27b8ba",
+  "native_extracted_sha256": "9a29102a227498f2360054b2fccbf0f68feb1441f4fa139017d71ee01e4d1526",
+  "native_extracted_bytes": 56232484,
+  "visual_sha256": "0c7e6578c0975900dcfbdfdae7d2f20f017a690ae1ea87946310361aba8342aa",
+  "compressed_visual_sha256": "396c46f365c6e55130128cec024ac2acedae947655785d671384c3d527a01d0c",
+  "collision_sha256": "1065c56be640845db92fb96293ddc60667eaccd1904c5272054e3a3111735949",
+  "collision_geometry_sha256": "d11884850d061de3e0023ec4d0aee24744d5e9c3ecb61e51aee80e8b437f764e",
+  "collision_change": "Only three version/status scene annotations; binary geometry, nodes and other JSON fields are exact",
+  "tests_passed": 220,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "shader_compiler_required": true,
+  "compiled_app_programs": 30,
+  "compiled_combined_critical_programs": 12,
+  "shader_counts_overlap": true,
+  "packaging_unit_tests_passed": 18,
+  "actual_native_extraction_verified": true,
+  "portable_export_byte_identity_verified": true,
+  "original_native_images_verified": 30,
+  "complete_packaged_native_file_images": 39,
+  "geometry": {
+    "triangles": 235734,
+    "meshes": 123,
+    "primitives": 138,
+    "materials": 77,
+    "images": 25,
+    "raw_bytes": 19934724,
+    "gzip_bytes": 6984537,
+    "base_rgba_bytes": 6881280,
+    "full_mip_rgba_bytes": 9175012,
+    "referenced_vertex_index_bytes": 18054030
+  },
+  "source_reimport_mean_rgb_difference_per_255": {
+    "green_yard": 0.006275,
+    "street": 1.005679,
+    "overview": 0.046046
+  },
+  "current_simulation": {
+    "stress_mode": "Kill Confirmed",
+    "teams": "6v6; human slot stationary for this disclosed stress case",
+    "seconds": 300,
+    "shots": 1197,
+    "deaths": 96,
+    "confirms": 17,
+    "denies": 71,
+    "score": [
+      4,
+      13
+    ],
+    "movement_violations": 0,
+    "render_cadence_replays_hz": [
+      30,
+      60,
+      144
+    ],
+    "replay_final_states_identical": true
+  },
+  "known_limits": [
+    "Repeated stylized fan-shaped grass; timber, vehicles and interiors remain less rich than the style references",
+    "Selected KC results improve collection but do not establish universal balance or humanlike tactics",
+    "Actual browser rendering, physical pointer/keyboard/touch, audio playback, disconnected reload and device GPU frame time remain unperformed",
+    "Native and web lighting/color pipelines are not asserted identical",
+    "Prototype scale uses a provisional10.5m bus, not authenticated original-game meters"
+  ],
+  "previews": {
+    "green-yard.png": {
+      "bytes": 1574111,
+      "sha256": "908f3a6ecef6cc5a049ce6b468a51a1d4b34579043c34f144c9cf02f52d08531"
+    },
+    "overview.png": {
+      "bytes": 1405181,
+      "sha256": "5c05962312a801a58652a0a0f0d2a55b8d1a0cf37ab4f40752354caf96de9989"
+    },
+    "street.png": {
+      "bytes": 1504251,
+      "sha256": "cce8c8a94ae81a3145aa5236103d43cc6e1d9281dd3474a70029ad79c448114e"
+    },
+    "yellow-yard.png": {
+      "bytes": 1600400,
+      "sha256": "17711c7ab003f1d2f293729dc4097b787ff1641f714535674d098dbc5f5c2259"
+    }
+  },
+  "lint": "passed",
+  "build": "passed",
+  "offline_version": "3721db604a1a2e44706d",
+  "offline_selected_delivery_bytes": {
+    "gzip": 14799951,
+    "raw": 27750138
+  },
+  "poster_sha256": "5c05962312a801a58652a0a0f0d2a55b8d1a0cf37ab4f40752354caf96de9989"
+}

@@ -43,7 +43,11 @@ export class OfflineMatch{
     return candidates.map((point,index)=>{let visible=0,nearest=100,occupied=0;for(const other of this.actors){if(!other.alive||other.id===actor.id)continue;const range=distance(point,other.position);if(range<1.2)occupied++;if(other.team!==actor.team){nearest=Math.min(nearest,range);if(this.world.hasLineOfSight(add(point,[0,1.64,0]),other.eye))visible++;}}return {point,index,value:nearest-visible*45-occupied*100+(index===(actor.life+hashSeed(this.settings.seed,actor.id))%candidates.length?.01:0)};}).sort((a,b)=>b.value-a.value||a.index-b.index)[0].point;
   }
   spawn(actor,time){
-    actor.life++;actor.alive=true;actor.health=GAMEPLAY_TUNING.actor.health;actor.damageHistory.clear();actor.weapon.reset();actor.brain?.reset();actor.respawnAt=null;actor.lastDamageAt=-Infinity;actor.protectionUntil=time+GAMEPLAY_TUNING.actor.spawnProtection;actor.yaw=actor.team===0?0:Math.PI;actor.pitch=0;actor.motor.spawn(this.chooseSpawn(actor));Object.assign(actor,actor.motor.state());this.emit('respawn',{actorId:actor.id,team:actor.team,position:[...actor.position],life:actor.life},time);
+    actor.life++;actor.alive=true;actor.health=GAMEPLAY_TUNING.actor.health;actor.damageHistory.clear();actor.weapon.reset();actor.brain?.reset();actor.respawnAt=null;actor.lastDamageAt=-Infinity;actor.protectionUntil=time+GAMEPLAY_TUNING.actor.spawnProtection;actor.yaw=actor.team===0?0:Math.PI;actor.pitch=0;actor.motor.spawn(this.chooseSpawn(actor));Object.assign(actor,actor.motor.state());
+    // Spawn runs before commands in this tick. Discard the previous life's
+    // buffered look/actions before they can overwrite the new spawn state.
+    if(actor.id==='player')this.playerCommand=sanitized({yaw:actor.yaw,pitch:actor.pitch});
+    this.emit('respawn',{actorId:actor.id,team:actor.team,position:[...actor.position],life:actor.life},time);
   }
   applyDamage(targetId,amount,{sourceId=null,time=this.timeElapsed,headshot=false,ignoreProtection=false}={}){
     const actor=this.getActor(targetId),source=sourceId?this.getActor(sourceId):null;

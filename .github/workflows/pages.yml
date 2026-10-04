@@ -31,6 +31,10 @@ jobs:
         env:
           REQUIRE_SHADER_COMPILER: '1'
           LIBGL_ALWAYS_SOFTWARE: '1'
+      - name: Verify editable-source package
+        run: |
+          python3 -m unittest discover -s source-assets/map-v32 -p 'test_*.py'
+          python3 source-assets/map-v32/extract_source.py
       - run: npm run build
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request'

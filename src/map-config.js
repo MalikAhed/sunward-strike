@@ -1,12 +1,12 @@
-// Generated coordinates from canonical site_frames.json; v3.1 style/delivery contract.
+// Generated canonical coordinates are unchanged; v3.2 accepted-style/delivery contract.
 export const MAP_CONFIG = Object.freeze({
-  "version": "3.1",
-  "decodedMapSha256": "7f2c4ba9865cbb471c1d102a407bc76fc888f4bed679260cde314f328ea1b0b2",
+  "version": "3.2",
+  "decodedMapSha256": "0c7e6578c0975900dcfbdfdae7d2f20f017a690ae1ea87946310361aba8342aa",
   "frameVersion": "layout-r3-family-corrected",
   "label": "SUNWARD / CLASSIC LAYOUT",
   "assets": {
-    "map": "sunward-v3.1.glb.gz",
-    "collision": "sunward-collision-v3.1.glb",
+    "map": "sunward-v3.2.glb.gz",
+    "collision": "sunward-collision-v3.2.glb",
     "rifle": "carbine-revision2.glb"
   },
   "floorY": 0.014,
@@ -214,14 +214,16 @@ export const MAP_CONFIG = Object.freeze({
   "paintMaterials": [],
   "scaleNotice": "Reference-traced proportions; meters are prototype calibration from a 10.5m bus anchor, not an authenticated game survey.",
   "style": {
-    "version": "palette-p1r5+vegetation-v4r5+furniture-r3+n5",
+    "version": "palette-p1r5+vegetation-v4r5+furniture-r3+n5 + surface-p2r5 + lawn-r6i",
     "materialsBaked": true,
     "structuralBuildVersion": "3.0",
     "bakedMaterialPrefixes": [
       "V3_Tone_",
       "V4R5_",
-      "D3_"
+      "D3_",
+      "V6_"
     ],
-    "atmosphere": "distant-painted-banks-n5"
+    "atmosphere": "distant-painted-banks-n5",
+    "lawnMaterial": "V6_ShortTurf_OriginalAtlas"
   }
 });

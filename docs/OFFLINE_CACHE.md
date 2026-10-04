@@ -10,11 +10,11 @@ Updates do not call `skipWaiting()` during installation. An explicit Update & re
 
 The unit suite exercises the actual generated worker in an isolated standards-object harness. It checks exact hashes, path constraints, disconnected shell/assets, gzip/raw selection, quota and corruption rollback, missing-file repair, scoped cache behavior, all-tab update gating and reload races. Browser registration, browser storage quotas/eviction, and real disconnected browser reload have not been verified in the WebGL-disabled review environment.
 
-## v3.1 checkpoint budgets
+## v3.2 checkpoint budgets
 
-The accepted p1r5 / vegetation-r5 / furniture-r3 / n5 checkpoint has an 8,062,943-byte map gzip, with a 17,890,616-byte decoded GLB. The map-only provisional gzip cap was explicitly revised to 8,500,000 bytes for v3.1; earlier versions retain their existing cap. This is separate from the two n5 sky atlases, totaling 3,387,735 file bytes.
+The accepted base artwork plus P2 surface detail and r6i lawn has a 6,984,537-byte map gzip, with a 19,934,724-byte decoded GLB. The map-only provisional gzip cap remains 8,500,000 bytes, as in v3.1; earlier versions retain their own explicit caps. This is separate from the two n5 sky atlases, totaling 3,387,735 file bytes.
 
-The map's embedded images occupy 5,439,488 decoded RGBA bytes. The two 1536×1024 sky atlases add 12,582,912 RGBA bytes, for 18,022,400 bytes before mipmaps, runtime render targets, the rifle, and GPU-driver overhead. The current generated manifest is the authority for each final build's selected total; it includes the poster, rifle, collision, code and CSS as well as the map and sky. A later art checkpoint must refresh these measurements and hashes before publication.
+The map's embedded images occupy 6,881,280 decoded RGBA bytes. The two 1536×1024 sky atlases add 12,582,912 RGBA bytes, for 19,464,192 bytes before mipmaps, runtime render targets, the rifle, and GPU-driver overhead. The current generated manifest is the authority for each final build's selected total; it includes the poster, rifle, collision, code and CSS as well as the map and sky. A later art checkpoint must refresh these measurements and hashes before publication.
 
 ## Primary API references
 

@@ -1,0 +1,149 @@
+{
+  "version": "surface-detail-p2r2",
+  "source": "Original analytic artwork; no input image pixels",
+  "tile_meters": 2.6,
+  "images": [
+    {
+      "file": "Turquoise_Siding_H.png",
+      "name": "Turquoise_Siding_H",
+      "role": "baseColor",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 4791,
+      "sha256": "cb6d77bb8d098daa4ebaf643766414080ef8fb0a05ac0874b2272966a16c7a13",
+      "decoded_rgba_bytes": 65536,
+      "target_linear_rgb": [
+        0.065,
+        0.56,
+        0.42
+      ],
+      "mean_decoded_linear_rgb": [
+        0.06499347214688406,
+        0.5599453250731573,
+        0.4199828064368261
+      ],
+      "mean_max_error": 5.4674926842746e-05
+    },
+    {
+      "file": "SunnyYellow_Siding_V.png",
+      "name": "SunnyYellow_Siding_V",
+      "role": "baseColor",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 4912,
+      "sha256": "b1aaa7a6123e55160bb244e4c909ea590010f4634b925d73b1bf1810ade386aa",
+      "decoded_rgba_bytes": 65536,
+      "target_linear_rgb": [
+        0.86,
+        0.67,
+        0.12
+      ],
+      "mean_decoded_linear_rgb": [
+        0.8601268615354087,
+        0.6700705241284831,
+        0.11997870960007068
+      ],
+      "mean_max_error": 0.000126861535408751
+    },
+    {
+      "file": "Siding_H_Normal.png",
+      "name": "Siding_H_Normal",
+      "role": "normal",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 1354,
+      "sha256": "fcb8229b1bd3bcb2aa774058cd5ad7be7b0a36314f179c6d2efc74b5c13ae557",
+      "decoded_rgba_bytes": 65536
+    },
+    {
+      "file": "Siding_V_Normal.png",
+      "name": "Siding_V_Normal",
+      "role": "normal",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 1164,
+      "sha256": "8367b1063a8af26af6183ab3accdc9da4d9b076cb2552ffbc702e4c07262f732",
+      "decoded_rgba_bytes": 65536
+    },
+    {
+      "file": "Lavender_Shingle_V.png",
+      "name": "Lavender_Shingle_V",
+      "role": "baseColor",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 5795,
+      "sha256": "7e84fe4c1ef6ca61e91e1ed95f03fd0af07d4047e58a71f20d44767f5d528f4d",
+      "decoded_rgba_bytes": 65536,
+      "target_linear_rgb": [
+        0.16,
+        0.18,
+        0.3
+      ],
+      "mean_decoded_linear_rgb": [
+        0.15997495318045996,
+        0.17997658991754886,
+        0.29998445755718783
+      ],
+      "mean_max_error": 2.5046819540047727e-05
+    },
+    {
+      "file": "Shingle_V_Normal.png",
+      "name": "Shingle_V_Normal",
+      "role": "normal",
+      "size": [
+        128,
+        128
+      ],
+      "bytes": 1652,
+      "sha256": "f9f4840b0dccd24bd86adb02a5c297438016889273438ddb776be8989171ef40",
+      "decoded_rgba_bytes": 65536
+    },
+    {
+      "file": "Honey_Grain_V.png",
+      "name": "Honey_Grain_V",
+      "role": "baseColor",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 27060,
+      "sha256": "834f5a6e5a333f59f36929a3e235266a4b020fafb8c4c29174ebcfe832e5efa5",
+      "decoded_rgba_bytes": 262144,
+      "target_linear_rgb": [
+        0.68,
+        0.36,
+        0.105
+      ],
+      "mean_decoded_linear_rgb": [
+        0.6798823387162859,
+        0.35990661612602115,
+        0.10496044138469267
+      ],
+      "mean_max_error": 0.00011766128371415441
+    },
+    {
+      "file": "Grain_V_Normal.png",
+      "name": "Grain_V_Normal",
+      "role": "normal",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 28143,
+      "sha256": "170c54220828e5528cd541fe9d8aa6574b5d79d974387495c93a297a0fcda98d",
+      "decoded_rgba_bytes": 262144
+    }
+  ],
+  "decoded_rgba_bytes": 917504,
+  "png_bytes": 74871
+}

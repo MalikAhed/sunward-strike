@@ -15,7 +15,7 @@ The latest four references supplied on 2026-10-03 have distinct roles: sky tone/
 
 The map's editable source and packed textures are versioned separately from its runtime GLBs. The web atmosphere adds original camera-centred sky/cloud/scenery cards and a sky gradient without changing source map transforms. Display-referred sky and lit map materials have separate color pipelines. A Blender presentation world is a source-side approximation, not a live synchronization of browser shaders.
 
-The current v3.1 increment retains the corrected house families and adds the accepted reversible turquoise/yellow/honey palette, packed turf textures, rounded broadleaf foliage and original furnished interiors. The lawn still has sparse/angular areas; a denser grass-only candidate remains separate until distance-view checks pass. Source-only presentation scenery must stay excluded from gameplay collision and map GLB exports; the browser owns its atmosphere layer.
+The current v3.2 increment preserves the corrected house families, turquoise/yellow/honey palette, broadleaf foliage and furnished interiors. The short lawn is denser, and main-house siding, shingles and selected timber have local surface detail. The grass still repeats flat fan-like tufts; timber, vehicles and some interior finishes remain simpler than the richer references. A roughness-only vehicle experiment was excluded because its visible gain was too small. Further grass/paint experiments remain separate until accepted. Source-only presentation scenery must stay excluded from gameplay collision and map GLB exports; the browser owns its atmosphere layer.
 
 ## Acceptance evidence
 

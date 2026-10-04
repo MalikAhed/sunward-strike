@@ -294,7 +294,8 @@ window.addEventListener('keydown',(event)=>{
     if(event.code==='KeyH'&&!event.repeat){toggleHelp();return;}
     if(!flow.acceptsInput||['INPUT','SELECT','TEXTAREA','BUTTON'].includes(event.target.tagName))return;
     const action=KEY_ACTIONS[event.code];
-    if(action){event.preventDefault();gameInput.press(action,event.code);}
+    // A lifecycle clear must wait for a fresh physical press, not OS repeat.
+    if(action){event.preventDefault();if(!event.repeat)gameInput.press(action,event.code);}
     if(event.code==='KeyF'&&!event.repeat)requestLock();
     if(event.code==='KeyI'&&!event.repeat&&!state.reloading)animateWeapon('Inspect');
     return;

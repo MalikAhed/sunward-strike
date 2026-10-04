@@ -1,6 +1,6 @@
 # SUNWARD STRIKE independent QA plan
 
-Updated 2026-10-03 for the v3.1 offline arena. The current accepted scopes and exact hashes are in the acceptance register; earlier RC1 evidence remains historical.
+Updated 2026-10-04 for the v3.2 offline arena. The current accepted scopes and exact hashes are in the acceptance register; earlier RC1 evidence remains historical.
 
 ## Current contract
 

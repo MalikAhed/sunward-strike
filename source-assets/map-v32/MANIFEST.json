@@ -1,0 +1,124 @@
+{
+  "version": "3.2",
+  "source_sha256": "2451ad713cdb8522398a5d4c7b13812475095138cd56c3321ca2d9e26f27b8ba",
+  "source_container_bytes": 19823154,
+  "native_extracted_name": "Sunward_ClassicLayout_v3_2.blend",
+  "native_archive": "Sunward_ClassicLayout_v3_2.blend.xz",
+  "native_archive_parts": [
+    {
+      "name": "Sunward_ClassicLayout_v3_2.blend.xz.part01",
+      "bytes": 8000000,
+      "sha256": "088ec549ce6f082269bcc7befeed20905c110599362737fdc53250da6ecd50a1"
+    },
+    {
+      "name": "Sunward_ClassicLayout_v3_2.blend.xz.part02",
+      "bytes": 4948372,
+      "sha256": "40c52a5d6e34bcda40bdcc07adc731a2a4aacf675a1a0aba5cdf5bfb2801e0e1"
+    }
+  ],
+  "archive_sha256": "19cac8021f13077b01b35c67550dfb96e1f33dad82976653919e83a247ad6324",
+  "archive_bytes": 12948372,
+  "uncompressed_blend_sha256": "9a29102a227498f2360054b2fccbf0f68feb1441f4fa139017d71ee01e4d1526",
+  "uncompressed_blend_bytes": 56232484,
+  "packaging": "Exact decoded native Blender bytes; lossless XZ split only for bounded transport. No scene or texture modification.",
+  "compression_preset": 6,
+  "seconds": 12.711898334004218,
+  "scope": "Accepted v3.1 scene plus independently accepted house P2r5 and lawn r6i; vehicle P3 and experimental r7/P4 excluded",
+  "visual_export_sha256": "0c7e6578c0975900dcfbdfdae7d2f20f017a690ae1ea87946310361aba8342aa",
+  "collision_export_sha256": "1065c56be640845db92fb96293ddc60667eaccd1904c5272054e3a3111735949",
+  "base_source_package": "../map-v31",
+  "application_order": [
+    "surfaces/surface_detail_patch.py",
+    "lawn/lawn_patch_r6.py"
+  ],
+  "files": {
+    ".gitignore": {
+      "bytes": 20,
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0"
+    },
+    "README.md": {
+      "bytes": 3889,
+      "sha256": "61a80963f392330143f7f34221a792c9d77b8259722b0a9c16dc5969e9e3b05f"
+    },
+    "build.py": {
+      "bytes": 3295,
+      "sha256": "3fa7f121472028cb9a2daef0b50e926ccc1df2849841c99693b8884520041e56"
+    },
+    "export_map.py": {
+      "bytes": 5543,
+      "sha256": "6974ea1d81bbef731a1b167ad8ab0bfebd5002a30a0c2581e79ed84c2fada5a8"
+    },
+    "extract_source.py": {
+      "bytes": 4907,
+      "sha256": "0a6e54ad2cc47290d94902e6e725c24ea7a1fa64f85e868be03187bfc85e0e39"
+    },
+    "source/lawn/lawn_patch_r6.py": {
+      "bytes": 11984,
+      "sha256": "3835651d78d48a74778532528fd471d5cd7b2386f41093033f1194d35e0143e2"
+    },
+    "source/lawn/make_turf_atlas.py": {
+      "bytes": 4231,
+      "sha256": "8fd9b94f69d63f3aaf01f60bd58bbc470812262f4a5c2d9282bbf1abe11e3275"
+    },
+    "source/lawn/site_frames.json": {
+      "bytes": 92232,
+      "sha256": "45cc4f9b81175bcc51cc196641c7bdf173d85a10853a98a770736e419d033960"
+    },
+    "source/lawn/textures/sunward_short_turf_r6i.png": {
+      "bytes": 64527,
+      "sha256": "418a0b1110a8327ea7eb4622eecf30ce984aea4296aa493b63992c201068c69c"
+    },
+    "source/surfaces/generate_textures.py": {
+      "bytes": 4699,
+      "sha256": "11c503f031e6ce0227c831185768f4deaef303c060c645dba0227d69784303b9"
+    },
+    "source/surfaces/surface_detail_patch.py": {
+      "bytes": 14377,
+      "sha256": "d4bc23f76878772e3bb3bc8f816659a49c51568491ec295685672d2252be8563"
+    },
+    "source/surfaces/texture-manifest.json": {
+      "bytes": 3617,
+      "sha256": "cc7e84add11845d46db40f55dc358fcc8f2309faabec0a7b641d1ebd9e25990a"
+    },
+    "source/surfaces/textures/Grain_V_Normal.png": {
+      "bytes": 28143,
+      "sha256": "170c54220828e5528cd541fe9d8aa6574b5d79d974387495c93a297a0fcda98d"
+    },
+    "source/surfaces/textures/Honey_Grain_V.png": {
+      "bytes": 27060,
+      "sha256": "834f5a6e5a333f59f36929a3e235266a4b020fafb8c4c29174ebcfe832e5efa5"
+    },
+    "source/surfaces/textures/Lavender_Shingle_V.png": {
+      "bytes": 5795,
+      "sha256": "7e84fe4c1ef6ca61e91e1ed95f03fd0af07d4047e58a71f20d44767f5d528f4d"
+    },
+    "source/surfaces/textures/Shingle_V_Normal.png": {
+      "bytes": 1652,
+      "sha256": "f9f4840b0dccd24bd86adb02a5c297438016889273438ddb776be8989171ef40"
+    },
+    "source/surfaces/textures/Siding_H_Normal.png": {
+      "bytes": 1354,
+      "sha256": "fcb8229b1bd3bcb2aa774058cd5ad7be7b0a36314f179c6d2efc74b5c13ae557"
+    },
+    "source/surfaces/textures/Siding_V_Normal.png": {
+      "bytes": 1164,
+      "sha256": "8367b1063a8af26af6183ab3accdc9da4d9b076cb2552ffbc702e4c07262f732"
+    },
+    "source/surfaces/textures/SunnyYellow_Siding_V.png": {
+      "bytes": 4912,
+      "sha256": "b1aaa7a6123e55160bb244e4c909ea590010f4634b925d73b1bf1810ade386aa"
+    },
+    "source/surfaces/textures/Turquoise_Siding_H.png": {
+      "bytes": 4791,
+      "sha256": "cb6d77bb8d098daa4ebaf643766414080ef8fb0a05ac0874b2272966a16c7a13"
+    },
+    "test_build.py": {
+      "bytes": 4124,
+      "sha256": "db6d72f099fe0e6f1c5a81a0b10b51eeb548d253783967a4cab5923b618dbc6f"
+    },
+    "test_extract_source.py": {
+      "bytes": 6028,
+      "sha256": "878a4029950a13ff86d3a07881f26c3ad04f6712e9d9b36e92bba06903ddbb1e"
+    }
+  }
+}

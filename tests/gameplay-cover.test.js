@@ -35,6 +35,6 @@ test('actual visual house stairs/mullion stop rays while adjacent authored upper
    {name:'A window beside mullion',from:[-13.109531018169276,4.82,16.879294480436094],to:[-15.389607813409068,4.82,16.13012840551743],blocked:false},
   ];
   for(const sample of cases){const delta=new THREE.Vector3(...sample.to).sub(new THREE.Vector3(...sample.from)),length=delta.length(),hit=cover.raycast(sample.from,delta.normalize().toArray(),length-.025);assert.equal(Number.isFinite(hit),sample.blocked,sample.name);}
-  assert.ok(cover.stats.triangleCount<120000);assert.ok(cover.stats.excluded.some(item=>/Lawn_Blade/.test(item.material)),'Actual baked lawn materials are excluded');assert.ok(cover.stats.accepted.every(item=>!/Lawn_Blade|Canopy_Leaf/.test(item.material)),'No decorative lawn or canopy enters hard cover');
+  assert.ok(cover.stats.triangleCount<120000);assert.ok(cover.stats.excluded.some(item=>/Lawn_Blade|ShortTurf/.test(item.material)),'Actual baked lawn materials are excluded');assert.ok(cover.stats.accepted.every(item=>!/Lawn_Blade|ShortTurf|Canopy_Leaf/.test(item.material)),'No decorative lawn or canopy enters hard cover');
  }finally{THREE.TextureLoader.prototype.load=previousLoad;if(previousSelf===undefined)delete globalThis.self;else globalThis.self=previousSelf;}
 });

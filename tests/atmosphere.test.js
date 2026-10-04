@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import { applyReferencePalette, createClouds, createSky, ATMOSPHERE_CONFIG } from '../src/atmosphere.js';
 import { MAP_CONFIG } from '../src/map-config.js';
 import {decodeGlbBytes} from '../src/asset-loader.js';
@@ -13,35 +14,41 @@ const textures=Object.fromEntries([ATMOSPHERE_CONFIG.cloudTexture,ATMOSPHERE_CON
 const mapBytes = Buffer.from(await decodeGlbBytes(readFileSync(new URL(`../public/assets/${MAP_CONFIG.assets.map}`, import.meta.url))));
 const sourceMap = JSON.parse(mapBytes.subarray(20, 20 + mapBytes.readUInt32LE(12)).toString());
 const paintNames = sourceMap.materials.map(material=>material.name).filter(name=>bakedPrefixes.some(prefix=>name.startsWith(prefix)));
-const representativeNames = ['V3_Tone_Turquoise_Plaster_p1r5','V3_Tone_SunnyYellow_Plaster_p1r5','V3_Tone_Cream_Plaster_p1r5','V3_Tone_Honey_Timber_p1r5','V3_Tone_Warm_SandGround_p1r5','V4R5_Canopy_LeafAtlas','V4R5_Lawn_Blade_0','D3_Rug_Pattern_0','D3_Fabric_Warm_Yellow'];
+const turfName=MAP_CONFIG.style.lawnMaterial||'V4R5_Lawn_Blade_0';
+const representativeNames = ['V3_Tone_Turquoise_Plaster_p1r5','V3_Tone_SunnyYellow_Plaster_p1r5','V3_Tone_Cream_Plaster_p1r5','V3_Tone_Honey_Timber_p1r5','V3_Tone_Warm_SandGround_p1r5','V4R5_Canopy_LeafAtlas',turfName,'D3_Rug_Pattern_0','D3_Fabric_Warm_Yellow',...sourceMap.materials.filter(material=>material.name.startsWith('V3_Tone_Surface_')).map(material=>material.name)];
+// Use the actual glTF material classes/extensions, channels and alpha flags.
+// Only texture pixels are placeholders because this is a shader-source/compiler
+// gate, not image decoding or browser visual acceptance.
+const loader=new GLTFLoader();
+loader.register(()=>({name:'SUNWARD_SHADER_TEXTURE_PLACEHOLDERS',loadTexture(){return Promise.resolve(new THREE.Texture());}}));
+const actualScene=(await loader.parseAsync(mapBytes.buffer.slice(mapBytes.byteOffset,mapBytes.byteOffset+mapBytes.byteLength),'')).scene;
+const actualMaterials=new Map();
+actualScene.traverse(object=>{if(object.isMesh)for(const material of Array.isArray(object.material)?object.material:[object.material])actualMaterials.set(material.name,material);});
 function painted(name) {
-  const source = sourceMap.materials.find(material => material.name === name);
+  const source=actualMaterials.get(name);
   assert.ok(source, `Current map must contain material ${name}`);
-  const pbr = source.pbrMetallicRoughness;
-  const material = new THREE.MeshStandardMaterial({
-    side: source.doubleSided ? THREE.DoubleSide : THREE.FrontSide,
-    metalness: pbr.metallicFactor,
-    roughness: pbr.roughnessFactor,
-    normalMapType: THREE.TangentSpaceNormalMap,
-  });
-  // Preserve actual GLB texture flags without decoding images: shader source
-  // depends on their presence/channel, not on the texel values.
-  if (pbr.baseColorTexture) {
-    material.map = new THREE.Texture();
-    material.map.channel = pbr.baseColorTexture.texCoord || 0;
-    material.map.colorSpace = THREE.SRGBColorSpace;
-  }
-  if (source.normalTexture) {
-    material.normalMap = new THREE.Texture();
-    material.normalMap.channel = source.normalTexture.texCoord || 0;
-    material.normalScale.setScalar(source.normalTexture.scale ?? 1);
-  }
-  material.name = name;
-  const root = new THREE.Group();
-  root.add(new THREE.Mesh(new THREE.BoxGeometry(), material));
+  const material=source.clone();
+  const root=new THREE.Group();root.add(new THREE.Mesh(new THREE.BoxGeometry(),material));
   applyReferencePalette(root);
   return material;
 }
+
+test('accepted short turf keeps real MASK flags and all four new house surfaces keep normal maps',()=>{
+  assert.equal(turfName,'V6_ShortTurf_OriginalAtlas');
+  const source=sourceMap.materials.find(material=>material.name===turfName),turf=painted(turfName);
+  assert.equal(source.alphaMode,'MASK');assert.equal(source.alphaCutoff??.5,.5);
+  assert.equal(turf.alphaTest,.5);assert.equal(turf.transparent,false);assert.equal(turf.side,THREE.FrontSide);
+  assert.ok(turf.map);assert.equal(turf.map.colorSpace,THREE.SRGBColorSpace);
+  assert.match(shaderSources(turf).fragment,/#define USE_ALPHATEST/);
+  const surfaces=sourceMap.materials.filter(material=>material.name.startsWith('V3_Tone_Surface_'));
+  assert.equal(surfaces.length,4);
+  for(const source of surfaces){
+    const material=painted(source.name);assert.ok(source.normalTexture);assert.ok(material.normalMap);
+    assert.equal(material.normalMap.channel,source.normalTexture.texCoord??0);
+    assert.ok(Math.abs(material.normalScale.x-(source.normalTexture.scale??1))<1e-6);
+    assert.equal(material.alphaTest,0);assert.equal(material.transparent,false);
+  }
+});
 
 test('all actual baked style surfaces remain untinted by legacy runtime layers', () => {
   assert.deepEqual(MAP_CONFIG.paintMaterials,[]);assert.equal(MAP_CONFIG.style.materialsBaked,true);assert.ok(paintNames.length>30);
@@ -61,6 +68,13 @@ test('full renderer-generated GLSL ES shaders compile and link offline', (t) => 
     for (const shadows of [false, true]) {
       programs.push({ name: `${name}-${shadows ? 'shadowed' : 'low'}`, ...shaderSources(painted(name), shadows) });
     }
+  }
+  const turf=painted(turfName);
+  if(turf.alphaTest>0){
+    const depth=new THREE.MeshDepthMaterial({map:turf.map,alphaTest:turf.alphaTest,side:turf.side,depthPacking:THREE.RGBADepthPacking});
+    const distance=new THREE.MeshDistanceMaterial({map:turf.map,alphaTest:turf.alphaTest,side:turf.side});
+    programs.push({name:turfName+'-masked-depth',...shaderSources(depth,false)});
+    programs.push({name:turfName+'-masked-point-distance',...shaderSources(distance,false)});
   }
   const clouds = createClouds({textures});
   programs.push({ name: 'OriginalCreamCloudLayer', ...shaderSources(clouds.children[0].material) });

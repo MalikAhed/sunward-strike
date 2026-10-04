@@ -1,8 +1,9 @@
 # Editable source assets
 
-The packaged native scenes are the editable source of truth. The current v3.1 scene is losslessly archived with a safe extractor. Open them in Blender 4.3 or newer. They contain materials, textures and relevant actions. Runtime GLBs under `public/assets/` are unchanged copies of their accepted exports.
+The packaged native scenes are the editable source of truth. The current v3.2 scene is losslessly archived in two verified XZ parts with a safe extractor. Open them in Blender 4.3 or newer. They contain materials, textures and relevant actions. Runtime GLBs under `public/assets/` are unchanged copies of their accepted exports.
 
-- `map-v31/`: current v3.1 native scene, art/furnishings and original authoring snapshots; run `python source-assets/map-v31/extract_source.py` from the repository root
+- `map-v32/`: current editable v3.2 scene, original incremental authoring snapshots, safe extractor and portable native-source exporter; run `python source-assets/map-v32/build.py`
+- `map-v31/`: preserved v3.1 native scene, art/furnishings and original authoring snapshots; run `python source-assets/map-v31/extract_source.py` from the repository root
 - `map-v3/Sunward_ClassicLayout_v3.blend`: preserved v3 structural baseline, source-side n2 atmosphere and packed textures; see its portable build instructions
 - `map/Sunward_TestSite.blend`: preserved v2.5 baseline; all 11 textures packed; corrected ground/doorway treatment
 - `rifle/compact_carbine.blend`: revision2 visual game prop with Fire, Reload, Inspect and Charge animation data

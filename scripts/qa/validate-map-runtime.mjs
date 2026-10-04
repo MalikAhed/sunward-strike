@@ -12,8 +12,10 @@ const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../
 const opts={project:projectRoot,routes:path.join(projectRoot,'tests/fixtures/map-v3-routes.json'),out:path.join(os.tmpdir(),'sunward-runtime-audit-'+process.pid+'.json')};
 for(let i=2;i<process.argv.length;i+=2){const k=process.argv[i].replace(/^--/,'');opts[k]=process.argv[i+1];}
 const {MAP_CONFIG}=await import(pathToFileURL(path.join(opts.project,'src/map-config.js')));
+const {mapBudgets,mapBudgetVersion}=await import(pathToFileURL(path.join(opts.project,'src/map-budgets.js')));
 opts.collision ||= path.join(opts.project,'public/assets',MAP_CONFIG.assets.collision);
 opts.visual ||= path.join(opts.project,'public/assets',MAP_CONFIG.assets.map);
+const budgetVersion=mapBudgetVersion(opts.visual,MAP_CONFIG.version),visualCaps=mapBudgets(budgetVersion);
 const mod=f=>import(pathToFileURL(f));
 const THREE=await mod(path.join(opts.project,'node_modules/three/build/three.module.js'));
 const {GLTFLoader}=await mod(path.join(opts.project,'node_modules/three/examples/jsm/loaders/GLTFLoader.js'));
@@ -23,7 +25,7 @@ const {WalkController}=await mod(path.join(opts.project,'src/physics.js'));
 const {decodeGlbBytes}=await mod(path.join(opts.project,'src/asset-loader.js'));
 const {Vector3,Ray,Triangle,Group,Box3,PerspectiveCamera}=THREE;
 const contract=JSON.parse(fs.readFileSync(opts.routes,'utf8'));
-const report={schema_version:1,scope:'Actual application WalkController and bounded ThreeOctree in Node, GLB metadata/budgets; no browser input/GPU frame tests',created_utc:new Date().toISOString(),tests:[],routes:[],perimeter:[],budgets:{status:'provisional engineering caps, baseline visual 207294 triangles /133 meshes /57 materials /11 images /12155684 bytes',visual:{triangles:400000,meshes:1500,primitives:1800,materials:80,images:24,bytes:32000000,texture_rgba_bytes:128*1024*1024},collision:{triangles:20000,bytes:3000000,nodes:40000,references:200000,build_ms:5000,heap_growth_bytes:256*1024*1024}},unverified:['Browser rendering, input, pointer lock, resize and touch controls','Browser WebGL2 shader linking and frame rate for integrated v3','Independent visible-reference acceptance'],scale_assumption:contract.scale_assumption};
+const report={schema_version:1,scope:'Actual application WalkController and bounded ThreeOctree in Node, GLB metadata/budgets; no browser input/GPU frame tests',created_utc:new Date().toISOString(),tests:[],routes:[],perimeter:[],budgets:{status:'explicit provisional engineering caps for map '+budgetVersion+'; not device performance',map_version:budgetVersion,visual:visualCaps,collision:{triangles:20000,bytes:3000000,nodes:40000,references:200000,build_ms:5000,heap_growth_bytes:256*1024*1024}},unverified:['Browser rendering, input, pointer lock, resize and touch controls','Browser WebGL2 shader linking and frame rate for integrated v3','Independent visible-reference acceptance'],scale_assumption:contract.scale_assumption};
 if(contract.frame_version)test('route fixture frame matches application config',()=>ok(contract.frame_version===MAP_CONFIG.frameVersion,'stale route fixture '+contract.frame_version+' vs app '+MAP_CONFIG.frameVersion));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 function test(name,fn){try{const detail=fn();report.tests.push({name,passed:true,...(detail||{})});}catch(e){report.tests.push({name,passed:false,error:String(e.message||e)});}}
@@ -61,7 +63,7 @@ function metadata(file,g,kind){
 }
 const visual=await readGlb(opts.visual),collision=await readGlb(opts.collision);metadata(opts.visual,visual,'visual');metadata(opts.collision,collision,'collision');
 if(path.resolve(opts.visual)===path.resolve(opts.project,'public/assets',MAP_CONFIG.assets.map))test('delivered map decodes to the pinned accepted SHA-256',()=>ok(sha(visual.bytes)===MAP_CONFIG.decodedMapSha256,'decoded visual differs from accepted map-config hash'));
-test('visual delivery byte budget',()=>ok(visual.delivery.length<=(path.basename(opts.visual)==='sunward-v3.1.glb.gz'?8500000:8000000)||!String(opts.visual).endsWith('.gz'),'compressed map exceeds the explicit version-specific transfer budget'));
+test('visual delivery byte budget',()=>ok(visual.delivery.length<=visualCaps.gzip_bytes||!String(opts.visual).endsWith('.gz'),'compressed map exceeds the explicit version-specific transfer budget'));
 
 const gltf=await new GLTFLoader().parseAsync(collision.bytes.buffer.slice(collision.bytes.byteOffset,collision.bytes.byteOffset+collision.bytes.byteLength),'');
 gltf.scene.updateWorldMatrix(true,true);

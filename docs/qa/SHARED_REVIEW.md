@@ -1,28 +1,35 @@
-# Current acceptance register: v3.1 offline arena
+# Current acceptance register: v3.2 refinement
 
-The integrated source/export, gameplay core, controller and opaque-cover scopes are accepted with the limits below. This record does not certify actual browser/device behavior or exact reference identity. [Exact hashes and measured gates](v31-gameplay/verification.json) accompany the [overview](v31-gameplay/overview.png), [street](v31-gameplay/street.png) and both [green](v31-gameplay/green-yard.png) / [yellow](v31-gameplay/yellow-yard.png) yard previews. The prior [RC1 review](RC1_REVIEW.md) is historical.
+The v3.2 source/export and scoped gameplay changes are independently checked, with the limitations below. Final deployment identity is established separately by the exact commit's CI and served-byte verification. [The v3.1 register](V31_REVIEW.md) and [RC1 review](RC1_REVIEW.md) remain historical evidence.
 
-## Closed portable gates
+[Exact hashes and measured checks](v32-gameplay/verification.json) accompany the [overview](v32-gameplay/overview.png), [street](v32-gameplay/street.png) and [green](v32-gameplay/green-yard.png)/[yellow](v32-gameplay/yellow-yard.png) yard previews.
 
-- Exact native source, protected structure, all original collision geometry, and evaluated containment of all16 added furniture proxies
-- Clean source/export/reimport and matching street/interior renders; baked materials remain untinted and all161 material/sky assertions and156 actual GLES program variants pass
--78 walking and78 sprinting routes,69 perimeter samples per pace,23 ground jumps, and900 elevated no-escape attempts from50 reachable anchors, including22 proven furniture/vehicle perches
-- True capsule/finite-triangle contacts fix a reproduced stair-edge launch without a displacement clamp; the old stock-solver negative control still demonstrates the original defect
--3,905 actual opaque-visual cover rays agree, preserving open windows while blocking rails, frames, bark and solid stair details; decorative grass/leaf cutouts stay out of hard cover
-- Both modes at all three difficulties on the real final map, deterministic30/60/144Hz replay, and a full300-second6v6 stress round
-- Actual composed application logic against a DOM model/no-op renderer, including start/retry, held/mixed input, camera ownership, pause, death/respawn, results/restart, explorer restoration, bounded audio and exact-version offline-cache logic
-- Full aggregate tests, lint and production build; exact count is in the verification JSON
+## Current scope
 
-## Qualified results retained
+- Preserved canonical classic-layout coordinates, house families, all312 collision proxies, furniture and traversal routes
+- Local main-house siding/shingle/selected-timber detail and denser original short grass; 235,734 visual triangles,77 materials and25 images
+- Bounded nearby KC tag commitment, with per-tick expiry/cancellation and unchanged health, damage, perception, aiming, scoring and navigation
+- Authoritative respawn orientation and neutral input, plus a keyboard-repeat guard that prevents cleared actions being rearmed without a fresh press
+- Existing TDM/KC, three bot difficulties, sprint/slide/crouch/jump, ADS/recoil/reload, hit detection, respawn, results/restart, touch bindings, original procedural audio and integrity-checked offline caching remain
 
-Grounded slides intentionally end when support is lost. Eighteen auxiliary “remain sliding until the endpoint” probes therefore failed across exterior floor drops, while every passage remained traversable and dedicated drop-safety tests passed. No route or geometry threshold was relaxed to force continuity.
+## Measured checks
 
-A one-minute6v6 Kill Confirmed probe produced a valid0–0 draw with denials but no confirms. The full300-second same-seed round produced96 deaths,7 confirms and75 denials, ending3–4 without physical anomalies. This is denial-heavy initial bot behavior, not broken scoring or an assertion of humanlike tactics. Eleven additional perch searches did not establish reachability and are not claimed inaccessible.
+The final application test suite runs against the current map. It checks actual controller routes, boundary/perch safety, static cover, match rules, input/lifecycle wiring, asset decoding, cache logic and renderer-generated GLSL. Actual-main tests use a DOM model and no-op renderer; authored geometry is tested independently. These are not physical browser/device tests.
 
-The earlier generic lamp-box audit compared a rotated box world AABB with a round lamp world AABB. A narrow qualified audit instead tests every evaluated visual vertex in proxy-local bounds at0.00001m tolerance, while separately checking the exact frozen box geometry. No proxy was enlarged to hide a failure.
+The exact native source preserves all non-lawn object state, original shader graphs and30 original packed/decoded images. The owned grass matches its accepted geometry, UVs and split normals. The corrected surface restoration record eagerly loads all image buffers and rejects a deliberate pixel mutation, rather than accepting an empty lazy-image snapshot.
 
-## Open browser and appearance checks
+Collision binary and node data remain unchanged from v3.1. Only three scene-level version/status annotations change its GLB container hash. No geometry or route threshold was changed to force a pass. New source/export/reimport views and actual normal-map/MASK color/depth/distance shader checks accompany the final asset identities.
 
-The cloud browser cannot create WebGL2. Actual browser rendering, pointer capture, mouse/touch feel, real audio, disconnected-device cache behavior, mobile alpha overdraw and GPU frame time remain unperformed. CPU simulation, offscreen GLES and DOM tests are distinct evidence; no GPU FPS claim is made.
+The editable source is losslessly split for bounded transport, with an independently checked extractor and portable exporter. Eighteen packaging tests cover corruption, part ordering, path/link safety, no-overwrite behavior, exporter failure, report/output validation and gzip/raw equality. CI also extracts the actual native payload.
 
-The current lawn still has visible sparse/angular patches and surfaces are simpler than the richer painted references. A denser-lawn candidate has a far-view artifact and is deliberately excluded from this release. Native AgX and web display-referred sky use different color pipelines. No literal perfection or exact commercial-game equivalence is claimed.
+## Qualified results
+
+KC collection improves in the tested paired seeds, while TDM events/snapshots remain identical. The stationary-human6v6 seed73 run changes from7 to17 confirms and from3–4 to4–13; other seeds also collect more, but first confirmation and team balance do not improve uniformly. Bots remain simple simulations, not humanlike tactical teammates.
+
+Grounded slides end when support is lost, including eighteen retained auxiliary floor-drop continuity cases. All144 fast passages still traverse safely. The older controller/cover/perch qualifications remain documented in the v3.1 register.
+
+## Visible and device limits
+
+Repeated flat fan-shaped grass remains visible, and honey timber/vehicles/interiors are still less detailed than the style references. A roughness-only vehicle experiment was omitted after its matched A/B showed too little benefit; later experiments are not part of this release. Native AgX and browser lighting/color pipelines are not asserted identical.
+
+The available cloud browser cannot create WebGL2. Actual browser GPU/frame rate, pointer capture, physical keyboard/touch feel, audio playback and disconnected-device reload remain unperformed. Static delivery, native renders, offscreen shader compilation and portable simulations are separate evidence. No perfection or exact commercial-game equivalence is claimed.

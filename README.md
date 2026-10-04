@@ -6,9 +6,10 @@ An original browser arena FPS and map explorer, with local Team Deathmatch and K
 
 ## Current milestone
 
-- v3.1 environment: the approved classic-layout structure, turquoise/yellow baked palette, furnished interiors, original vegetation and distant n5 cloud/mountain atlases
+- v3.2 environment: the approved classic-layout structure, turquoise/yellow baked palette, furnished interiors, denser short grass, clearer house siding/shingles and distant n5 cloud/mountain atlases
 - Local TDM and Kill Confirmed, Recruit/Regular/Veteran bots, 2v2–4v4 team presets, scores, clock, death/respawn and restart
 - Shared fixed-step player/bot movement with sprint, grounded slide, crouch, ADS, real hitscan damage, recoil, reload and recovery
+- Bounded nearby tag commitment improves bot KC collection; clean respawn look/input prevents stale held actions
 - Movement collision plus opaque visual cover for bullets and bot sight; open windows remain open
 - Compact match HUD, mouse capture or drag fallback, touch action controls, keyboard menus and optional original synthesized sound
 - Preserved Freefly, First Person and Orbit exploration with six viewpoints and three quality settings
@@ -16,7 +17,7 @@ An original browser arena FPS and map explorer, with local Team Deathmatch and K
 
 The offline match is a prototype with independent tuning. It is not an identical implementation of a commercial game's mechanics. Bots are difficulty-scaled simulations, not a claim of human-equivalent play. Online multiplayer and battle royale are not implemented.
 
-The accepted v3.1 artwork still has disclosed reference-matching gaps, including far-view lawn patterning and foliage refinement. Visual matching, device feel and performance remain review work; no “perfect match” claim is made. See [art direction](docs/ART_DIRECTION.md) and [match behavior and verification boundaries](docs/OFFLINE_MATCHES.md).
+The accepted v3.2 artwork still has disclosed reference-matching gaps, including repeated fan-shaped grass and restrained timber/vehicle detail. Visual matching, device feel and performance remain review work; no “perfect match” claim is made. See [art direction](docs/ART_DIRECTION.md) and [match behavior and verification boundaries](docs/OFFLINE_MATCHES.md).
 
 ## Controls
 
@@ -41,7 +42,7 @@ npm ci
 npm run dev
 ```
 
-Requires Node.js 22 and a current WebGL2 browser. `npm test`, `npm run lint` and `npm run build` run the portable regression gates and produce the production `dist/` folder. The map is committed as an 8,062,943-byte gzip; dev/build prepare its exact raw compatibility fallback. A differing local raw file is never silently overwritten. See [asset delivery](docs/ASSET_DELIVERY.md).
+Requires Node.js 22 and a current WebGL2 browser. `npm test`, `npm run lint` and `npm run build` run the portable regression gates and produce the production `dist/` folder. The map is committed as an 6,984,537-byte gzip; dev/build prepare its exact raw compatibility fallback. A differing local raw file is never silently overwritten. See [asset delivery](docs/ASSET_DELIVERY.md).
 
 A production build can cache the complete current game after initial assets settle. Gzip-capable browsers save only the gzip map; others save only raw. Initial play does not wait for saving. The setup menu reports readiness, repair and update status. Updates require every open match to be idle and never automatically reload an active match. Browser storage can still be cleared. [Offline cache details](docs/OFFLINE_CACHE.md).
 
@@ -59,6 +60,6 @@ Structure is traced from the publisher's classic Nuketown minimap and checked ag
 
 All included map, rifle and atmospheric art was created for this project. Call of Duty and VALORANT are design references; the project is not affiliated with their publishers and contains no extracted commercial game assets. User reference images are visual direction, not redistributed textures. No open-source art license is assigned by this repository. Third-party dependency licenses remain with their authors.
 
-## Editable v3.1 source
+## Editable v3.2 source
 
-The [native source package](source-assets/map-v31/README.md) preserves the full editable scene and original module/texture snapshots. Its safe Python extractor recreates the exact native Blender bytes without overwriting different local edits.
+The [native source package](source-assets/map-v32/README.md) preserves the full editable scene and original module/texture snapshots. Its safe Python extractor recreates the exact native Blender bytes without overwriting different local edits.

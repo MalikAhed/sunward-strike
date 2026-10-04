@@ -1,0 +1,3547 @@
+{
+  "version": "layout-r3-family-corrected",
+  "approval_status": "independent reviewer accepted physical terrain and corrected family mapping; corrected house-r7 routes authored; final integrated capsule pass pending",
+  "authority_reference": "/workspace/shared/sunward-structure-research/classic-nuketown-landmarks.json",
+  "reference_crop_size": [
+    840,
+    960
+  ],
+  "axes": {
+    "Blender_X": "image right",
+    "Blender_Y": "image up",
+    "Blender_Z": "vertical up",
+    "runtime_Three_X": "Blender X",
+    "runtime_Three_Y": "Blender Z",
+    "runtime_Three_Z": "negative Blender Y"
+  },
+  "image_to_world": {
+    "origin_crop_pixels": [
+      550.0,
+      475.0
+    ],
+    "uniform_m_per_crop_pixel": 0.1269490642060507,
+    "formula": "X=(u-550)*s; Y=(475-v)*s; Z=up"
+  },
+  "player_reference": {
+    "height_m": 1.8,
+    "capsule_radius_m": 0.35,
+    "door_clear_height_m": 2.15,
+    "minimum_route_clear_width_m": 1.1
+  },
+  "scale_assumption": {
+    "kind": "provisional gameplay anchor, not official dimensions",
+    "anchor": "existing SUNLINE_Shuttle body rear-to-front length10.5m",
+    "source_segment_crop_pixels": [
+      [
+        535,
+        505
+      ],
+      [
+        615,
+        484
+      ]
+    ],
+    "segment_length_pixels": 82.71033792700887,
+    "uncertainty": "Primary source supplies ratios/angles, no absolute meter survey. All metric quantities are prototype estimates."
+  },
+  "outline_crop_pixels": [
+    [
+      538,
+      73
+    ],
+    [
+      612,
+      357
+    ],
+    [
+      599,
+      362
+    ],
+    [
+      609,
+      403
+    ],
+    [
+      681,
+      405
+    ],
+    [
+      680,
+      535
+    ],
+    [
+      616,
+      535
+    ],
+    [
+      598,
+      587
+    ],
+    [
+      623,
+      599
+    ],
+    [
+      531,
+      879
+    ],
+    [
+      400,
+      831
+    ],
+    [
+      407,
+      816
+    ],
+    [
+      334,
+      790
+    ],
+    [
+      394,
+      603
+    ],
+    [
+      363,
+      550
+    ],
+    [
+      370,
+      544
+    ],
+    [
+      344,
+      480
+    ],
+    [
+      374,
+      395
+    ],
+    [
+      364,
+      389
+    ],
+    [
+      381,
+      347
+    ],
+    [
+      338,
+      170
+    ],
+    [
+      436,
+      140
+    ],
+    [
+      426,
+      108
+    ]
+  ],
+  "outline_blender": [
+    [
+      -1.5233887704726086,
+      51.033523810832385,
+      0
+    ],
+    [
+      7.870841980775143,
+      14.979989576313983,
+      0
+    ],
+    [
+      6.220504146096484,
+      14.34524425528373,
+      0
+    ],
+    [
+      7.4899947881569915,
+      9.14033262283565,
+      0
+    ],
+    [
+      16.630327410992642,
+      8.886434494423549,
+      0
+    ],
+    [
+      16.50337834678659,
+      -7.616943852363042,
+      0
+    ],
+    [
+      8.378638237599347,
+      -7.616943852363042,
+      0
+    ],
+    [
+      6.093555081890434,
+      -14.21829519107768,
+      0
+    ],
+    [
+      9.267281687041702,
+      -15.741683961550287,
+      0
+    ],
+    [
+      -2.4120322199149635,
+      -51.28742193924448,
+      0
+    ],
+    [
+      -19.042359630907605,
+      -45.19386685735405,
+      0
+    ],
+    [
+      -18.15371618146525,
+      -43.28963089426329,
+      0
+    ],
+    [
+      -27.42099786850695,
+      -39.98895522490597,
+      0
+    ],
+    [
+      -19.80405401614391,
+      -16.24948021837449,
+      0
+    ],
+    [
+      -23.73947500653148,
+      -9.521179815453802,
+      0
+    ],
+    [
+      -22.850831557089126,
+      -8.759485430217499,
+      0
+    ],
+    [
+      -26.151507226446444,
+      -0.6347453210302535,
+      0
+    ],
+    [
+      -22.343035300264923,
+      10.155925136484056,
+      0
+    ],
+    [
+      -23.61252594232543,
+      10.917619521720361,
+      0
+    ],
+    [
+      -21.45439185082257,
+      16.24948021837449,
+      0
+    ],
+    [
+      -26.913201611682748,
+      38.71946458284547,
+      0
+    ],
+    [
+      -14.472193319489781,
+      42.527936509026986,
+      0
+    ],
+    [
+      -15.741683961550287,
+      46.59030656362061,
+      0
+    ]
+  ],
+  "court": {
+    "center_blender": [
+      0,
+      0,
+      0
+    ],
+    "center_crop_pixels": [
+      550.0,
+      475.0
+    ],
+    "curb_radius_crop_pixels": 83,
+    "curb_radius_m": 10.536772329102208,
+    "radius_uncertainty_m": 0.7616943852363043,
+    "mouth_crop_pixels": [
+      [
+        681,
+        405
+      ],
+      [
+        680,
+        535
+      ]
+    ],
+    "mouth_blender": [
+      [
+        16.630327410992642,
+        8.886434494423549,
+        0
+      ],
+      [
+        16.50337834678659,
+        -7.616943852363042,
+        0
+      ]
+    ]
+  },
+  "house_frames": {
+    "A_Mint": {
+      "house_id": "A_Mint",
+      "source_color": "green",
+      "geometric_lot_id": "south",
+      "source_component_key": "yellow",
+      "roof_family": "green gable",
+      "position_crop_pixels": [
+        473.0,
+        618.5
+      ],
+      "position_blender": [
+        -9.775077943865904,
+        -18.217190713568275,
+        0
+      ],
+      "yaw_degrees": 161.811,
+      "yaw_radians": 2.824134715944545,
+      "local_axes": "X fa\u00e7ade-right; Y rearward; Z up; root main-shell ground center",
+      "components": {
+        "main_body": {
+          "crop_pixels": [
+            [
+              456,
+              558
+            ],
+            [
+              526,
+              581
+            ],
+            [
+              489,
+              679
+            ],
+            [
+              421,
+              656
+            ]
+          ],
+          "blender": [
+            [
+              -11.933212035368767,
+              -10.536772329102208,
+              0
+            ],
+            [
+              -3.046777540945217,
+              -13.456600805841374,
+              0
+            ],
+            [
+              -7.743892916569093,
+              -25.897609098034344,
+              0
+            ],
+            [
+              -16.376429282580542,
+              -22.977780621295178,
+              0
+            ]
+          ],
+          "local_xy_m": [
+            [
+              4.447758482447995,
+              -6.622976204031171
+            ],
+            [
+              -4.906070485263678,
+              -6.622968743329423
+            ],
+            [
+              -4.3271528093339855,
+              6.662603675758609
+            ],
+            [
+              4.7854648121496695,
+              6.583341271601991
+            ]
+          ],
+          "local_bbox_m": [
+            [
+              -4.906070485263678,
+              -6.622976204031171
+            ],
+            [
+              4.7854648121496695,
+              6.662603675758609
+            ]
+          ],
+          "bounding_dimensions_m": [
+            9.691535297413347,
+            13.285579879789779
+          ]
+        },
+        "garage": {
+          "crop_pixels": [
+            [
+              516,
+              612
+            ],
+            [
+              568,
+              630
+            ],
+            [
+              554,
+              671
+            ],
+            [
+              502,
+              654
+            ]
+          ],
+          "blender": [
+            [
+              -4.316268183005724,
+              -17.392021796228946,
+              0
+            ],
+            [
+              2.2850831557089126,
+              -19.67710495193786,
+              0
+            ],
+            [
+              0.5077962568242028,
+              -24.882016584385937,
+              0
+            ],
+            [
+              -6.093555081890434,
+              -22.723882492883074,
+              0
+            ]
+          ],
+          "local_xy_m": [
+            [
+              -4.928465377674076,
+              -2.4879181595207776
+            ],
+            [
+              -11.913254870696404,
+              -2.37764457329524
+            ],
+            [
+              -11.849501787925117,
+              3.121972628563239
+            ],
+            [
+              -4.904339766630225,
+              3.1323047154517125
+            ]
+          ],
+          "local_bbox_m": [
+            [
+              -11.913254870696404,
+              -2.4879181595207776
+            ],
+            [
+              -4.904339766630225,
+              3.1323047154517125
+            ]
+          ],
+          "bounding_dimensions_m": [
+            7.008915104066179,
+            5.62022287497249
+          ]
+        }
+      },
+      "source_baseline_root": [
+        0,
+        17,
+        0
+      ],
+      "source_baseline_yaw_degrees": 0
+    },
+    "B_Saffron": {
+      "house_id": "B_Saffron",
+      "source_color": "yellow",
+      "geometric_lot_id": "north",
+      "source_component_key": "green",
+      "roof_family": "yellow shed/asymmetric",
+      "position_crop_pixels": [
+        518.5,
+        316.5
+      ],
+      "position_blender": [
+        -3.998895522490597,
+        20.121426676659038,
+        0
+      ],
+      "yaw_degrees": 18.208,
+      "yaw_radians": 0.3177895502031275,
+      "local_axes": "X fa\u00e7ade-right; Y rearward; Z up; root main-shell ground center",
+      "components": {
+        "main_body": {
+          "crop_pixels": [
+            [
+              465,
+              278
+            ],
+            [
+              541,
+              253
+            ],
+            [
+              571,
+              360
+            ],
+            [
+              497,
+              375
+            ]
+          ],
+          "blender": [
+            [
+              -10.79067045751431,
+              25.00896564859199,
+              0
+            ],
+            [
+              -1.1425415778544563,
+              28.182692253743255,
+              0
+            ],
+            [
+              2.665930348327065,
+              14.599142383695831,
+              0
+            ],
+            [
+              -6.728300402920687,
+              12.69490642060507,
+              0
+            ]
+          ],
+          "local_xy_m": [
+            [
+              -4.924502754799785,
+              6.765021551196204
+            ],
+            [
+              5.232215781981468,
+              6.76510743241417
+            ],
+            [
+              4.605572909766094,
+              -7.32831671487097
+            ],
+            [
+              -4.913285936947778,
+              -6.2018122687394115
+            ]
+          ],
+          "local_bbox_m": [
+            [
+              -4.924502754799785,
+              -7.32831671487097
+            ],
+            [
+              5.232215781981468,
+              6.76510743241417
+            ]
+          ],
+          "bounding_dimensions_m": [
+            10.156718536781252,
+            14.09342414728514
+          ]
+        },
+        "garage": {
+          "crop_pixels": [
+            [
+              421,
+              290
+            ],
+            [
+              465,
+              278
+            ],
+            [
+              486,
+              340
+            ],
+            [
+              436,
+              349
+            ]
+          ],
+          "blender": [
+            [
+              -16.376429282580542,
+              23.48557687811938,
+              0
+            ],
+            [
+              -10.79067045751431,
+              25.00896564859199,
+              0
+            ],
+            [
+              -8.124740109187245,
+              17.138123667816846,
+              0
+            ],
+            [
+              -14.472193319489781,
+              15.995582089962388,
+              0
+            ]
+          ],
+          "local_xy_m": [
+            [
+              -10.706583444332649,
+              7.06327965676668
+            ],
+            [
+              -4.924502754799785,
+              6.765021551196204
+            ],
+            [
+              -4.851442480994062,
+              -1.5447317727512087
+            ],
+            [
+              -11.238075931910156,
+              -0.646691307212095
+            ]
+          ],
+          "local_bbox_m": [
+            [
+              -11.238075931910156,
+              -1.5447317727512087
+            ],
+            [
+              -4.851442480994062,
+              7.06327965676668
+            ]
+          ],
+          "bounding_dimensions_m": [
+            6.3866334509160945,
+            8.60801142951789
+          ]
+        }
+      },
+      "source_baseline_root": [
+        0,
+        -17,
+        0
+      ],
+      "source_baseline_yaw_degrees": 180
+    }
+  },
+  "landmark_frames": {
+    "SUNLINE_Shuttle": {
+      "kind": "vehicle",
+      "source_segment_crop_pixels": [
+        [
+          535,
+          505
+        ],
+        [
+          615,
+          484
+        ]
+      ],
+      "position_crop_pixels": [
+        575.0,
+        494.5
+      ],
+      "position_blender": [
+        3.173726605151267,
+        -2.4755067520179885,
+        0.0
+      ],
+      "yaw_degrees": 14.708303899682749,
+      "yaw_radians": 0.2567083304333857,
+      "local_axes": "X vehicle front; Y vehicle left; Z up",
+      "target_reference_axis_length_m": 10.499999999999998,
+      "footprint_blender": [
+        [
+          -2.2850831557089126,
+          -2.2850831557089126,
+          0
+        ],
+        [
+          7.743892916569093,
+          0.1269490642060507,
+          0
+        ],
+        [
+          8.632536366011449,
+          -2.4120322199149635,
+          0
+        ],
+        [
+          -1.3964397062665577,
+          -4.951013504035977,
+          0
+        ]
+      ]
+    },
+    "Sunward_Delivery": {
+      "kind": "vehicle",
+      "source_segment_crop_pixels": [
+        [
+          462,
+          467
+        ],
+        [
+          563,
+          438
+        ]
+      ],
+      "position_crop_pixels": [
+        512.5,
+        452.5
+      ],
+      "position_blender": [
+        -4.760589907726901,
+        2.856353944636141,
+        0.0
+      ],
+      "yaw_degrees": 16.020292302071223,
+      "yaw_radians": 0.27960684780304484,
+      "local_axes": "X vehicle front; Y vehicle left; Z up",
+      "target_reference_axis_length_m": 13.339924612104413,
+      "footprint_blender": [
+        [
+          -11.933212035368767,
+          2.7928794125331153,
+          0
+        ],
+        [
+          1.5233887704726086,
+          6.220504146096484,
+          0
+        ],
+        [
+          2.4120322199149635,
+          3.55457379776942,
+          0
+        ],
+        [
+          -11.171517650132461,
+          -0.5077962568242028,
+          0
+        ]
+      ]
+    },
+    "West_Pink_Sedan": {
+      "kind": "secondary landmark",
+      "position_crop_pixels": [
+        410,
+        487
+      ],
+      "position_blender": [
+        -17.772868988847097,
+        -1.5233887704726086,
+        0
+      ],
+      "certainty": "marker verified; exact car model and yaw inferred",
+      "yaw_degrees": null
+    },
+    "Entrance_Jeep": {
+      "kind": "secondary landmark",
+      "position_crop_pixels": [
+        650,
+        468
+      ],
+      "position_blender": [
+        12.69490642060507,
+        0.888643449442355,
+        0
+      ],
+      "certainty": "marker verified",
+      "yaw_degrees": null
+    },
+    "Welcome_Sign": {
+      "kind": "secondary landmark",
+      "position_crop_pixels": [
+        466,
+        520
+      ],
+      "position_blender": [
+        -10.66372139330826,
+        -5.712707889272282,
+        0
+      ],
+      "certainty": "marker verified",
+      "yaw_degrees": null
+    },
+    "Green_Driveway_Car": {
+      "kind": "secondary landmark",
+      "actual_built_group": "Green_Driveway_Sedan",
+      "position_crop_pixels": [
+        562.2782773552592,
+        600.672897548202
+      ],
+      "position_blender": [
+        1.5587158203125,
+        -15.954056739807129,
+        0.024800000712275505
+      ],
+      "yaw_degrees": 71.81101974550481,
+      "yaw_radians": 1.2533387337737194,
+      "certainty": "approximate derived location3.2m outward from corrected lower green closed bay; not measured minimap marker",
+      "physical_lot_id": "south",
+      "family_at_position": "A_Mint",
+      "source_report": "/workspace/shared/sunward-structure-build/landmarks/landmarks-classic-r12-report.json"
+    },
+    "Context_Clock": {
+      "kind": "context landmark",
+      "position_crop_pixels": [
+        374.3513227085384,
+        918.7362488853073
+      ],
+      "position_blender": [
+        -22.29843521118164,
+        -56.33190155029297,
+        -0.044977013021707535
+      ],
+      "yaw_degrees": 161.811,
+      "yaw_radians": 2.824134715944545,
+      "certainty": "approximate photo-context placement behind corrected lower green rear boundary; outside playable floor by design; no minimap metric anchor",
+      "physical_lot_id": "south-context",
+      "family_at_position": "A_Mint",
+      "collision_role": "unreachable context excluded",
+      "source_report": "/workspace/shared/sunward-structure-build/landmarks/landmarks-classic-r12-report.json"
+    }
+  },
+  "traversal_anchors": {
+    "A_Mint": {
+      "status": "authored corrected-family route geometry; hidden-side/interior placement estimates remain disclosed; actual capsule test pending",
+      "front_approach": [
+        -6.274221164298508,
+        -11.343553917652521,
+        0.18
+      ],
+      "interior_ground": [
+        -10.101271145701276,
+        -18.762426772276562,
+        0.18
+      ],
+      "rear_door_inside": [
+        -11.675390789830603,
+        -23.553238574452813,
+        0.18
+      ],
+      "rear_door_outside": [
+        -12.299695852262824,
+        -25.453302570485974,
+        0.18
+      ],
+      "backyard": [
+        -11.425415778544563,
+        -36.94217768396076,
+        0.2
+      ],
+      "garage_front": [
+        -2.295860109330669,
+        -17.003272252546292,
+        0.18
+      ],
+      "garage_inside": [
+        -2.9201651717628905,
+        -18.903336248579453,
+        0.18
+      ],
+      "garage_rear": [
+        -5.455675615089965,
+        -23.986067022115765,
+        0.18
+      ],
+      "stairs_lower": [
+        -11.904260271923894,
+        -27.498956002573628,
+        0.18
+      ],
+      "stairs_upper": [
+        -18.35022737846639,
+        -25.38100107827232,
+        3.18
+      ],
+      "upper_interior": [
+        -10.71393219472343,
+        -21.26776477950874,
+        3.18
+      ],
+      "main_side_lane": [
+        -16.221486636823652,
+        -16.099090696977907,
+        0.2
+      ],
+      "garage_side_lane": [
+        3.442959379855715,
+        -22.56024843891104,
+        0.2
+      ],
+      "front_door_inside": [
+        -6.898526226730729,
+        -13.243617913685682,
+        0.18
+      ],
+      "interior_stairs_lower": [
+        -11.489945934794356,
+        -11.62975302603077,
+        0.18
+      ],
+      "interior_stairs_upper": [
+        -13.50332976113827,
+        -17.75745941323771,
+        3.18
+      ],
+      "rear_deck_landing": [
+        -12.125297079220315,
+        -25.563234676630028,
+        3.18
+      ],
+      "exterior_side_landing": [
+        -17.938186037261122,
+        -24.12695884089043,
+        3.18
+      ],
+      "exterior_deck_connector": [
+        -16.014371241277548,
+        -24.759067716603056,
+        3.18
+      ]
+    },
+    "B_Saffron": {
+      "status": "authored corrected-family route geometry; hidden-side/interior placement estimates remain disclosed; actual capsule test pending",
+      "front_approach": [
+        -2.4330715868189228,
+        12.269206147489866,
+        0.18
+      ],
+      "interior_ground": [
+        -3.762245379137185,
+        20.53444816078398,
+        0.18
+      ],
+      "rear_door_inside": [
+        -5.464166192226881,
+        25.708434820907474,
+        0.18
+      ],
+      "rear_door_outside": [
+        -6.089101305402971,
+        27.608291685073716,
+        0.18
+      ],
+      "backyard": [
+        -10.66372139330826,
+        37.323024876578906,
+        0.2
+      ],
+      "garage_front": [
+        -10.845694902758371,
+        15.190387361118113,
+        0.18
+      ],
+      "garage_inside": [
+        -11.47063001593446,
+        17.090244225284355,
+        0.18
+      ],
+      "garage_rear": [
+        -12.076860396321829,
+        25.952579343907438,
+        0.18
+      ],
+      "stairs_lower": [
+        -7.400295013023209,
+        29.092924061929324,
+        0.18
+      ],
+      "stairs_upper": [
+        -0.9550306013392307,
+        31.21301643337921,
+        3.18
+      ],
+      "upper_interior": [
+        -4.81881484992806,
+        23.106444401132272,
+        3.18
+      ],
+      "main_side_lane": [
+        2.871191875773864,
+        22.38125947077228,
+        0.2
+      ],
+      "garage_side_lane": [
+        -16.574120236287317,
+        15.984957436288067,
+        0.2
+      ],
+      "front_door_inside": [
+        -3.058006699995012,
+        14.16906301165611,
+        0.18
+      ],
+      "interior_stairs_lower": [
+        1.935054153186007,
+        15.306169227458241,
+        0.18
+      ],
+      "interior_stairs_upper": [
+        -0.08036158680688181,
+        21.433207614394373,
+        3.18
+      ],
+      "rear_deck_landing": [
+        -6.294710369648998,
+        27.593294595360263,
+        3.18
+      ],
+      "exterior_side_landing": [
+        -0.5425734266430116,
+        29.95911090302949,
+        3.18
+      ],
+      "exterior_deck_connector": [
+        -2.466178501611333,
+        29.326364100938697,
+        3.18
+      ]
+    },
+    "three_lanes": {
+      "center_court": {
+        "start": [
+          12.56795735639902,
+          -4.697115375623876,
+          0.2
+        ],
+        "end": [
+          -14.853040512107933,
+          -7.10914759553884,
+          0.2
+        ]
+      },
+      "north_flank": {
+        "start": [
+          9.521179815453802,
+          7.616943852363042,
+          0.2
+        ],
+        "end": [
+          -19.296257759319708,
+          10.917619521720361,
+          0.2
+        ]
+      },
+      "south_flank": {
+        "start": [
+          3.808471926181521,
+          -8.632536366011449,
+          0.2
+        ],
+        "end": [
+          -19.55015588773181,
+          -14.599142383695831,
+          0.2
+        ]
+      }
+    }
+  },
+  "viewpoints": [
+    {
+      "id": "street",
+      "label": "Street overview",
+      "position_blender": [
+        13.456600805841374,
+        -4.0623700545936225,
+        1.84
+      ],
+      "look_at_blender": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "id": "green_front",
+      "label": "Green house \u00b7 lower lot",
+      "position_blender": [
+        -4.0623700545936225,
+        -7.743892916569093,
+        1.84
+      ],
+      "look_at_blender": [
+        -9.775077943865904,
+        -18.2806652456713,
+        2.5
+      ]
+    },
+    {
+      "id": "yellow_front",
+      "label": "Yellow house \u00b7 upper lot",
+      "position_blender": [
+        -0.888643449442355,
+        7.10914759553884,
+        1.84
+      ],
+      "look_at_blender": [
+        -3.808471926181521,
+        19.296257759319708,
+        2.5
+      ]
+    },
+    {
+      "id": "green_backyard",
+      "label": "Green backyard \u00b7 lower lot",
+      "position_blender": [
+        -8.886434494423549,
+        -38.08471926181521,
+        1.84
+      ],
+      "look_at_blender": [
+        -9.521179815453802,
+        -24.120322199149633,
+        2.0
+      ]
+    },
+    {
+      "id": "yellow_backyard",
+      "label": "Yellow backyard \u00b7 upper lot",
+      "position_blender": [
+        -10.282874200690108,
+        40.49675148173017,
+        1.84
+      ],
+      "look_at_blender": [
+        -7.616943852363042,
+        29.833030088421914,
+        2.0
+      ]
+    },
+    {
+      "id": "overview",
+      "label": "Map overview",
+      "position_blender": [
+        45,
+        -50,
+        58
+      ],
+      "look_at_blender": [
+        -6,
+        0,
+        0
+      ]
+    }
+  ],
+  "walk_spawns": {
+    "street": [
+      12.060161099574817,
+      -3.9354209903875716,
+      1.84
+    ],
+    "green_backyard": [
+      -11.044568585926411,
+      -39.22726083966967,
+      1.84
+    ],
+    "yellow_backyard": [
+      -11.806262971162715,
+      40.623700545936224,
+      1.84
+    ]
+  },
+  "bbox_m": [
+    [
+      -27.42099786850695,
+      -51.28742193924448,
+      0
+    ],
+    [
+      16.630327410992642,
+      51.033523810832385,
+      0
+    ]
+  ],
+  "estimated_size_m": [
+    44.05132527949959,
+    102.32094575007687
+  ],
+  "measured_outline_bbox_crop_pixels": [
+    328,
+    70,
+    686,
+    881
+  ],
+  "measured_outline_bbox_estimated_m": [
+    45.44776498576615,
+    102.95569107110713
+  ],
+  "root_correction_note": "North-lot r1 landmark321.5v was5px off polygon mean; root fixed to518.5,316.5. Yaws rectified by house worker from actual footprint edge axes.",
+  "family_mapping_evidence": {
+    "north_upper": "B_Saffron yellow shed-roof family; truck-side",
+    "south_lower": "A_Mint green gable family; bus-side",
+    "primary_cross_check": "bo1-bird-eye-wikia.png plus official004 east-exit view, manager+reviewer correction2026-10-03",
+    "previous_family_mapping": "layout-r2 family assignment superseded; physical outline/yaws/vehicles unchanged"
+  },
+  "geometric_lots": {
+    "south": {
+      "house_id": "A_Mint",
+      "position_blender": [
+        -9.775077943865904,
+        -18.217190713568275,
+        0
+      ],
+      "yaw_radians": 2.824134715944545
+    },
+    "north": {
+      "house_id": "B_Saffron",
+      "position_blender": [
+        -3.998895522490597,
+        20.121426676659038,
+        0
+      ],
+      "yaw_radians": 0.3177895502031275
+    }
+  },
+  "final_house_route_contract": {
+    "version": "houses-r7-route-contract",
+    "layout_version": "layout-r3-family-corrected",
+    "units": "meters estimated gameplay calibration; not official dimensions",
+    "local_frame": "Blender Z up,front=-Y,rear=+Y,+Xstreetimage-right",
+    "runtime_conversion": "Three=(BlenderX,BlenderZ,-BlenderY)",
+    "proxy_prefix": "COL_V3_H3_",
+    "collision_collection": "V3_COLLISION",
+    "houses": {
+      "A_Mint": {
+        "root_name": "HOUSE_ROOT_A_Mint",
+        "collision_root_name": "COL_HOUSE_ROOT_A_Mint",
+        "root_world_blender": [
+          -9.775077943865904,
+          -18.217190713568275,
+          0
+        ],
+        "yaw_radians": 2.824134715944545,
+        "floor_ground_z": 0.18,
+        "floor_upper_z": 3.18,
+        "portals": {
+          "front_door": {
+            "center": {
+              "local_blender": [
+                -1.1803028365570043,
+                -6.622976204031171,
+                0.18
+              ],
+              "world_blender": [
+                -6.586373695514618,
+                -12.293585915669102,
+                0.18
+              ],
+              "world_three": [
+                -6.586373695514618,
+                0.18,
+                12.293585915669102
+              ]
+            },
+            "clear_width": 1.16,
+            "clear_height": 2.15,
+            "negative_axis_approach": {
+              "local_blender": [
+                -1.1803028365570043,
+                -7.622976204031171,
+                0.18
+              ],
+              "world_blender": [
+                -6.274221164298508,
+                -11.343553917652521,
+                0.18
+              ],
+              "world_three": [
+                -6.274221164298508,
+                0.18,
+                11.343553917652521
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -1.1803028365570043,
+                -5.622976204031171,
+                0.18
+              ],
+              "world_blender": [
+                -6.898526226730729,
+                -13.243617913685682,
+                0.18
+              ],
+              "world_three": [
+                -6.898526226730729,
+                0.18,
+                13.243617913685682
+              ]
+            }
+          },
+          "rear_door": {
+            "center": {
+              "local_blender": [
+                0.13969716344299582,
+                6.662603675758609,
+                0.18
+              ],
+              "world_blender": [
+                -11.987543321046713,
+                -24.503270572469393,
+                0.18
+              ],
+              "world_three": [
+                -11.987543321046713,
+                0.18,
+                24.503270572469393
+              ]
+            },
+            "clear_width": 1.2,
+            "clear_height": 2.15,
+            "certainty": "rear doorway family verified by BO1 thesis capture; exact width/position estimated",
+            "negative_axis_approach": {
+              "local_blender": [
+                0.13969716344299582,
+                5.662603675758609,
+                0.18
+              ],
+              "world_blender": [
+                -11.675390789830603,
+                -23.553238574452813,
+                0.18
+              ],
+              "world_three": [
+                -11.675390789830603,
+                0.18,
+                23.553238574452813
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                0.13969716344299582,
+                7.662603675758609,
+                0.18
+              ],
+              "world_blender": [
+                -12.299695852262824,
+                -25.453302570485974,
+                0.18
+              ],
+              "world_three": [
+                -12.299695852262824,
+                0.18,
+                25.453302570485974
+              ]
+            }
+          },
+          "rear_upper_door": {
+            "center": {
+              "local_blender": [
+                -0.6603028365570042,
+                6.662603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -11.22751772263345,
+                -24.752992597442283,
+                3.18
+              ],
+              "world_three": [
+                -11.22751772263345,
+                3.18,
+                24.752992597442283
+              ]
+            },
+            "clear_width": 1.2,
+            "clear_height": 2.15,
+            "certainty": "rear doorway family verified by BO1 thesis capture; exact width/position estimated",
+            "negative_axis_approach": {
+              "local_blender": [
+                -0.6603028365570042,
+                5.662603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -10.91536519141734,
+                -23.802960599425703,
+                3.18
+              ],
+              "world_three": [
+                -10.91536519141734,
+                3.18,
+                23.802960599425703
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -0.6603028365570042,
+                7.662603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -11.539670253849561,
+                -25.703024595458864,
+                3.18
+              ],
+              "world_three": [
+                -11.539670253849561,
+                3.18,
+                25.703024595458864
+              ]
+            }
+          },
+          "garage_connector": {
+            "center": {
+              "local_blender": [
+                -4.906070485263678,
+                1.119813735863719,
+                0.18
+              ],
+              "world_blender": [
+                -5.463706690481109,
+                -20.812491914757004,
+                0.18
+              ],
+              "world_three": [
+                -5.463706690481109,
+                0.18,
+                20.812491914757004
+              ]
+            },
+            "clear_width": 1.3,
+            "clear_height": 2.15,
+            "negative_axis_approach": {
+              "local_blender": [
+                -5.906070485263678,
+                1.119813735863719,
+                0.18
+              ],
+              "world_blender": [
+                -4.513674692464528,
+                -21.124644445973114,
+                0.18
+              ],
+              "world_three": [
+                -4.513674692464528,
+                0.18,
+                21.124644445973114
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -3.906070485263678,
+                1.119813735863719,
+                0.18
+              ],
+              "world_blender": [
+                -6.413738688497689,
+                -20.500339383540894,
+                0.18
+              ],
+              "world_three": [
+                -6.413738688497689,
+                0.18,
+                20.500339383540894
+              ]
+            }
+          },
+          "room_passage": {
+            "center": {
+              "local_blender": [
+                0.13969716344299582,
+                0.6198137358637189,
+                0.18
+              ],
+              "world_blender": [
+                -10.101271145701276,
+                -18.762426772276562,
+                0.18
+              ],
+              "world_three": [
+                -10.101271145701276,
+                0.18,
+                18.762426772276562
+              ]
+            },
+            "clear_width": 1.6,
+            "clear_height": 2.25,
+            "certainty": "unverified room partition approximation",
+            "negative_axis_approach": {
+              "local_blender": [
+                0.13969716344299582,
+                -0.3801862641362811,
+                0.18
+              ],
+              "world_blender": [
+                -9.789118614485165,
+                -17.81239477425998,
+                0.18
+              ],
+              "world_three": [
+                -9.789118614485165,
+                0.18,
+                17.81239477425998
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                0.13969716344299582,
+                1.619813735863719,
+                0.18
+              ],
+              "world_blender": [
+                -10.413423676917386,
+                -19.712458770293143,
+                0.18
+              ],
+              "world_three": [
+                -10.413423676917386,
+                0.18,
+                19.712458770293143
+              ]
+            }
+          },
+          "upper_room_passage": {
+            "center": {
+              "local_blender": [
+                0.1896971634429958,
+                -0.28018626413628106,
+                3.18
+              ],
+              "world_blender": [
+                -9.867835467507605,
+                -17.891790347500837,
+                3.18
+              ],
+              "world_three": [
+                -9.867835467507605,
+                3.18,
+                17.891790347500837
+              ]
+            },
+            "clear_width": 1.3,
+            "clear_height": 2.15,
+            "certainty": "two-room connection verified in BO1 thesis plan; exact coordinates estimated",
+            "negative_axis_approach": {
+              "local_blender": [
+                0.1896971634429958,
+                -1.2801862641362811,
+                3.18
+              ],
+              "world_blender": [
+                -9.555682936291495,
+                -16.941758349484257,
+                3.18
+              ],
+              "world_three": [
+                -9.555682936291495,
+                3.18,
+                16.941758349484257
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                0.1896971634429958,
+                0.7198137358637189,
+                3.18
+              ],
+              "world_blender": [
+                -10.179987998723716,
+                -18.841822345517414,
+                3.18
+              ],
+              "world_three": [
+                -10.179987998723716,
+                3.18,
+                18.841822345517414
+              ]
+            }
+          },
+          "garage_front": {
+            "center": {
+              "local_blender": [
+                -6.7265685426467705,
+                -2.4879181595207776,
+                0.18
+              ],
+              "world_blender": [
+                -2.60801264054678,
+                -17.953304250562873,
+                0.18
+              ],
+              "world_three": [
+                -2.60801264054678,
+                0.18,
+                17.953304250562873
+              ]
+            },
+            "clear_width": 3.12445755203309,
+            "clear_height": 2.45,
+            "negative_axis_approach": {
+              "local_blender": [
+                -6.7265685426467705,
+                -3.4879181595207776,
+                0.18
+              ],
+              "world_blender": [
+                -2.295860109330669,
+                -17.003272252546292,
+                0.18
+              ],
+              "world_three": [
+                -2.295860109330669,
+                0.18,
+                17.003272252546292
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -6.7265685426467705,
+                -1.4879181595207776,
+                0.18
+              ],
+              "world_blender": [
+                -2.9201651717628905,
+                -18.903336248579453,
+                0.18
+              ],
+              "world_three": [
+                -2.9201651717628905,
+                0.18,
+                18.903336248579453
+              ]
+            }
+          },
+          "garage_rear": {
+            "center": {
+              "local_blender": [
+                -5.904339766630225,
+                3.1323047154517125,
+                0.18
+              ],
+              "world_blender": [
+                -5.143523083873855,
+                -23.036035024099185,
+                0.18
+              ],
+              "world_three": [
+                -5.143523083873855,
+                0.18,
+                23.036035024099185
+              ]
+            },
+            "clear_width": 1.2,
+            "clear_height": 2.15,
+            "certainty": "reversible traversal approximation, rear evidence limited",
+            "negative_axis_approach": {
+              "local_blender": [
+                -5.904339766630225,
+                2.1323047154517125,
+                0.18
+              ],
+              "world_blender": [
+                -4.831370552657744,
+                -22.086003026082604,
+                0.18
+              ],
+              "world_three": [
+                -4.831370552657744,
+                0.18,
+                22.086003026082604
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -5.904339766630225,
+                4.1323047154517125,
+                0.18
+              ],
+              "world_blender": [
+                -5.455675615089965,
+                -23.986067022115765,
+                0.18
+              ],
+              "world_three": [
+                -5.455675615089965,
+                0.18,
+                23.986067022115765
+              ]
+            }
+          }
+        },
+        "routes": {
+          "interior_stairs": {
+            "bottom": {
+              "local_blender": [
+                3.6854648121496694,
+                -5.722976204031172,
+                0.18
+              ],
+              "world_blender": [
+                -11.489945934794356,
+                -11.62975302603077,
+                0.18
+              ],
+              "world_three": [
+                -11.489945934794356,
+                0.18,
+                11.62975302603077
+              ]
+            },
+            "top": {
+              "local_blender": [
+                3.6854648121496694,
+                0.7270237959688288,
+                3.18
+              ],
+              "world_blender": [
+                -13.50332976113827,
+                -17.75745941323771,
+                3.18
+              ],
+              "world_three": [
+                -13.50332976113827,
+                3.18,
+                17.75745941323771
+              ]
+            },
+            "ramp_start": {
+              "local_blender": [
+                3.6854648121496694,
+                -5.472976204031172,
+                0.3466666666666667
+              ],
+              "world_blender": [
+                -11.567984067598383,
+                -11.867261025534916,
+                0.3466666666666667
+              ],
+              "world_three": [
+                -11.567984067598383,
+                0.3466666666666667,
+                11.867261025534916
+              ]
+            },
+            "ramp_end": {
+              "local_blender": [
+                3.6854648121496694,
+                0.17702379596882878,
+                3.18
+              ],
+              "world_blender": [
+                -13.331645868969408,
+                -17.234941814328593,
+                3.18
+              ],
+              "world_three": [
+                -13.331645868969408,
+                3.18,
+                17.234941814328593
+              ]
+            },
+            "width": 1.45,
+            "rise": 3.0,
+            "run": 5.65,
+            "uncertainty": "gameplay-calibrated location, not primary measured stair plan"
+          },
+          "upper_rooms": {
+            "front_room": {
+              "local_blender": [
+                -0.06030283655700419,
+                -3.451581234083726,
+                3.18
+              ],
+              "world_blender": [
+                -8.640368500648325,
+                -14.956901780505962,
+                3.18
+              ],
+              "world_three": [
+                -8.640368500648325,
+                3.18,
+                14.956901780505962
+              ]
+            },
+            "rear_room": {
+              "local_blender": [
+                -0.06030283655700419,
+                3.1912087058111642,
+                3.18
+              ],
+              "world_blender": [
+                -10.71393219472343,
+                -21.26776477950874,
+                3.18
+              ],
+              "world_three": [
+                -10.71393219472343,
+                3.18,
+                21.26776477950874
+              ]
+            },
+            "passage": {
+              "local_blender": [
+                0.1896971634429958,
+                -0.28018626413628106,
+                3.18
+              ],
+              "world_blender": [
+                -9.867835467507605,
+                -17.891790347500837,
+                3.18
+              ],
+              "world_three": [
+                -9.867835467507605,
+                3.18,
+                17.891790347500837
+              ]
+            },
+            "balcony_door": {
+              "local_blender": [
+                -0.6603028365570042,
+                6.662603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -11.22751772263345,
+                -24.752992597442283,
+                3.18
+              ],
+              "world_three": [
+                -11.22751772263345,
+                3.18,
+                24.752992597442283
+              ]
+            },
+            "topology_evidence": "BO1 thesis plan p128 and rear gameplay photographs p130; no primary meter dimensions"
+          },
+          "rear_stairs": {
+            "bottom": {
+              "local_blender": [
+                -0.8745351878503309,
+                9.48260367575861,
+                0.18
+              ],
+              "world_blender": [
+                -11.904260271923894,
+                -27.498956002573628,
+                0.18
+              ],
+              "world_three": [
+                -11.904260271923894,
+                0.18,
+                27.498956002573628
+              ]
+            },
+            "top": {
+              "local_blender": [
+                5.9104648121496695,
+                9.48260367575861,
+                3.18
+              ],
+              "world_blender": [
+                -18.35022737846639,
+                -25.38100107827232,
+                3.18
+              ],
+              "world_three": [
+                -18.35022737846639,
+                3.18,
+                25.38100107827232
+              ]
+            },
+            "deck_connector": {
+              "local_blender": [
+                3.885464812149669,
+                8.162603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -16.014371241277548,
+                -24.759067716603056,
+                3.18
+              ],
+              "world_three": [
+                -16.014371241277548,
+                3.18,
+                24.759067716603056
+              ]
+            },
+            "side_landing": {
+              "local_blender": [
+                5.9104648121496695,
+                8.162603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -17.938186037261122,
+                -24.12695884089043,
+                3.18
+              ],
+              "world_three": [
+                -17.938186037261122,
+                3.18,
+                24.12695884089043
+              ]
+            },
+            "top_cap": {
+              "local_blender": [
+                5.9104648121496695,
+                9.48260367575861,
+                3.18
+              ],
+              "world_blender": [
+                -18.35022737846639,
+                -25.38100107827232,
+                3.18
+              ],
+              "world_three": [
+                -18.35022737846639,
+                3.18,
+                25.38100107827232
+              ]
+            },
+            "ramp_start": {
+              "local_blender": [
+                -0.32453518785033086,
+                9.48260367575861,
+                0.3467
+              ],
+              "world_blender": [
+                -12.426777870833012,
+                -27.32727211040477,
+                0.3467
+              ],
+              "world_three": [
+                -12.426777870833012,
+                0.3467,
+                27.32727211040477
+              ]
+            },
+            "ramp_end": {
+              "local_blender": [
+                5.3254648121496695,
+                9.48260367575861,
+                3.18
+              ],
+              "world_blender": [
+                -17.794458659626688,
+                -25.56361030903374,
+                3.18
+              ],
+              "world_three": [
+                -17.794458659626688,
+                3.18,
+                25.56361030903374
+              ]
+            },
+            "bottom_landing_bbox": [
+              [
+                -1.7245351878503308,
+                8.60760367575861,
+                0
+              ],
+              [
+                -0.2745351878503309,
+                10.35760367575861,
+                0.18
+              ]
+            ],
+            "bottom_landing_floor": 0.18,
+            "width": 1.45,
+            "run": 5.65,
+            "rise": 3.0,
+            "certainty": "rear pergola/diagonal fa\u00e7ade-parallel stair corroborated by BO1 thesis capture; exact dimensions estimated"
+          },
+          "rear_deck": {
+            "door": {
+              "local_blender": [
+                -0.6603028365570042,
+                6.662603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -11.22751772263345,
+                -24.752992597442283,
+                3.18
+              ],
+              "world_three": [
+                -11.22751772263345,
+                3.18,
+                24.752992597442283
+              ]
+            },
+            "landing": {
+              "local_blender": [
+                -0.06030283655700419,
+                7.712603675758609,
+                3.18
+              ],
+              "world_blender": [
+                -12.125297079220315,
+                -25.563234676630028,
+                3.18
+              ],
+              "world_three": [
+                -12.125297079220315,
+                3.18,
+                25.563234676630028
+              ]
+            },
+            "width": 9.291535297413347,
+            "depth": 2.1
+          },
+          "interior_ramp_support": {
+            "start": {
+              "local_blender": [
+                3.6854648121496694,
+                -5.472976204031172,
+                0.3466666667
+              ],
+              "world_blender": [
+                -11.567984067598383,
+                -11.867261025534916,
+                0.3466666667
+              ],
+              "world_three": [
+                -11.567984067598383,
+                0.3466666667,
+                11.867261025534916
+              ]
+            },
+            "mid": {
+              "local_blender": [
+                3.6854648121496694,
+                -2.6479762040311714,
+                1.7633333333
+              ],
+              "world_blender": [
+                -12.449814968283896,
+                -14.551101419931754,
+                1.7633333333
+              ],
+              "world_three": [
+                -12.449814968283896,
+                1.7633333333,
+                14.551101419931754
+              ]
+            },
+            "end": {
+              "local_blender": [
+                3.6854648121496694,
+                0.17702379596882878,
+                3.18
+              ],
+              "world_blender": [
+                -13.331645868969408,
+                -17.234941814328593,
+                3.18
+              ],
+              "world_three": [
+                -13.331645868969408,
+                3.18,
+                17.234941814328593
+              ]
+            },
+            "clear_width": 1.45
+          },
+          "interior_up_ordered": {
+            "waypoints": [
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  -5.722976204031172,
+                  0.18
+                ],
+                "world_blender": [
+                  -11.489945934794356,
+                  -11.62975302603077,
+                  0.18
+                ],
+                "world_three": [
+                  -11.489945934794356,
+                  0.18,
+                  11.62975302603077
+                ]
+              },
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  -5.372976204031172,
+                  0.39681415932477876
+                ],
+                "world_blender": [
+                  -11.599199320719995,
+                  -11.962264225336572,
+                  0.39681415932477876
+                ],
+                "world_three": [
+                  -11.599199320719995,
+                  0.39681415932477876,
+                  11.962264225336572
+                ]
+              },
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  -2.6479762040311714,
+                  1.7633333333
+                ],
+                "world_blender": [
+                  -12.449814968283896,
+                  -14.551101419931754,
+                  1.7633333333
+                ],
+                "world_three": [
+                  -12.449814968283896,
+                  1.7633333333,
+                  14.551101419931754
+                ]
+              },
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  0.7270237959688288,
+                  3.18
+                ],
+                "world_blender": [
+                  -13.50332976113827,
+                  -17.75745941323771,
+                  3.18
+                ],
+                "world_three": [
+                  -13.50332976113827,
+                  3.18,
+                  17.75745941323771
+                ]
+              }
+            ],
+            "intent": "Existing proven frontal entrance and full flight; no side entry"
+          },
+          "interior_down_ordered": {
+            "waypoints": [
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  0.7270237959688288,
+                  3.18
+                ],
+                "world_blender": [
+                  -13.50332976113827,
+                  -17.75745941323771,
+                  3.18
+                ],
+                "world_three": [
+                  -13.50332976113827,
+                  3.18,
+                  17.75745941323771
+                ]
+              },
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  -2.6479762040311714,
+                  1.7633333333
+                ],
+                "world_blender": [
+                  -12.449814968283896,
+                  -14.551101419931754,
+                  1.7633333333
+                ],
+                "world_three": [
+                  -12.449814968283896,
+                  1.7633333333,
+                  14.551101419931754
+                ]
+              },
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  -5.372976204031172,
+                  0.39681415932477876
+                ],
+                "world_blender": [
+                  -11.599199320719995,
+                  -11.962264225336572,
+                  0.39681415932477876
+                ],
+                "world_three": [
+                  -11.599199320719995,
+                  0.39681415932477876,
+                  11.962264225336572
+                ]
+              },
+              {
+                "local_blender": [
+                  3.6854648121496694,
+                  -5.722976204031172,
+                  0.18
+                ],
+                "world_blender": [
+                  -11.489945934794356,
+                  -11.62975302603077,
+                  0.18
+                ],
+                "world_three": [
+                  -11.489945934794356,
+                  0.18,
+                  11.62975302603077
+                ]
+              }
+            ],
+            "intent": "Existing proven frontal descent to supported floor endpoint"
+          },
+          "exterior_ramp_support": {
+            "start": {
+              "local_blender": [
+                -0.32453518785033086,
+                9.48260367575861,
+                0.3467
+              ],
+              "world_blender": [
+                -12.426777870833012,
+                -27.32727211040477,
+                0.3467
+              ],
+              "world_three": [
+                -12.426777870833012,
+                0.3467,
+                27.32727211040477
+              ]
+            },
+            "mid": {
+              "local_blender": [
+                2.5004648121496693,
+                9.48260367575861,
+                1.76335
+              ],
+              "world_blender": [
+                -15.110618265229851,
+                -26.445441209719256,
+                1.76335
+              ],
+              "world_three": [
+                -15.110618265229851,
+                1.76335,
+                26.445441209719256
+              ]
+            },
+            "end": {
+              "local_blender": [
+                5.3254648121496695,
+                9.48260367575861,
+                3.18
+              ],
+              "world_blender": [
+                -17.794458659626688,
+                -25.56361030903374,
+                3.18
+              ],
+              "world_three": [
+                -17.794458659626688,
+                3.18,
+                25.56361030903374
+              ]
+            },
+            "clear_width": 1.45
+          },
+          "exterior_to_upper_room_ordered": {
+            "waypoints": [
+              {
+                "local_blender": [
+                  -0.8745351878503309,
+                  9.48260367575861,
+                  0.18
+                ],
+                "world_blender": [
+                  -11.904260271923894,
+                  -27.498956002573628,
+                  0.18
+                ],
+                "world_three": [
+                  -11.904260271923894,
+                  0.18,
+                  27.498956002573628
+                ]
+              },
+              {
+                "local_blender": [
+                  5.9104648121496695,
+                  9.48260367575861,
+                  3.18
+                ],
+                "world_blender": [
+                  -18.35022737846639,
+                  -25.38100107827232,
+                  3.18
+                ],
+                "world_three": [
+                  -18.35022737846639,
+                  3.18,
+                  25.38100107827232
+                ]
+              },
+              {
+                "local_blender": [
+                  5.9104648121496695,
+                  8.162603675758609,
+                  3.18
+                ],
+                "world_blender": [
+                  -17.938186037261122,
+                  -24.12695884089043,
+                  3.18
+                ],
+                "world_three": [
+                  -17.938186037261122,
+                  3.18,
+                  24.12695884089043
+                ]
+              },
+              {
+                "local_blender": [
+                  3.885464812149669,
+                  8.162603675758609,
+                  3.18
+                ],
+                "world_blender": [
+                  -16.014371241277548,
+                  -24.759067716603056,
+                  3.18
+                ],
+                "world_three": [
+                  -16.014371241277548,
+                  3.18,
+                  24.759067716603056
+                ]
+              },
+              {
+                "local_blender": [
+                  -0.06030283655700419,
+                  7.712603675758609,
+                  3.18
+                ],
+                "world_blender": [
+                  -12.125297079220315,
+                  -25.563234676630028,
+                  3.18
+                ],
+                "world_three": [
+                  -12.125297079220315,
+                  3.18,
+                  25.563234676630028
+                ]
+              },
+              {
+                "local_blender": [
+                  -0.6603028365570042,
+                  6.662603675758609,
+                  3.18
+                ],
+                "world_blender": [
+                  -11.22751772263345,
+                  -24.752992597442283,
+                  3.18
+                ],
+                "world_three": [
+                  -11.22751772263345,
+                  3.18,
+                  24.752992597442283
+                ]
+              },
+              {
+                "local_blender": [
+                  -0.06030283655700419,
+                  3.1912087058111642,
+                  3.18
+                ],
+                "world_blender": [
+                  -10.71393219472343,
+                  -21.26776477950874,
+                  3.18
+                ],
+                "world_three": [
+                  -10.71393219472343,
+                  3.18,
+                  21.26776477950874
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "B_Saffron": {
+        "root_name": "HOUSE_ROOT_B_Saffron",
+        "collision_root_name": "COL_HOUSE_ROOT_B_Saffron",
+        "root_world_blender": [
+          -3.998895522490597,
+          20.121426676659038,
+          0
+        ],
+        "yaw_radians": 0.3177895502031275,
+        "floor_ground_z": 0.18,
+        "floor_upper_z": 3.18,
+        "portals": {
+          "front_door": {
+            "center": {
+              "local_blender": [
+                -0.9661434864091585,
+                -6.94831671487097,
+                0.18
+              ],
+              "world_blender": [
+                -2.7455391434069676,
+                13.219134579572987,
+                0.18
+              ],
+              "world_three": [
+                -2.7455391434069676,
+                0.18,
+                -13.219134579572987
+              ]
+            },
+            "clear_width": 1.16,
+            "clear_height": 2.15,
+            "negative_axis_approach": {
+              "local_blender": [
+                -0.9661434864091585,
+                -7.94831671487097,
+                0.18
+              ],
+              "world_blender": [
+                -2.4330715868189228,
+                12.269206147489866,
+                0.18
+              ],
+              "world_three": [
+                -2.4330715868189228,
+                0.18,
+                -12.269206147489866
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -0.9661434864091585,
+                -5.94831671487097,
+                0.18
+              ],
+              "world_blender": [
+                -3.058006699995012,
+                14.16906301165611,
+                0.18
+              ],
+              "world_three": [
+                -3.058006699995012,
+                0.18,
+                -14.16906301165611
+              ]
+            }
+          },
+          "rear_door": {
+            "center": {
+              "local_blender": [
+                0.35385651359084164,
+                6.76510743241417,
+                0.18
+              ],
+              "world_blender": [
+                -5.776633748814926,
+                26.658363252990597,
+                0.18
+              ],
+              "world_three": [
+                -5.776633748814926,
+                0.18,
+                -26.658363252990597
+              ]
+            },
+            "clear_width": 1.2,
+            "clear_height": 2.15,
+            "certainty": "rear doorway family verified by BO1 thesis capture; exact width/position estimated",
+            "negative_axis_approach": {
+              "local_blender": [
+                0.35385651359084164,
+                5.76510743241417,
+                0.18
+              ],
+              "world_blender": [
+                -5.464166192226881,
+                25.708434820907474,
+                0.18
+              ],
+              "world_three": [
+                -5.464166192226881,
+                0.18,
+                -25.708434820907474
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                0.35385651359084164,
+                7.76510743241417,
+                0.18
+              ],
+              "world_blender": [
+                -6.089101305402971,
+                27.608291685073716,
+                0.18
+              ],
+              "world_three": [
+                -6.089101305402971,
+                0.18,
+                -27.608291685073716
+              ]
+            }
+          },
+          "rear_upper_door": {
+            "center": {
+              "local_blender": [
+                -0.44614348640915835,
+                6.76510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -6.536576494481423,
+                26.40838920772016,
+                3.18
+              ],
+              "world_three": [
+                -6.536576494481423,
+                3.18,
+                -26.40838920772016
+              ]
+            },
+            "clear_width": 1.2,
+            "clear_height": 2.15,
+            "certainty": "rear doorway family verified by BO1 thesis capture; exact width/position estimated",
+            "negative_axis_approach": {
+              "local_blender": [
+                -0.44614348640915835,
+                5.76510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -6.224108937893378,
+                25.458460775637036,
+                3.18
+              ],
+              "world_three": [
+                -6.224108937893378,
+                3.18,
+                -25.458460775637036
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -0.44614348640915835,
+                7.76510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -6.849044051069468,
+                27.358317639803282,
+                3.18
+              ],
+              "world_three": [
+                -6.849044051069468,
+                3.18,
+                -27.358317639803282
+              ]
+            }
+          },
+          "garage_connector": {
+            "center": {
+              "local_blender": [
+                -4.924502754799785,
+                0.8183953587716002,
+                0.18
+              ],
+              "world_blender": [
+                -8.932542701224927,
+                19.360096353437665,
+                0.18
+              ],
+              "world_three": [
+                -8.932542701224927,
+                0.18,
+                -19.360096353437665
+              ]
+            },
+            "clear_width": 1.3,
+            "clear_height": 2.15,
+            "negative_axis_approach": {
+              "local_blender": [
+                -5.924502754799785,
+                0.8183953587716002,
+                0.18
+              ],
+              "world_blender": [
+                -9.882471133308048,
+                19.04762879684962,
+                0.18
+              ],
+              "world_three": [
+                -9.882471133308048,
+                0.18,
+                -19.04762879684962
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -3.924502754799785,
+                0.8183953587716002,
+                0.18
+              ],
+              "world_blender": [
+                -7.982614269141805,
+                19.67256391002571,
+                0.18
+              ],
+              "world_three": [
+                -7.982614269141805,
+                0.18,
+                -19.67256391002571
+              ]
+            }
+          },
+          "room_passage": {
+            "center": {
+              "local_blender": [
+                0.35385651359084164,
+                0.3183953587716001,
+                0.18
+              ],
+              "world_blender": [
+                -3.762245379137185,
+                20.53444816078398,
+                0.18
+              ],
+              "world_three": [
+                -3.762245379137185,
+                0.18,
+                -20.53444816078398
+              ]
+            },
+            "clear_width": 1.6,
+            "clear_height": 2.25,
+            "certainty": "unverified room partition approximation",
+            "negative_axis_approach": {
+              "local_blender": [
+                0.35385651359084164,
+                -0.6816046412283999,
+                0.18
+              ],
+              "world_blender": [
+                -3.44977782254914,
+                19.58451972870086,
+                0.18
+              ],
+              "world_three": [
+                -3.44977782254914,
+                0.18,
+                -19.58451972870086
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                0.35385651359084164,
+                1.3183953587716002,
+                0.18
+              ],
+              "world_blender": [
+                -4.07471293572523,
+                21.484376592867104,
+                0.18
+              ],
+              "world_three": [
+                -4.07471293572523,
+                0.18,
+                -21.484376592867104
+              ]
+            }
+          },
+          "upper_room_passage": {
+            "center": {
+              "local_blender": [
+                0.4038565135908416,
+                -0.5816046412283999,
+                3.18
+              ],
+              "world_blender": [
+                -3.433528156603789,
+                19.695135949738575,
+                3.18
+              ],
+              "world_three": [
+                -3.433528156603789,
+                3.18,
+                -19.695135949738575
+              ]
+            },
+            "clear_width": 1.3,
+            "clear_height": 2.15,
+            "certainty": "two-room connection verified in BO1 thesis plan; exact coordinates estimated",
+            "negative_axis_approach": {
+              "local_blender": [
+                0.4038565135908416,
+                -1.5816046412284,
+                3.18
+              ],
+              "world_blender": [
+                -3.121060600015744,
+                18.74520751765545,
+                3.18
+              ],
+              "world_three": [
+                -3.121060600015744,
+                3.18,
+                -18.74520751765545
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                0.4038565135908416,
+                0.41839535877160006,
+                3.18
+              ],
+              "world_blender": [
+                -3.7459957131918338,
+                20.645064381821694,
+                3.18
+              ],
+              "world_three": [
+                -3.7459957131918338,
+                3.18,
+                -20.645064381821694
+              ]
+            }
+          },
+          "garage_front": {
+            "center": {
+              "local_blender": [
+                -8.04475920645211,
+                -1.5447317727512087,
+                0.18
+              ],
+              "world_blender": [
+                -11.158162459346416,
+                16.140315793201232,
+                0.18
+              ],
+              "world_three": [
+                -11.158162459346416,
+                0.18,
+                -16.140315793201232
+              ]
+            },
+            "clear_width": 2.94,
+            "clear_height": 2.42,
+            "certainty": "visible garage location, bay detail partly occluded in primary photo",
+            "negative_axis_approach": {
+              "local_blender": [
+                -8.04475920645211,
+                -2.5447317727512084,
+                0.18
+              ],
+              "world_blender": [
+                -10.845694902758371,
+                15.190387361118113,
+                0.18
+              ],
+              "world_three": [
+                -10.845694902758371,
+                0.18,
+                -15.190387361118113
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -8.04475920645211,
+                -0.5447317727512087,
+                0.18
+              ],
+              "world_blender": [
+                -11.47063001593446,
+                17.090244225284355,
+                0.18
+              ],
+              "world_three": [
+                -11.47063001593446,
+                0.18,
+                -17.090244225284355
+              ]
+            }
+          },
+          "garage_rear": {
+            "center": {
+              "local_blender": [
+                -5.851442480994062,
+                7.06327965676668,
+                0.18
+              ],
+              "world_blender": [
+                -11.764392839733784,
+                25.002650911824315,
+                0.18
+              ],
+              "world_three": [
+                -11.764392839733784,
+                0.18,
+                -25.002650911824315
+              ]
+            },
+            "clear_width": 1.2,
+            "clear_height": 2.15,
+            "certainty": "reversible traversal approximation, rear evidence limited",
+            "negative_axis_approach": {
+              "local_blender": [
+                -5.851442480994062,
+                6.06327965676668,
+                0.18
+              ],
+              "world_blender": [
+                -11.451925283145739,
+                24.052722479741195,
+                0.18
+              ],
+              "world_three": [
+                -11.451925283145739,
+                0.18,
+                -24.052722479741195
+              ]
+            },
+            "positive_axis_approach": {
+              "local_blender": [
+                -5.851442480994062,
+                8.06327965676668,
+                0.18
+              ],
+              "world_blender": [
+                -12.076860396321829,
+                25.952579343907438,
+                0.18
+              ],
+              "world_three": [
+                -12.076860396321829,
+                0.18,
+                -25.952579343907438
+              ]
+            }
+          }
+        },
+        "routes": {
+          "interior_stairs": {
+            "bottom": {
+              "local_blender": [
+                4.132215781981468,
+                -6.42831671487097,
+                0.18
+              ],
+              "world_blender": [
+                1.935054153186007,
+                15.306169227458241,
+                0.18
+              ],
+              "world_three": [
+                1.935054153186007,
+                0.18,
+                -15.306169227458241
+              ]
+            },
+            "top": {
+              "local_blender": [
+                4.132215781981468,
+                0.021683285129030283,
+                3.18
+              ],
+              "world_blender": [
+                -0.08036158680688181,
+                21.433207614394373,
+                3.18
+              ],
+              "world_three": [
+                -0.08036158680688181,
+                3.18,
+                -21.433207614394373
+              ]
+            },
+            "ramp_start": {
+              "local_blender": [
+                4.132215781981468,
+                -6.17831671487097,
+                0.3466666666666667
+              ],
+              "world_blender": [
+                1.8569372640389958,
+                15.543651335479023,
+                0.3466666666666667
+              ],
+              "world_three": [
+                1.8569372640389958,
+                0.3466666666666667,
+                -15.543651335479023
+              ]
+            },
+            "ramp_end": {
+              "local_blender": [
+                4.132215781981468,
+                -0.5283167148709698,
+                3.18
+              ],
+              "world_blender": [
+                0.09149556931654282,
+                20.91074697674866,
+                3.18
+              ],
+              "world_three": [
+                0.09149556931654282,
+                3.18,
+                -20.91074697674866
+              ]
+            },
+            "width": 1.45,
+            "rise": 3.0,
+            "run": 5.65,
+            "uncertainty": "gameplay-calibrated location, not primary measured stair plan"
+          },
+          "upper_rooms": {
+            "front_room": {
+              "local_blender": [
+                0.15385651359084163,
+                -3.9549606780496847,
+                3.18
+              ],
+              "world_blender": [
+                -2.616945946297492,
+                16.412572249675787,
+                3.18
+              ],
+              "world_three": [
+                -2.616945946297492,
+                3.18,
+                -16.412572249675787
+              ]
+            },
+            "rear_room": {
+              "local_blender": [
+                0.15385651359084163,
+                3.091751395592885,
+                3.18
+              ],
+              "world_blender": [
+                -4.81881484992806,
+                23.106444401132272,
+                3.18
+              ],
+              "world_three": [
+                -4.81881484992806,
+                3.18,
+                -23.106444401132272
+              ]
+            },
+            "passage": {
+              "local_blender": [
+                0.4038565135908416,
+                -0.5816046412283999,
+                3.18
+              ],
+              "world_blender": [
+                -3.433528156603789,
+                19.695135949738575,
+                3.18
+              ],
+              "world_three": [
+                -3.433528156603789,
+                3.18,
+                -19.695135949738575
+              ]
+            },
+            "balcony_door": {
+              "local_blender": [
+                -0.44614348640915835,
+                6.76510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -6.536576494481423,
+                26.40838920772016,
+                3.18
+              ],
+              "world_three": [
+                -6.536576494481423,
+                3.18,
+                -26.40838920772016
+              ]
+            },
+            "topology_evidence": "BO1 thesis plan p128 and rear gameplay photographs p130; no primary meter dimensions"
+          },
+          "rear_stairs": {
+            "bottom": {
+              "local_blender": [
+                -0.42778421801853317,
+                9.58510743241417,
+                0.18
+              ],
+              "world_blender": [
+                -7.400295013023209,
+                29.092924061929324,
+                0.18
+              ],
+              "world_three": [
+                -7.400295013023209,
+                0.18,
+                -29.092924061929324
+              ]
+            },
+            "top": {
+              "local_blender": [
+                6.357215781981467,
+                9.58510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -0.9550306013392307,
+                31.21301643337921,
+                3.18
+              ],
+              "world_three": [
+                -0.9550306013392307,
+                3.18,
+                -31.21301643337921
+              ]
+            },
+            "deck_connector": {
+              "local_blender": [
+                4.332215781981467,
+                8.265107432414169,
+                3.18
+              ],
+              "world_blender": [
+                -2.466178501611333,
+                29.326364100938697,
+                3.18
+              ],
+              "world_three": [
+                -2.466178501611333,
+                3.18,
+                -29.326364100938697
+              ]
+            },
+            "side_landing": {
+              "local_blender": [
+                6.357215781981467,
+                8.265107432414169,
+                3.18
+              ],
+              "world_blender": [
+                -0.5425734266430116,
+                29.95911090302949,
+                3.18
+              ],
+              "world_three": [
+                -0.5425734266430116,
+                3.18,
+                -29.95911090302949
+              ]
+            },
+            "top_cap": {
+              "local_blender": [
+                6.357215781981467,
+                9.58510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -0.9550306013392307,
+                31.21301643337921,
+                3.18
+              ],
+              "world_three": [
+                -0.9550306013392307,
+                3.18,
+                -31.21301643337921
+              ]
+            },
+            "ramp_start": {
+              "local_blender": [
+                0.12221578198146688,
+                9.58510743241417,
+                0.3467
+              ],
+              "world_blender": [
+                -6.877834375377493,
+                29.264781218052747,
+                0.3467
+              ],
+              "world_three": [
+                -6.877834375377493,
+                0.3467,
+                -29.264781218052747
+              ]
+            },
+            "ramp_end": {
+              "local_blender": [
+                5.772215781981467,
+                9.58510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -1.510738734107857,
+                31.0302229127752,
+                3.18
+              ],
+              "world_three": [
+                -1.510738734107857,
+                3.18,
+                -31.0302229127752
+              ]
+            },
+            "bottom_landing_bbox": [
+              [
+                -1.277784218018533,
+                8.71010743241417,
+                0
+              ],
+              [
+                0.17221578198146686,
+                10.46010743241417,
+                0.18
+              ]
+            ],
+            "bottom_landing_floor": 0.18,
+            "width": 1.45,
+            "run": 5.65,
+            "rise": 3.0,
+            "certainty": "rear pergola/diagonal fa\u00e7ade-parallel stair corroborated by BO1 thesis capture; exact dimensions estimated"
+          },
+          "rear_deck": {
+            "door": {
+              "local_blender": [
+                -0.44614348640915835,
+                6.76510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -6.536576494481423,
+                26.40838920772016,
+                3.18
+              ],
+              "world_three": [
+                -6.536576494481423,
+                3.18,
+                -26.40838920772016
+              ]
+            },
+            "landing": {
+              "local_blender": [
+                0.15385651359084163,
+                7.81510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -6.294710369648998,
+                27.593294595360263,
+                3.18
+              ],
+              "world_three": [
+                -6.294710369648998,
+                3.18,
+                -27.593294595360263
+              ]
+            },
+            "width": 9.756718536781252,
+            "depth": 2.1
+          },
+          "interior_ramp_support": {
+            "start": {
+              "local_blender": [
+                4.132215781981468,
+                -6.17831671487097,
+                0.3466666667
+              ],
+              "world_blender": [
+                1.8569372640389958,
+                15.543651335479023,
+                0.3466666667
+              ],
+              "world_three": [
+                1.8569372640389958,
+                0.3466666667,
+                -15.543651335479023
+              ]
+            },
+            "mid": {
+              "local_blender": [
+                4.132215781981468,
+                -3.35331671487097,
+                1.7633333333
+              ],
+              "world_blender": [
+                0.9742164166777694,
+                18.22719915611384,
+                1.7633333333
+              ],
+              "world_three": [
+                0.9742164166777694,
+                1.7633333333,
+                -18.22719915611384
+              ]
+            },
+            "end": {
+              "local_blender": [
+                4.132215781981468,
+                -0.5283167148709698,
+                3.18
+              ],
+              "world_blender": [
+                0.09149556931654282,
+                20.91074697674866,
+                3.18
+              ],
+              "world_three": [
+                0.09149556931654282,
+                3.18,
+                -20.91074697674866
+              ]
+            },
+            "clear_width": 1.45
+          },
+          "interior_up_ordered": {
+            "waypoints": [
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  -6.42831671487097,
+                  0.18
+                ],
+                "world_blender": [
+                  1.935054153186007,
+                  15.306169227458241,
+                  0.18
+                ],
+                "world_three": [
+                  1.935054153186007,
+                  0.18,
+                  -15.306169227458241
+                ]
+              },
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  -6.0783167148709705,
+                  0.39681415932477876
+                ],
+                "world_blender": [
+                  1.8256905083801915,
+                  15.638644178687333,
+                  0.39681415932477876
+                ],
+                "world_three": [
+                  1.8256905083801915,
+                  0.39681415932477876,
+                  -15.638644178687333
+                ]
+              },
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  -3.35331671487097,
+                  1.7633333333
+                ],
+                "world_blender": [
+                  0.9742164166777694,
+                  18.22719915611384,
+                  1.7633333333
+                ],
+                "world_three": [
+                  0.9742164166777694,
+                  1.7633333333,
+                  -18.22719915611384
+                ]
+              },
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  0.021683285129030283,
+                  3.18
+                ],
+                "world_blender": [
+                  -0.08036158680688181,
+                  21.433207614394373,
+                  3.18
+                ],
+                "world_three": [
+                  -0.08036158680688181,
+                  3.18,
+                  -21.433207614394373
+                ]
+              }
+            ],
+            "intent": "Existing proven frontal entrance and full flight; no side entry"
+          },
+          "interior_down_ordered": {
+            "waypoints": [
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  0.021683285129030283,
+                  3.18
+                ],
+                "world_blender": [
+                  -0.08036158680688181,
+                  21.433207614394373,
+                  3.18
+                ],
+                "world_three": [
+                  -0.08036158680688181,
+                  3.18,
+                  -21.433207614394373
+                ]
+              },
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  -3.35331671487097,
+                  1.7633333333
+                ],
+                "world_blender": [
+                  0.9742164166777694,
+                  18.22719915611384,
+                  1.7633333333
+                ],
+                "world_three": [
+                  0.9742164166777694,
+                  1.7633333333,
+                  -18.22719915611384
+                ]
+              },
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  -6.0783167148709705,
+                  0.39681415932477876
+                ],
+                "world_blender": [
+                  1.8256905083801915,
+                  15.638644178687333,
+                  0.39681415932477876
+                ],
+                "world_three": [
+                  1.8256905083801915,
+                  0.39681415932477876,
+                  -15.638644178687333
+                ]
+              },
+              {
+                "local_blender": [
+                  4.132215781981468,
+                  -6.42831671487097,
+                  0.18
+                ],
+                "world_blender": [
+                  1.935054153186007,
+                  15.306169227458241,
+                  0.18
+                ],
+                "world_three": [
+                  1.935054153186007,
+                  0.18,
+                  -15.306169227458241
+                ]
+              }
+            ],
+            "intent": "Existing proven frontal descent to supported floor endpoint"
+          },
+          "exterior_ramp_support": {
+            "start": {
+              "local_blender": [
+                0.12221578198146688,
+                9.58510743241417,
+                0.3467
+              ],
+              "world_blender": [
+                -6.877834375377493,
+                29.264781218052747,
+                0.3467
+              ],
+              "world_three": [
+                -6.877834375377493,
+                0.3467,
+                -29.264781218052747
+              ]
+            },
+            "mid": {
+              "local_blender": [
+                2.947215781981467,
+                9.58510743241417,
+                1.76335
+              ],
+              "world_blender": [
+                -4.194286554742675,
+                30.147502065413974,
+                1.76335
+              ],
+              "world_three": [
+                -4.194286554742675,
+                1.76335,
+                -30.147502065413974
+              ]
+            },
+            "end": {
+              "local_blender": [
+                5.772215781981467,
+                9.58510743241417,
+                3.18
+              ],
+              "world_blender": [
+                -1.510738734107857,
+                31.0302229127752,
+                3.18
+              ],
+              "world_three": [
+                -1.510738734107857,
+                3.18,
+                -31.0302229127752
+              ]
+            },
+            "clear_width": 1.45
+          },
+          "exterior_to_upper_room_ordered": {
+            "waypoints": [
+              {
+                "local_blender": [
+                  -0.42778421801853317,
+                  9.58510743241417,
+                  0.18
+                ],
+                "world_blender": [
+                  -7.400295013023209,
+                  29.092924061929324,
+                  0.18
+                ],
+                "world_three": [
+                  -7.400295013023209,
+                  0.18,
+                  -29.092924061929324
+                ]
+              },
+              {
+                "local_blender": [
+                  6.357215781981467,
+                  9.58510743241417,
+                  3.18
+                ],
+                "world_blender": [
+                  -0.9550306013392307,
+                  31.21301643337921,
+                  3.18
+                ],
+                "world_three": [
+                  -0.9550306013392307,
+                  3.18,
+                  -31.21301643337921
+                ]
+              },
+              {
+                "local_blender": [
+                  6.357215781981467,
+                  8.265107432414169,
+                  3.18
+                ],
+                "world_blender": [
+                  -0.5425734266430116,
+                  29.95911090302949,
+                  3.18
+                ],
+                "world_three": [
+                  -0.5425734266430116,
+                  3.18,
+                  -29.95911090302949
+                ]
+              },
+              {
+                "local_blender": [
+                  4.332215781981467,
+                  8.265107432414169,
+                  3.18
+                ],
+                "world_blender": [
+                  -2.466178501611333,
+                  29.326364100938697,
+                  3.18
+                ],
+                "world_three": [
+                  -2.466178501611333,
+                  3.18,
+                  -29.326364100938697
+                ]
+              },
+              {
+                "local_blender": [
+                  0.15385651359084163,
+                  7.81510743241417,
+                  3.18
+                ],
+                "world_blender": [
+                  -6.294710369648998,
+                  27.593294595360263,
+                  3.18
+                ],
+                "world_three": [
+                  -6.294710369648998,
+                  3.18,
+                  -27.593294595360263
+                ]
+              },
+              {
+                "local_blender": [
+                  -0.44614348640915835,
+                  6.76510743241417,
+                  3.18
+                ],
+                "world_blender": [
+                  -6.536576494481423,
+                  26.40838920772016,
+                  3.18
+                ],
+                "world_three": [
+                  -6.536576494481423,
+                  3.18,
+                  -26.40838920772016
+                ]
+              },
+              {
+                "local_blender": [
+                  0.15385651359084163,
+                  3.091751395592885,
+                  3.18
+                ],
+                "world_blender": [
+                  -4.81881484992806,
+                  23.106444401132272,
+                  3.18
+                ],
+                "world_three": [
+                  -4.81881484992806,
+                  3.18,
+                  -23.106444401132272
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "house_route_contract_source": "/workspace/shared/sunward-structure-build/houses/house-route-contract-r7.json"
+}

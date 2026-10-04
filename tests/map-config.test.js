@@ -2,9 +2,17 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {MAP_CONFIG} from '../src/map-config.js';
+import {mapBudgets} from '../src/map-budgets.js';
 import {decodeGlbBytes} from '../src/asset-loader.js';
 import {PerspectiveCamera,Vector3} from 'three';
 import {withinPlayBounds,fittedOverviewPosition,overviewFrameOnResize,overviewFrameAfterModeChange} from '../src/math.js';
+
+test('WebGL fallback poster is the accepted current-source overview, not a stale map',()=>{
+  const version='v'+MAP_CONFIG.version.replaceAll('.','');
+  const poster=readFileSync(new URL('../public/assets/map-poster.png',import.meta.url));
+  const accepted=readFileSync(new URL(`../docs/qa/${version}-gameplay/overview.png`,import.meta.url));
+  assert.deepEqual(poster,accepted);
+});
 
 test('canonical outline and spawns replace the old rectangular map contract',()=>{
   assert.equal(MAP_CONFIG.outline.length,23);
@@ -20,7 +28,7 @@ test('configured public assets decode to real GLB2 files within delivery and dec
     assert.match(name,/^[\w.-]+\.glb(?:\.gz)?$/);
     const delivery=readFileSync(new URL(`../public/assets/${name}`,import.meta.url));
     const bytes=Buffer.from(await decodeGlbBytes(delivery));
-    assert.ok(delivery.length<(kind==='map'?(MAP_CONFIG.version==='3.1'?8_500_000:8_000_000):3_000_000),`${kind} transfer budget`);
+    assert.ok(delivery.length<(kind==='map'?(mapBudgets(MAP_CONFIG.version).gzip_bytes):3_000_000),`${kind} transfer budget`);
     assert.equal(bytes.readUInt32LE(0),0x46546c67,name);
     assert.equal(bytes.readUInt32LE(4),2,name);
     assert.equal(bytes.readUInt32LE(8),bytes.length,name);
