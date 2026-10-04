@@ -15,7 +15,9 @@ const mapBytes = Buffer.from(await decodeGlbBytes(readFileSync(new URL(`../publi
 const sourceMap = JSON.parse(mapBytes.subarray(20, 20 + mapBytes.readUInt32LE(12)).toString());
 const paintNames = sourceMap.materials.map(material=>material.name).filter(name=>bakedPrefixes.some(prefix=>name.startsWith(prefix)));
 const turfName=MAP_CONFIG.style.lawnMaterial||'V4R5_Lawn_Blade_0';
-const representativeNames = ['V3_Tone_Turquoise_Plaster_p1r5','V3_Tone_SunnyYellow_Plaster_p1r5','V3_Tone_Cream_Plaster_p1r5','V3_Tone_Honey_Timber_p1r5','V3_Tone_Warm_SandGround_p1r5','V4R5_Canopy_LeafAtlas',turfName,'D3_Rug_Pattern_0','D3_Fabric_Warm_Yellow',...sourceMap.materials.filter(material=>material.name.startsWith('V3_Tone_Surface_')).map(material=>material.name)];
+const timberName='V3_Tone_Timber_Honey_p5r3';
+const isReviewedHouseSurface=material=>material.name.startsWith('V3_Tone_Surface_')||material.name===timberName;
+const representativeNames = ['V3_Tone_Turquoise_Plaster_p1r5','V3_Tone_SunnyYellow_Plaster_p1r5','V3_Tone_Cream_Plaster_p1r5','V3_Tone_Honey_Timber_p1r5','V3_Tone_Warm_SandGround_p1r5','V4R5_Canopy_LeafAtlas',turfName,'D3_Rug_Pattern_0','D3_Fabric_Warm_Yellow',...sourceMap.materials.filter(isReviewedHouseSurface).map(material=>material.name)];
 // Use the actual glTF material classes/extensions, channels and alpha flags.
 // Only texture pixels are placeholders because this is a shader-source/compiler
 // gate, not image decoding or browser visual acceptance.
@@ -40,7 +42,7 @@ test('accepted short turf keeps real MASK flags and all four new house surfaces 
   assert.equal(turf.alphaTest,.5);assert.equal(turf.transparent,false);assert.equal(turf.side,THREE.FrontSide);
   assert.ok(turf.map);assert.equal(turf.map.colorSpace,THREE.SRGBColorSpace);
   assert.match(shaderSources(turf).fragment,/#define USE_ALPHATEST/);
-  const surfaces=sourceMap.materials.filter(material=>material.name.startsWith('V3_Tone_Surface_'));
+  const surfaces=sourceMap.materials.filter(isReviewedHouseSurface);
   assert.equal(surfaces.length,4);
   for(const source of surfaces){
     const material=painted(source.name);assert.ok(source.normalTexture);assert.ok(material.normalMap);
@@ -48,6 +50,21 @@ test('accepted short turf keeps real MASK flags and all four new house surfaces 
     assert.ok(Math.abs(material.normalScale.x-(source.normalTexture.scale??1))<1e-6);
     assert.equal(material.alphaTest,0);assert.equal(material.transparent,false);
   }
+});
+
+test('accepted timber keeps independent color and normal texture transforms',()=>{
+  const source=sourceMap.materials.find(material=>material.name===timberName),material=painted(timberName);
+  assert.ok(source);assert.ok(representativeNames.includes(timberName));
+  assert.deepEqual(source.pbrMetallicRoughness.baseColorTexture.extensions.KHR_texture_transform.scale,[3,1]);
+  assert.equal(source.normalTexture.extensions?.KHR_texture_transform,undefined);
+  assert.deepEqual(material.map.repeat.toArray(),[3,1]);assert.deepEqual(material.normalMap.repeat.toArray(),[1,1]);
+  assert.deepEqual(material.color.toArray(),[1,1,1]);
+  assert.equal(material.map.colorSpace,THREE.SRGBColorSpace);assert.equal(material.normalMap.colorSpace,THREE.NoColorSpace);
+  assert.ok(Math.abs(material.normalScale.x-.3)<1e-6&&Math.abs(material.normalScale.y+.3)<1e-6);
+  material.map.updateMatrix();material.normalMap.updateMatrix();
+  for(const [i,value] of [3,0,0,0,1,0,0,0,1].entries())assert.ok(Math.abs(material.map.matrix.elements[i]-value)<1e-12);
+  for(const [i,value] of [1,0,0,0,1,0,0,0,1].entries())assert.ok(Math.abs(material.normalMap.matrix.elements[i]-value)<1e-12);
+  const program=shaderSources(material);assert.match(program.vertex,/mapTransform/);assert.match(program.vertex,/normalMapTransform/);
 });
 
 test('all actual baked style surfaces remain untinted by legacy runtime layers', () => {

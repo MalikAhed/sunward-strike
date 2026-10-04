@@ -1,0 +1,50 @@
+{
+  "revision": "timber-finish-p5r3",
+  "source": "Original analytic directional paint; no supplied reference image pixels",
+  "target_linear_mean": [
+    0.68,
+    0.36,
+    0.105
+  ],
+  "image_count": 2,
+  "decoded_rgba_bytes": 524288,
+  "normal_strength_preserved": 0.3,
+  "images": [
+    {
+      "name": "Honey_Fibers_p5r3",
+      "file": "Honey_Fibers_p5r3.png",
+      "role": "baseColor",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 24019,
+      "sha256": "8f3da98c9f1ec8b77f189e2e030a996a9aec6a73eb94fcf7dfea782acac123ce",
+      "decoded_rgba_bytes": 262144,
+      "mean_linear_rgb": [
+        0.6800479735265628,
+        0.36004442602083775,
+        0.10503837103518505
+      ],
+      "mean_max_error": 4.7973526562716806e-05,
+      "luminance_relative_std": 0.08732259910968222
+    },
+    {
+      "name": "Honey_Fibers_Normal_p5r3",
+      "file": "Honey_Fibers_Normal_p5r3.png",
+      "role": "normal",
+      "size": [
+        256,
+        256
+      ],
+      "bytes": 9434,
+      "sha256": "6fad0c4f6dbdee36d66619e09d3dff1ddf3d8ad7f53e3f48ae8e8a7a3145d495",
+      "decoded_rgba_bytes": 262144
+    }
+  ],
+  "color_vector_scale": [
+    3,
+    1
+  ],
+  "pixel_source_revision": "timber-finish-p5r2; color pixels/contrast and exact r1 normal bytes unchanged"
+}

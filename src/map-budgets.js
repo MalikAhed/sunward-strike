@@ -6,6 +6,8 @@ const versions = Object.freeze({
   '3.1': Object.freeze({...common,materials:80,images:24,gzip_bytes:8500000}),
   // One original short-turf MASK atlas; the material cap stays unchanged.
   '3.2': Object.freeze({...common,materials:80,images:25,gzip_bytes:8500000}),
+  // Timber/wordmark finish keeps every v3.2 allowance unchanged.
+  '3.3': Object.freeze({...common,materials:80,images:25,gzip_bytes:8500000}),
 });
 
 export function mapBudgets(version) {

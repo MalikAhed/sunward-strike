@@ -1,0 +1,89 @@
+{
+  "version": "3.3",
+  "scope": "Exact locally reviewed timber and wordmark increment; deployment identity is verified separately for the published commit",
+  "created_utc": "2026-10-04T03:36:45Z",
+  "source_sha256": "ef49475dd90e58e75f60f8a12fcd8d8601886df2c7489be48ce20996c7f30e1f",
+  "native_extracted_sha256": "f91f85249a1e87e430cc450dcced2836f28fceb9e4323b69115e72e15ce9b1f1",
+  "native_extracted_bytes": 57507844,
+  "visual_sha256": "d0a1e19862b9d0a614dd484e8686b052bbcdeb796622a63f272ca343e1081a7b",
+  "compressed_visual_sha256": "5863c77258fff6c35a26000d89f8dc82b37995442276d47017492b97bec3d5a1",
+  "collision_sha256": "a00bb2353fd639ca09f4783f969f55bfe3bae3996f9e7f7240c4f0c0b6655f75",
+  "collision_geometry_sha256": "d11884850d061de3e0023ec4d0aee24744d5e9c3ecb61e51aee80e8b437f764e",
+  "collision_change": "Only map_version and integrated_style_revision change. Binary/nodes/all other JSON remain exact to v3.2.",
+  "tests_passed": 225,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "shader_compiler_required": true,
+  "compiled_app_programs": 30,
+  "independent_timber_programs": 2,
+  "shader_counts_overlap": true,
+  "packaging_unit_tests_passed": 18,
+  "actual_native_extraction_verified": true,
+  "portable_export_byte_identity_verified": true,
+  "original_v32_native_images_verified": 39,
+  "complete_packaged_native_file_images": 41,
+  "geometry": {
+    "triangles": 235734,
+    "raw_bytes": 19913252,
+    "gzip_bytes": 6961481,
+    "materials": 77,
+    "images": 25,
+    "meshes": 123,
+    "primitives": 138,
+    "decoded_base_RGBA_bytes": 6881280,
+    "decoded_full_mip_RGBA_bytes": 9175012,
+    "vertex_index_bytes": 18054126,
+    "original_caps_pass": true
+  },
+  "source_reimport_mean_rgb_difference_per_255": {
+    "near_green": 0.007834201388888889,
+    "bus_close": 4.924634331597222,
+    "street": 1.0047721354166668
+  },
+  "source_reimport_qualification": "Vehicle/fence response differences were independently present in the unchanged stock baseline; static frames are not pixel-identical or browser parity.",
+  "selected_match_asset_regression": {
+    "runs": 3,
+    "seconds_each": 120,
+    "scenarios": [
+      "TDM 4v4",
+      "KC 4v4",
+      "KC 6v6 stress"
+    ],
+    "all_events_every_step_and_final_snapshots_equal_to_v32": true,
+    "movement_violations": 0,
+    "gameplay_implementation": "Unchanged shipped cover-query r2 and match code; no cold-start scan candidate"
+  },
+  "known_limits": [
+    "Repeated fan-shaped r6i lawn; held D1/P4 experiments excluded",
+    "Regular timber grain and unchanged UV-ambiguous surfaces; vehicle/interior finish remains simpler than richer style references",
+    "Actual browser rendering, physical input/touch, audio playback, disconnected reload, temporal shimmer and device FPS remain unperformed",
+    "Prototype scale uses a provisional 10.5m bus, not an authenticated survey"
+  ],
+  "previews": {
+    "green-yard.png": {
+      "bytes": 759643,
+      "sha256": "b78565f5e5fd7e066d6e2c11e7abefd1d9c2751425c8dc53eb078bf003717e65"
+    },
+    "overview.png": {
+      "bytes": 1405033,
+      "sha256": "6678fbca77dbbd5fdfa9d7dc7eede99711e295fafe5bc0401eacb1f19e1ba1fb"
+    },
+    "street.png": {
+      "bytes": 479942,
+      "sha256": "b9d3dbb3983caa120cfda178f71d477880f185e01d32b545e3710a91e88bb26f"
+    },
+    "yellow-yard.png": {
+      "bytes": 761575,
+      "sha256": "54785e1142eff4fb9a30d945a0077026ec0146f2480d07264b4de620216d670e"
+    }
+  },
+  "preview_qualification": "1200x900 elevated source overview; bounded secondary native yard views at 800x600/8 samples and independently rendered street at 640x480/8 samples. A prior 1200x900 street process exited137 without a frame and is not used as evidence.",
+  "lint": "passed",
+  "build": "passed",
+  "offline_version": "c707c06efba863440198",
+  "offline_selected_delivery_bytes": {
+    "gzip": 14780887,
+    "raw": 27732658
+  },
+  "poster_sha256": "6678fbca77dbbd5fdfa9d7dc7eede99711e295fafe5bc0401eacb1f19e1ba1fb"
+}

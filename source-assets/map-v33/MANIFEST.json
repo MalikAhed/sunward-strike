@@ -1,0 +1,149 @@
+{
+  "version": "3.3",
+  "status": "EXACT_NATIVE_SOURCE_PACKAGE",
+  "source_sha256": "ef49475dd90e58e75f60f8a12fcd8d8601886df2c7489be48ce20996c7f30e1f",
+  "source_container_bytes": 20379865,
+  "native_extracted_name": "Sunward_ClassicLayout_v3_3.blend",
+  "native_archive": "Sunward_ClassicLayout_v3_3.blend.xz",
+  "native_archive_parts": [
+    {
+      "name": "Sunward_ClassicLayout_v3_3.blend.xz.part01",
+      "bytes": 8000000,
+      "sha256": "5186851b96a30ea8ccc81e808f115dc9ea586dffb18b98c9dbf79c19060718b2"
+    },
+    {
+      "name": "Sunward_ClassicLayout_v3_3.blend.xz.part02",
+      "bytes": 5396916,
+      "sha256": "d0da192e676bcb5648dd797d125e0bf26114aeaf66b49a657fd1f3f0886b5067"
+    }
+  ],
+  "archive_sha256": "152b197614437c4ff5499917a585cb2752ddfd2df118f0ec1c429e815f2d2834",
+  "archive_bytes": 13396916,
+  "uncompressed_blend_sha256": "f91f85249a1e87e430cc450dcced2836f28fceb9e4323b69115e72e15ce9b1f1",
+  "uncompressed_blend_bytes": 57507844,
+  "packaging": "Exact decoded native Blender bytes; lossless XZ split only for bounded transport. No scene or texture modification.",
+  "compression_preset": 6,
+  "scope": "Accepted v3.2 scene plus frozen P5r3 timber and P6r1 wordmark in that order; P4 paint and R7 grass experiments excluded.",
+  "visual_export_sha256": "d0a1e19862b9d0a614dd484e8686b052bbcdeb796622a63f272ca343e1081a7b",
+  "collision_export_sha256": "a00bb2353fd639ca09f4783f969f55bfe3bae3996f9e7f7240c4f0c0b6655f75",
+  "gzip_export_sha256": "5863c77258fff6c35a26000d89f8dc82b37995442276d47017492b97bec3d5a1",
+  "base_source_package": "../map-v32",
+  "base_source_sha256": "2451ad713cdb8522398a5d4c7b13812475095138cd56c3321ca2d9e26f27b8ba",
+  "application_order": [
+    "timber/timber_finish_patch.py",
+    "wordmark/wordmark_patch.py"
+  ],
+  "restoration_order": [
+    "wordmark/wordmark_patch.py:restore_wordmark",
+    "timber/timber_finish_patch.py:restore_timber_finish"
+  ],
+  "p6_expected_image_count_after_p5": 41,
+  "runtime_budget_limits": {
+    "triangles": 400000,
+    "raw_bytes": 32000000,
+    "gzip_bytes": 8500000,
+    "materials": 80,
+    "images": 25,
+    "decoded_texture_bytes": 134217728,
+    "meshes": 1500,
+    "primitives": 1800
+  },
+  "preservation": "All original v3.2 image/material IDs remain recoverable, including inactive packed and decoded image data and scoped restoration flags. Restore manager version annotations, then P6 followed by P5.",
+  "files": {
+    ".gitignore": {
+      "bytes": 20,
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0"
+    },
+    "README.md": {
+      "bytes": 5294,
+      "sha256": "1c8d7115a3d82051cd02e1e03b9111477dc3dd13d2274a29e0da9078f2d77366"
+    },
+    "build.py": {
+      "bytes": 3321,
+      "sha256": "0276330069ed203dd3f433d4dad54c4e2c0270984ae4ce7383ff05f69181d297"
+    },
+    "export_map.py": {
+      "bytes": 5543,
+      "sha256": "ea31dd7d15bd01cc9cd3d631ba18a27b10428e7693f002e7310d5350985375d4"
+    },
+    "extract_source.py": {
+      "bytes": 4907,
+      "sha256": "0a6e54ad2cc47290d94902e6e725c24ea7a1fa64f85e868be03187bfc85e0e39"
+    },
+    "source/timber/generate_pixel_sources.py": {
+      "bytes": 2955,
+      "sha256": "f5312188a231767216e90569992b79041fbad46db0892fd2e2f89dff2ccd9540"
+    },
+    "source/timber/texture-manifest.json": {
+      "bytes": 1286,
+      "sha256": "dff6d7e3ec0d13e3c0cf243b3b9f7c815c339290f762b0b2b717e4e3466f32a5"
+    },
+    "source/timber/textures/Honey_Fibers_Normal_p5r3.png": {
+      "bytes": 9434,
+      "sha256": "6fad0c4f6dbdee36d66619e09d3dff1ddf3d8ad7f53e3f48ae8e8a7a3145d495"
+    },
+    "source/timber/textures/Honey_Fibers_p5r3.png": {
+      "bytes": 24019,
+      "sha256": "8f3da98c9f1ec8b77f189e2e030a996a9aec6a73eb94fcf7dfea782acac123ce"
+    },
+    "source/timber/timber_finish_patch.py": {
+      "bytes": 7233,
+      "sha256": "a75fcd4eb619223a1179d1aa3b3f99b863e9c18b42dd05e1f218d4d6eca1e77d"
+    },
+    "source/wordmark/label_validation.py": {
+      "bytes": 1213,
+      "sha256": "db0dd5b5cb1589ca035fe188817c841af34694748a0c9d229182e948316836ec"
+    },
+    "source/wordmark/label_validation_base.py": {
+      "bytes": 5339,
+      "sha256": "1a2624d6e4891085b2ce1daa35d563e990ad9c5ed4f9a4571731207818be0b36"
+    },
+    "source/wordmark/reports/.gitignore": {
+      "bytes": 14,
+      "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+    },
+    "source/wordmark/wordmark_patch.py": {
+      "bytes": 5454,
+      "sha256": "868683beada0613801bc842845a8a5130bd84f860f40b8fecc71d0aa7d4a09fe"
+    },
+    "test_build.py": {
+      "bytes": 4124,
+      "sha256": "db6d72f099fe0e6f1c5a81a0b10b51eeb548d253783967a4cab5923b618dbc6f"
+    },
+    "test_extract_source.py": {
+      "bytes": 6028,
+      "sha256": "878a4029950a13ff86d3a07881f26c3ad04f6712e9d9b36e92bba06903ddbb1e"
+    }
+  },
+  "seconds": 13.340963747999922,
+  "visual_export_bytes": 19913252,
+  "gzip_export_bytes": 6961481,
+  "collision_export_bytes": 585320,
+  "version_annotations_to_restore_before_module_undo": [
+    "map_version",
+    "integrated_style_revision"
+  ],
+  "unchanged_reassigned_annotation": "validation_state",
+  "runtime_allocation": {
+    "triangles": 235734,
+    "meshes": 123,
+    "primitives": 138,
+    "materials": 77,
+    "images": 25,
+    "base_decoded_rgba_bytes": 6881280
+  },
+  "outputs": {
+    "sunward-v3.3.glb": {
+      "bytes": 19913252,
+      "sha256": "d0a1e19862b9d0a614dd484e8686b052bbcdeb796622a63f272ca343e1081a7b"
+    },
+    "sunward-v3.3.glb.gz": {
+      "bytes": 6961481,
+      "sha256": "5863c77258fff6c35a26000d89f8dc82b37995442276d47017492b97bec3d5a1"
+    },
+    "sunward-collision-v3.3.glb": {
+      "bytes": 585320,
+      "sha256": "a00bb2353fd639ca09f4783f969f55bfe3bae3996f9e7f7240c4f0c0b6655f75"
+    }
+  }
+}
