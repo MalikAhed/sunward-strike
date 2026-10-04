@@ -11,6 +11,7 @@ An original browser arena FPS and map explorer, with local Team Deathmatch and K
 - Shared fixed-step player/bot movement with sprint, grounded slide, crouch, ADS, real hitscan damage, recoil, reload and recovery
 - Bounded nearby tag commitment improves bot KC collection; clean respawn look/input prevents stale held actions
 - Movement collision plus opaque visual cover for bullets and bot sight; open windows remain open
+- Accelerated static-cover queries, with unchanged shooting, visibility and movement rules
 - Compact match HUD, mouse capture or drag fallback, touch action controls, keyboard menus and optional original synthesized sound
 - Preserved Freefly, First Person and Orbit exploration with six viewpoints and three quality settings
 - Bundled dependencies, relative-base static hosting and versioned, integrity-checked repeat-play offline caching
@@ -53,6 +54,8 @@ Dependencies and assets are same-origin. There is no account, analytics, multipl
 The GitHub Actions workflow tests/builds main-branch pushes and deploys `dist/` to GitHub Pages. Pull requests run checks without publishing. See [contribution guidance](CONTRIBUTING.md), [runtime QA](docs/qa/QA_PLAN.md) and [gameplay research](docs/GAMEPLAY_RESEARCH.md).
 
 Portable verification covers authored collision routes, perimeter walks/jumps, real-map gameplay/cover, shader compile/link, full main-module lifecycle, input, HUD, audio graph lifetime, offline cache integrity and update races. Main-module tests use a DOM model/no-op renderer, with authored geometry tested separately from placeholder textures. These are not actual browser GPU, touch-layout, audio playback, disconnected browser reload or device-FPS acceptance. The review browser currently cannot provide WebGL2; the app shows an honest static source preview in that case.
+
+The [cover-query review](docs/qa/COVER_QUERY_R2.md) records measured CPU gains and the additional first-match setup/memory cost. These measurements are not a device-FPS claim.
 
 ## Map proportions and provenance
 

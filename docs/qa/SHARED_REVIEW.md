@@ -1,8 +1,8 @@
-# Current acceptance register: v3.2 refinement
+# Current acceptance register: v3.2 map and cover-query r2
 
-The v3.2 source/export and scoped gameplay changes are independently checked, with the limitations below. Final deployment identity is established separately by the exact commit's CI and served-byte verification. [The v3.1 register](V31_REVIEW.md) and [RC1 review](RC1_REVIEW.md) remain historical evidence.
+The v3.2 source/export and scoped gameplay changes are independently checked, with the limitations below. The follow-on [cover-query r2 review](COVER_QUERY_R2.md) records the query-only optimization; its map, native source, controls and gameplay rules are unchanged. Final deployment identity is established separately by the exact commit's CI and served-byte verification. [The v3.1 register](V31_REVIEW.md) and [RC1 review](RC1_REVIEW.md) remain historical evidence.
 
-[Exact hashes and measured checks](v32-gameplay/verification.json) accompany the [overview](v32-gameplay/overview.png), [street](v32-gameplay/street.png) and [green](v32-gameplay/green-yard.png)/[yellow](v32-gameplay/yellow-yard.png) yard previews.
+[V3.2 map hashes and initial refinement checks](v32-gameplay/verification.json) accompany the [overview](v32-gameplay/overview.png), [street](v32-gameplay/street.png) and [green](v32-gameplay/green-yard.png)/[yellow](v32-gameplay/yellow-yard.png) yard previews. That original record remains unchanged; the later query-only checks are documented separately.
 
 ## Current scope
 

@@ -1,0 +1,994 @@
+{
+  "source": "Independent v3.2 cover-query review regressions",
+  "sourceReportSha256": "92278bf8ec41e8e6a9ccb97d558097403ef18499f636f90f5f7ba08d1f5fb25e",
+  "cases": [
+    {
+      "id": "review-r1-2184",
+      "kind": "synthetic-plane",
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2185",
+      "kind": "synthetic-plane",
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2226",
+      "kind": "synthetic-plane",
+      "origin": [
+        -1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2227",
+      "kind": "synthetic-plane",
+      "origin": [
+        -1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2310",
+      "kind": "synthetic-plane",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2311",
+      "kind": "synthetic-plane",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2352",
+      "kind": "synthetic-plane",
+      "origin": [
+        2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2353",
+      "kind": "synthetic-plane",
+      "origin": [
+        2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2373",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2374",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2375",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2380",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-100
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2381",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-100
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2382",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-100
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2387",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e+100
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2388",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e+100
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2389",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e+100
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2394",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2395",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2396",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2436",
+      "kind": "synthetic-plane",
+      "origin": [
+        1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2437",
+      "kind": "synthetic-plane",
+      "origin": [
+        1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "front"
+    },
+    {
+      "id": "review-r1-2772",
+      "kind": "synthetic-plane",
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2773",
+      "kind": "synthetic-plane",
+      "origin": [
+        -2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2814",
+      "kind": "synthetic-plane",
+      "origin": [
+        -1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2815",
+      "kind": "synthetic-plane",
+      "origin": [
+        -1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2898",
+      "kind": "synthetic-plane",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2899",
+      "kind": "synthetic-plane",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2940",
+      "kind": "synthetic-plane",
+      "origin": [
+        2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2941",
+      "kind": "synthetic-plane",
+      "origin": [
+        2,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2961",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2962",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2963",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2968",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-100
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2969",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-100
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2970",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-100
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2975",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e+100
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2976",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e+100
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2977",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e+100
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2982",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2983",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-2984",
+      "kind": "synthetic-plane",
+      "origin": [
+        2.0000000000000004,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-3024",
+      "kind": "synthetic-plane",
+      "origin": [
+        1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-3025",
+      "kind": "synthetic-plane",
+      "origin": [
+        1.9999999999999998,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1e-200
+      ],
+      "maxDistance": 5.000000000000001,
+      "expectedDistance": 5,
+      "materialSide": "double"
+    },
+    {
+      "id": "review-r1-21769",
+      "kind": "actual-map",
+      "origin": [
+        -1.7997795770227238,
+        1.1512498851647581,
+        -5.0688979043453815
+      ],
+      "direction": [
+        0.20034690341168257,
+        -0.6877441412014891,
+        0.6977600694625453
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 1.000000010828006e-08
+    },
+    {
+      "id": "review-r1-21770",
+      "kind": "actual-map",
+      "origin": [
+        -1.7997795770227238,
+        1.1512498851647581,
+        -5.0688979043453815
+      ],
+      "direction": [
+        0.20034690341168257,
+        -0.6877441412014891,
+        0.6977600694625453
+      ],
+      "maxDistance": 1.000000010828006e-08,
+      "expectedDistance": 1.000000010828006e-08
+    },
+    {
+      "id": "review-r1-21772",
+      "kind": "actual-map",
+      "origin": [
+        -1.7997795770227238,
+        1.1512498851647581,
+        -5.0688979043453815
+      ],
+      "direction": [
+        0.20034690341168257,
+        -0.6877441412014891,
+        0.6977600694625453
+      ],
+      "maxDistance": 1.0000000108280062e-08,
+      "expectedDistance": 1.000000010828006e-08
+    },
+    {
+      "id": "review-r1-33447",
+      "kind": "actual-map",
+      "origin": [
+        -1.2983985076008326,
+        4.159368508769607,
+        -30.305797965146688
+      ],
+      "direction": [
+        -0.09403473285134742,
+        0.6245041755442391,
+        0.7753399278673746
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 9.999987562249609e-09
+    },
+    {
+      "id": "review-r1-33448",
+      "kind": "actual-map",
+      "origin": [
+        -1.2983985076008326,
+        4.159368508769607,
+        -30.305797965146688
+      ],
+      "direction": [
+        -0.09403473285134742,
+        0.6245041755442391,
+        0.7753399278673746
+      ],
+      "maxDistance": 9.999987562249609e-09,
+      "expectedDistance": 9.999987562249609e-09
+    },
+    {
+      "id": "review-r1-33450",
+      "kind": "actual-map",
+      "origin": [
+        -1.2983985076008326,
+        4.159368508769607,
+        -30.305797965146688
+      ],
+      "direction": [
+        -0.09403473285134742,
+        0.6245041755442391,
+        0.7753399278673746
+      ],
+      "maxDistance": 9.99998756224961e-09,
+      "expectedDistance": 9.999987562249609e-09
+    },
+    {
+      "id": "review-r1-38100",
+      "kind": "actual-map",
+      "origin": [
+        -1.6963671775809301,
+        6.502487488232784,
+        -30.27437175375676
+      ],
+      "direction": [
+        -0.6717007942146968,
+        -0.7071067822624743,
+        0.2209480516541283
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 0.35000000000000075
+    },
+    {
+      "id": "review-r1-38101",
+      "kind": "actual-map",
+      "origin": [
+        -1.6963671775809301,
+        6.502487488232784,
+        -30.27437175375676
+      ],
+      "direction": [
+        -0.6717007942146968,
+        -0.7071067822624743,
+        0.2209480516541283
+      ],
+      "maxDistance": 0.35000000000000075,
+      "expectedDistance": 0.35000000000000075
+    },
+    {
+      "id": "review-r1-38103",
+      "kind": "actual-map",
+      "origin": [
+        -1.6963671775809301,
+        6.502487488232784,
+        -30.27437175375676
+      ],
+      "direction": [
+        -0.6717007942146968,
+        -0.7071067822624743,
+        0.2209480516541283
+      ],
+      "maxDistance": 0.3500000000000008,
+      "expectedDistance": 0.35000000000000075
+    },
+    {
+      "id": "review-r1-45978",
+      "kind": "actual-map",
+      "origin": [
+        -6.249085131376619,
+        2.8910000253540695,
+        -10.54288502210546
+      ],
+      "direction": [
+        -0.2209544923221571,
+        0.707085707624849,
+        -0.6717208604735483
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 9.999998762247386e-09
+    },
+    {
+      "id": "review-r1-45979",
+      "kind": "actual-map",
+      "origin": [
+        -6.249085131376619,
+        2.8910000253540695,
+        -10.54288502210546
+      ],
+      "direction": [
+        -0.2209544923221571,
+        0.707085707624849,
+        -0.6717208604735483
+      ],
+      "maxDistance": 9.999998762247386e-09,
+      "expectedDistance": 9.999998762247386e-09
+    },
+    {
+      "id": "review-r1-45981",
+      "kind": "actual-map",
+      "origin": [
+        -6.249085131376619,
+        2.8910000253540695,
+        -10.54288502210546
+      ],
+      "direction": [
+        -0.2209544923221571,
+        0.707085707624849,
+        -0.6717208604735483
+      ],
+      "maxDistance": 9.999998762247387e-09,
+      "expectedDistance": 9.999998762247386e-09
+    },
+    {
+      "id": "review-r1-51346",
+      "kind": "actual-map",
+      "origin": [
+        -10.618114117410247,
+        2.35700012743093,
+        5.4395823071220555
+      ],
+      "direction": [
+        2.684652860582357e-07,
+        0.9999999999999639,
+        -3.347911858818425e-10
+      ],
+      "maxDistance": "Infinity",
+      "expectedDistance": 1.3213418359470575e-08
+    },
+    {
+      "id": "review-r1-51347",
+      "kind": "actual-map",
+      "origin": [
+        -10.618114117410247,
+        2.35700012743093,
+        5.4395823071220555
+      ],
+      "direction": [
+        2.684652860582357e-07,
+        0.9999999999999639,
+        -3.347911858818425e-10
+      ],
+      "maxDistance": 1.3213418359470575e-08,
+      "expectedDistance": 1.3213418359470575e-08
+    },
+    {
+      "id": "review-r1-51349",
+      "kind": "actual-map",
+      "origin": [
+        -10.618114117410247,
+        2.35700012743093,
+        5.4395823071220555
+      ],
+      "direction": [
+        2.684652860582357e-07,
+        0.9999999999999639,
+        -3.347911858818425e-10
+      ],
+      "maxDistance": 1.3213418359470577e-08,
+      "expectedDistance": 1.3213418359470575e-08
+    }
+  ]
+}

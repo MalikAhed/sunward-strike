@@ -1,5 +1,6 @@
 import {Group,Mesh,BufferGeometry,DoubleSide,BackSide,Ray,Vector3} from 'three';
 import {buildCollisionOctree} from '../collision.js';
+import {makeBvhCoverRaycast} from './cover-query-bvh.js';
 
 // Hard-cover queries are distinct from capsule movement. Decorative leaf/grass
 // cards and blended/sky layers are not turned into invisible solid cover.
@@ -12,6 +13,7 @@ export function isOpaqueCoverMaterial(material,object){
 }
 export function buildOpaqueCover(root,{filter=isOpaqueCoverMaterial}={}){
   if(!root?.traverse)throw new TypeError('Visual cover needs the actual loaded map root');
+  const totalStart=performance.now();
   root.updateWorldMatrix(true,true);
   const groups=[new Group(),new Group()],accepted=[],excluded=[];let sourceTriangles=0;
   root.traverse(object=>{
@@ -32,11 +34,11 @@ export function buildOpaqueCover(root,{filter=isOpaqueCoverMaterial}={}){
     }
     for(let side=0;side<2;side++)if(indices[side].length){const copied=new BufferGeometry();copied.setAttribute('position',positions);copied.setIndex(indices[side]);const mesh=new Mesh(copied);mesh.name=object.name;mesh.matrixAutoUpdate=false;mesh.matrix.copy(object.matrixWorld);groups[side].add(mesh);}
   });
-  const start=performance.now(),trees=groups.map((group,index)=>group.children.length?{tree:buildCollisionOctree(group),backfaceCulling:index===0}:null).filter(Boolean),buildMs=performance.now()-start;
-  const stats={triangleCount:0,mirroredMeshes:0,nodes:0,references:0,maxLevel:5,sourceTriangles,meshes:groups.reduce((sum,group)=>sum+group.children.length,0),buildMs,accepted,excluded};
+  const legacyStart=performance.now(),trees=groups.map((group,index)=>group.children.length?{tree:buildCollisionOctree(group),backfaceCulling:index===0}:null).filter(Boolean),legacyBuildMs=performance.now()-legacyStart;
+  const stats={triangleCount:0,mirroredMeshes:0,nodes:0,references:0,maxLevel:5,sourceTriangles,meshes:groups.reduce((sum,group)=>sum+group.children.length,0),accepted,excluded};
   for(const {tree}of trees)for(const key of['triangleCount','mirroredMeshes','nodes','references'])stats[key]+=tree.stats[key];
   const ray=new Ray(new Vector3(),new Vector3()),point=new Vector3(),boxPoint=new Vector3(),seen=new Set();
-  return {
+  const legacyCover={
     trees,
     stats:Object.freeze(stats),
     raycast(origin,direction,maxDistance=Infinity){
@@ -51,5 +53,23 @@ export function buildOpaqueCover(root,{filter=isOpaqueCoverMaterial}={}){
       for(const {tree,backfaceCulling}of trees)visit(tree,backfaceCulling);
       return found?closest:Infinity;
     },
+  };
+  // Capture the complete legacy backend before replacing the public query.
+  // It remains available for exceptional finite direction normalization.
+  const queryStart=performance.now(),raycast=makeBvhCoverRaycast(legacyCover),queryBuildMs=performance.now()-queryStart,totalBuildMs=performance.now()-totalStart;
+  const prepareSourceMs=legacyStart-totalStart;
+  const {triangleCount,mirroredMeshes,nodes,references,maxLevel,sourceTriangles:sourceCount,meshes,accepted:included,excluded:skipped}=stats;
+  const {scope:_prototypeScope,...queryIndex}=raycast.indexStats;
+  return {
+    trees,
+    raycast,
+    stats:Object.freeze({
+      triangleCount,mirroredMeshes,sourceTriangles:sourceCount,meshes,accepted:included,excluded:skipped,
+      queryBackend:'triangle-bvh',buildMs:totalBuildMs,
+      buildTimingsMs:Object.freeze({prepareSourceMeshes:prepareSourceMs,legacyOctreeAndTriangles:legacyBuildMs,queryIndex:queryBuildMs,bookkeeping:Math.max(0,totalBuildMs-prepareSourceMs-legacyBuildMs-queryBuildMs),total:totalBuildMs}),
+      retainedLegacyOctree:true,
+      legacyOctree:Object.freeze({backend:'bounded-octree',purpose:'source triangles and exceptional normalization fallback',nodes,references,maxLevel}),
+      queryIndex:Object.freeze({...queryIndex,backend:'triangle-bvh'}),
+    }),
   };
 }
